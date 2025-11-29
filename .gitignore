@@ -1,0 +1,10 @@
+# folders
+misc/
+
+# build files
+*.o
+*.out
+*.exe
+
+# editor files
+.vscode/
