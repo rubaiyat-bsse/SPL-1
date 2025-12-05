@@ -8,3 +8,6 @@ misc/
 
 # editor files
 .vscode/
+
+# folders
+build/
