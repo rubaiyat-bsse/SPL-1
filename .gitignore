@@ -1,5 +1,6 @@
 # folders
 misc/
+build/
 
 # build files
 *.o
@@ -9,5 +10,4 @@ misc/
 # editor files
 .vscode/
 
-# folders
-build/
+
