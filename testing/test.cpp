@@ -5,14 +5,13 @@ int main() {
     IloEnv env;
     IloModel model(env);
 
-    IloNumVar x(env, 0, IloInfinity, ILOFLOAT);
-    IloNumVar y(env, 0, IloInfinity, ILOFLOAT);
+    IloNumVar y1(env, 0, IloInfinity, ILOFLOAT);
+    IloNumVar y2(env, 0, IloInfinity, ILOFLOAT);
+    IloNumVar y3(env, 0, IloInfinity, ILOFLOAT);
 
-    model.add(IloMaximize(env, 5*x+4*y));
-    model.add(x + y<=5);
-    model.add(10*x+6*y<=45);
-    model.add(x>=4);
-    model.add(y<=0);
+    model.add(IloMinimize(env, 3000*y1+4000*y2+5000*y3));
+    model.add(y1+y3>=1.2);
+    model.add(y2+y3>=1.7);
 
     IloCplex cplex(model);
 
@@ -23,10 +22,11 @@ int main() {
         return 1;
     }
 
-    cout << "Optimal Solution:" << endl;
-    cout << "z = " << cplex.getObjValue()<< endl;
-    cout << "x = " << cplex.getValue(x) << endl;
-    cout << "y = " << cplex.getValue(y) << endl;
+    cout << "Dual Optimal Solution:" << endl;
+    cout << "W = " << cplex.getObjValue()<< endl;
+    cout << "y1 = " << cplex.getValue(y1) << endl;
+    cout << "y2 = " << cplex.getValue(y2) << endl;
+    cout << "y3 = " << cplex.getValue(y3) << endl;
     
 
     env.end();

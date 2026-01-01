@@ -96,17 +96,13 @@ int main(){
         IloNumVar x(env, 0, IloInfinity, ILOFLOAT);
         IloNumVar y(env, 0, IloInfinity, ILOFLOAT);
 
-        // Objective
         model.add(IloMaximize(env, 5*x + 4*y));
 
-        // Constraints
         model.add(x + y <= 5);
         model.add(10*x + 6*y <= 45);
 
-        // Start Branch and Bound
         branchAndBound(model, env, x, y);
 
-        // Print final solution
         cout << "Optimal integer solution:" << endl;
         cout << "z = " << z_best << endl;
         cout << "x = " << x_best << endl;
