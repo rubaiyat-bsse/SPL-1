@@ -8,6 +8,10 @@ typedef struct Item{
     int weight, value;
 };
 
+//greedy lower bound for a good start
+pair<double, vector<int>> getInitialSolution(vector<Item> items, int C){
+    for()
+}
 
 vector<int> lagrangian(vector<Item> items, int C){
 
@@ -74,12 +78,22 @@ vector<int> lagrangian(vector<Item> items, int C){
 
 
 int main(){
+    // int N, C;
+    // cin>>N>>C;   
+    // vector<Item> items(N);
+    // for(int i=0; i<N; i++){
+    //     int value, weight;
+    //     cin>>value>>weight;
+    //     items[i].value = value;
+    //     items[i].weight = weight;
+    // }
+
     vector<Item> items = {
-        {2, 10},
-        {4, 18},
-        {3, 12},
-        {5, 15},
-        {1, 2}
+        {2, 10}, // Index 0
+        {4, 18}, // Index 1
+        {3, 12}, // Index 2
+        {5, 15}, // Index 3
+        {1, 2}   // Index 4
     };
     double C = 10;
 

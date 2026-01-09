@@ -17,7 +17,7 @@ int main(int argc, char *argv[]){
     int N = stoi(argv[1]);
     int W = stoi(argv[2]);
 
-    char* outputFilename = "knapsack_input.txt"; 
+    char* outputFilename = "data/lagrange_input.txt";
 
     srand(time(0));
 
