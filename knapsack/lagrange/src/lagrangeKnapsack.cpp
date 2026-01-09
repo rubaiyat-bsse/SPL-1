@@ -113,6 +113,36 @@ vector<int> lagrangian(vector<Item>items, int C){
 
 }
 
+void printSolution(const vector<int>& solution, const vector<Item>& items){
+    
+    cout << endl
+         << left
+         << setw(8)  << "ID"
+         << setw(10) << "Weight"
+         << setw(10) << "Value"
+         << "\n";
+    cout<<"--------------------------"<<endl;
+
+    int totalWeight = 0;
+    int totalValue = 0;
+
+    for(int id:solution){
+        cout << left
+             << setw(8) << items[id].id
+             << setw(10) << items[id].weight
+             << setw(10) << items[id].value
+             << "\n";
+
+        totalWeight += items[id].weight;
+        totalValue += items[id].value;
+    }
+    cout<<"--------------------------"<<endl;
+    cout << left
+         << setw(8) << "TOTAL"
+         << setw(10) << totalWeight
+         << setw(10) << totalValue
+         << "\n";
+}
 
 int main(){
     int n,C;
@@ -129,10 +159,9 @@ int main(){
     }
 
     vector<int> solutionVector = lagrangian(items, C);
+    sort(solutionVector.begin(), solutionVector.end()); //for cleaner output
 
-    for(int i=0; i<solutionVector.size(); i++){
-        cout<< solutionVector[i] <<" ";
-    }
+    printSolution(solutionVector, items);
     cout<<endl;
     return 0;
 
