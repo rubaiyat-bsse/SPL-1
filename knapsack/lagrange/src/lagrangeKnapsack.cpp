@@ -44,6 +44,32 @@ double polyakStepSize(double currentDualValue, double lowerBound, double subgrad
     
 }
 
+// void logIteration(
+//     int iter,
+//     double lambda,
+//     double dual,
+//     double primal,
+//     double LB,
+//     double UB,
+//     double gap,
+//     double step,
+//     double subgrad
+// ){
+//     cout << left
+//          << setw(8)  << "iter"
+//          << setw(10) << "lambda"
+//          << setw(10) << "dual"
+//          << setw(10) << "primal"
+//          << setw(10) << "LB"
+//          << setw(10) << "UB"
+//          << setw(10) << "gap"
+//          << setw(10) << "step"
+//          << setw(10) << "subgrad"
+//          << "\n";
+
+    
+// }
+
 vector<int> lagrangian(vector<Item>items, int C){
 
     double lambda =0.0;
