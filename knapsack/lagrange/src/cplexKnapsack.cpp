@@ -38,20 +38,40 @@ int main(){
         cplex.setOut(env.getNullStream());
 
         cplex.solve();
+        
+        auto status = cplex.getStatus();
 
-        cout<<"Optimal value: "<<fixed<<setprecision(0) <<cplex.getObjValue() <<endl;
-        cout<<"Selected items: "<<endl;
-        cout<<"ID\tWeight\tValue\n";
+        cout<<"Cplex Status: "<<status<<endl;
+        cout<<"MIP gap: "<<cplex.getMIPRelativeGap()<<endl;
+        
+        cout<<"\nSelected items: "<<endl;
+        cout << endl
+         << left
+         << setw(8)  << "ID"
+         << setw(10) << "Weight"
+         << setw(10) << "Value"
+         << "\n";
+        cout<<"--------------------------"<<endl;
 
         double totalWeight=0;
 
         for(int i=0; i<n; i++){
             if(cplex.getValue(x[i])>0.5){
-                cout<<i<<"\t"<<weight[i]<<"\t"<<value[i]<<"\n";
+                cout << left
+                     << setw(8) << i
+                     << setw(10) << weight[i]
+                     << setw(10) << value[i]
+                     << endl;                
                 totalWeight+=weight[i];
             } 
         }
-        cout<<"Total weight: "<<totalWeight<<endl;
+        cout<<"--------------------------"<<endl;
+        cout << left
+         << setw(8) << "TOTAL"
+         << setw(10) << totalWeight
+         << setw(10) << cplex.getObjValue()
+         << "\n";
+        
     }
     catch(IloException& e){
         cerr<< e <<endl;

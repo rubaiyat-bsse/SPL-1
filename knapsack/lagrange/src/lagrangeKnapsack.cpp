@@ -44,31 +44,52 @@ double polyakStepSize(double currentDualValue, double lowerBound, double subgrad
     
 }
 
-// void logIteration(
-//     int iter,
-//     double lambda,
-//     double dual,
-//     double primal,
-//     double LB,
-//     double UB,
-//     double gap,
-//     double step,
-//     double subgrad
-// ){
-//     cout << left
-//          << setw(8)  << "iter"
-//          << setw(10) << "lambda"
-//          << setw(10) << "dual"
-//          << setw(10) << "primal"
-//          << setw(10) << "LB"
-//          << setw(10) << "UB"
-//          << setw(10) << "gap"
-//          << setw(10) << "step"
-//          << setw(10) << "subgrad"
-//          << "\n";
+void logIteration(
+    int iter,
+    double lambda,
+    double dual,
+    double primal,
+    double LB,
+    double UB,
+    double gap,
+    double step,
+    double subgrad
+){
+    static bool headerPrinted = false;
 
+    ofstream logFile("iterationLog.txt", ios::app);
+    if(!logFile) return;
     
-// }
+    if(!headerPrinted){
+        logFile << left
+                << setw(6)  << "iter"
+                << setw(15) << "lambda"
+                << setw(15) << "dual"
+                << setw(15) << "primal"
+                << setw(15) << "LB"
+                << setw(15) << "UB"
+                << setw(15) << "gap"
+                << setw(15) << "step"
+                << setw(15) << "subgrad"
+                << "\n";
+        logFile << string(100, '-') << "\n";
+        headerPrinted = true;
+    }
+
+    logFile << left
+            << setw(6)  << iter
+            << setw(15) << lambda
+            << setw(15) << dual
+            << setw(15) << primal
+            << setw(15) << LB
+            << setw(15) << UB
+            << setw(15) << gap
+            << setw(15) << step
+            << setw(15) << subgrad
+            << "\n";
+    
+    logFile.close(); 
+}
 
 vector<int> lagrangian(vector<Item>items, int C){
 
@@ -79,7 +100,7 @@ vector<int> lagrangian(vector<Item>items, int C){
 
     double bestLowerBound = initialData.first;
     double bestUpperBound = DBL_MAX;
-    double stepSize;
+    double stepSize = 0.0;
     vector<int> bestSolutionIndex=initialData.second;
 
     for(int I=0; I<MAX_ITERATION; I++){
@@ -133,8 +154,8 @@ vector<int> lagrangian(vector<Item>items, int C){
         
         lambda = max(0.0, lambda-stepSize*subgradient);
 
+        logIteration(I, lambda, currentUpperBound, primalValue, bestLowerBound, bestUpperBound, dualityGap, stepSize, subgradient);
     }
-
     return bestSolutionIndex;
 
 }
@@ -158,6 +179,8 @@ void printSolution(const vector<int>& solution, const vector<Item>& items){
              << setw(10) << items[id].weight
              << setw(10) << items[id].value
              << "\n";
+        
+        // cout<<items[id].id<<" ";
 
         totalWeight += items[id].weight;
         totalValue += items[id].value;
@@ -171,6 +194,7 @@ void printSolution(const vector<int>& solution, const vector<Item>& items){
 }
 
 int main(){
+    ofstream("iterationLog.txt", ios::trunc).close();
     int n,C;
     cin>>n>>C;
     vector<Item> items(n);
