@@ -94,13 +94,13 @@ void logIteration(
 vector<int> lagrangian(vector<Item>items, int C){
 
     double lambda =0.0;
-
-    //initalize best lower bound with greedy
+    
     auto initialData = initialGreedyData(items, C);
 
     double bestLowerBound = initialData.first;
     double bestUpperBound = DBL_MAX;
     double stepSize = 0.0;
+
     vector<int> bestSolutionIndex=initialData.second;
 
     for(int I=0; I<MAX_ITERATION; I++){
