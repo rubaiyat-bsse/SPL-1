@@ -7,9 +7,9 @@
 using namespace std;
 
 #define WEIGHT_MIN 1      //min weight of each individual item
-#define WEIGHT_MAX 1000
+#define WEIGHT_MAX 100
 #define VALUE_MIN 1
-#define VALUE_MAX 1000
+#define VALUE_MAX 100
 
 int main(int argc, char *argv[]){
     if(argc!=3) return 1;
