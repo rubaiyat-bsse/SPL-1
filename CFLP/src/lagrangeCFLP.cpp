@@ -13,7 +13,12 @@ struct Customer{
     double d;
 };
 
-double polyakStepSize(double UB, double LB, vector<double>&g){}
+double polyakStepSize(double UB, double LB, vector<double>&g){
+    double norm=0;
+    for(double v:g) norm+=v*v;
+    if(norm==0) return 0;
+    return (UB-LB)/norm;
+}
 
 int main(){
 
@@ -24,6 +29,8 @@ int main(){
     vector<Facility> facilities(m);
 
     for(int i=0; i<n; i++) cin>>customers[i].d;
+
+    for(int j=0; j<m; j++) cin>>facilities[j].f;
 
     for(int j=0; j<m; j++) cin>>facilities[j].M;
 
@@ -54,6 +61,8 @@ int main(){
         }
 
         // assignment subproblem
+        
+        vector<vector<double>> x(n, vector<double>(m,0));
 
         for(int i=0; i<n; i++){
             int bestJ=0;
