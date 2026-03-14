@@ -4,21 +4,21 @@
 ILOSTLBEGIN
 
 int main(){
-    int J, I;
-    cin>>J>>I;
+    int I, J;
+    cin>>I>>J;
 
     vector<double> d(I);
     vector<double> M(J);
     vector<double> f(J);
-    vector<vector<double>> c(J, vector<double>(I));
+    vector<vector<double>> c(I, vector<double>(J));
 
     for(int i=0; i<I; i++) cin>>d[i];
-    for(int i=0; i<J; i++) cin>>M[i];   
-    for(int i=0; i<J; i++) cin>>f[i];
+    for(int j=0; j<J; j++) cin>>f[j];
+    for(int j=0; j<J; j++) cin>>M[j];
 
-    for(int j=0; j<J; j++)
-        for(int i=0; i<I; i++)
-            cin>>c[j][i];
+    for(int i=0; i<I; i++)
+        for(int j=0; j<J; j++)
+            cin>>c[i][j];
 
     IloEnv env;
     try{
@@ -35,7 +35,7 @@ int main(){
         for(int j=0; j<J; j++){
             obj+=f[j]*y[j];
             for(int i=0; i<I; i++){
-                obj+=c[j][i]*x[j][i];
+                obj+=c[i][j]*x[j][i];
             }
         }
         model.add(IloMinimize(env, obj));
