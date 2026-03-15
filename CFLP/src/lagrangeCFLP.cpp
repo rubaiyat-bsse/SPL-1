@@ -28,6 +28,54 @@ double polyakStepSize(double UB, double LB, const vector<double>& g){
     return (UB-LB)/norm;
 }
 
+void writeCSV(const string& filename, const vector<string>& row, bool append = true){
+    ofstream file;
+    if(append){
+        file.open(filename, ios::app);
+    }
+    else{
+        file.open(filename, ios::trunc);
+    }
+
+    if(!file.is_open()) return;
+
+    for(size_t i = 0; i < row.size(); i++) {
+        file << row[i];
+        if(i != row.size()-1) {
+            file << ",";
+        }
+    }
+    file << "\n";
+    file.close();
+}
+
+void logIteration(
+    int iter,
+    double L,
+    double primal,
+    double LB,
+    double UB,
+    double gap,
+    double step
+){
+    static bool headerPrinted = false;
+
+    if(!headerPrinted){
+        writeCSV("out/lagrange_log.csv", {"iter", "lagrangian", "primal", "LB", "UB", "gap", "step"}, false);
+        headerPrinted = true;
+    }
+
+    writeCSV("out/lagrange_log.csv", {
+        to_string(iter),
+        to_string(L),
+        to_string(primal),
+        to_string(LB),
+        to_string(UB),
+        to_string(gap),
+        to_string(step)
+    });
+}
+
 vector<int> solveFacilitySubproblem(const vector<Facility>& facilities, const vector<double>& lambda){
     int m = facilities.size();
     vector<int> y(m, 0);
@@ -218,7 +266,13 @@ RelaxationResult lagrangeRelaxation(
     vector<int> bestY(m, 0);
     vector<vector<double>> bestX(n, vector<double>(m, 0));
 
-    ofstream logFile("out/lagrange_log.txt");
+    // clear previous log file on new run
+    ofstream("out/lagrange_log.txt", ios::trunc).close();
+
+    double prevLB = LB;
+    double prevUB = UB;
+    int noChangeCount = 0;
+    const int MAX_NO_CHANGE = 5;
 
     for(int iter=0; iter<MAX_ITERATION; iter++){
         vector<int> y = solveFacilitySubproblem(facilities, lambda);
@@ -232,45 +286,49 @@ RelaxationResult lagrangeRelaxation(
         const vector<vector<double>>& xRepair = repaired.second;
 
         double primal = computePrimalValue(facilities, c, yRepair, xRepair);
-        if (primal < UB) {
+        if (primal < UB){
             UB = primal;
             bestY = yRepair;
             bestX = xRepair;
         }
 
-        if(logFile.is_open()){
-            logFile << "Iteration " << iter << ": Lower Bound = " << LB << ", Upper Bound = " << UB << "\n";
-        }
-
         double gap = (UB-LB)/UB;
-        if(gap < THRESHOLD) break;
 
         vector<double> g = computeSubgradient(facilities, y, x);
         double step = polyakStepSize(UB, LB, g);
+        
+        logIteration(iter, L, primal, LB, UB, gap, step);
+
+        if(gap < THRESHOLD) break;
+        
+        // early stopping check
+        if(abs(LB - prevLB) < 1e-6 && abs(UB - prevUB) < 1e-6){
+            noChangeCount++;
+            if (noChangeCount >= MAX_NO_CHANGE) {
+                writeCSV("out/lagrange_log.csv", {"Stopping early: No change in bounds for " + to_string(MAX_NO_CHANGE) + " consecutive iterations."});
+                break;
+            }
+        }
+        else{
+            noChangeCount = 0;
+        }
+        
+        prevLB = LB;
+        prevUB = UB;
+
         updateLambda(lambda, step, g);
     }
-
-    if (logFile.is_open()) logFile.close();
 
     return {LB, UB, lambda, bestY, bestX};
 }
 
 void printFinalResult(const RelaxationResult& result, int n, int m, const vector<Facility>& facilities, const vector<vector<double>>& c) {
-    ofstream outFile("out/lagrangeOutput.txt");
-    if (!outFile.is_open()) {
-        cerr << "Error: Could not open out/lagrangeOutput.txt for writing.\n";
-        return;
-    }
+    string outFile = "out/lagrangeOutput.csv";
+    writeCSV(outFile, {"Optimal Objective Value (Upper Bound)", to_string(result.UB)}, false);
+    writeCSV(outFile, {});
 
-    outFile << "Optimal Objective Value (Upper Bound) = " << result.UB << "\n";
-    outFile << "Opened facilities:\n";
-    for (int j = 0; j < m; j++) {
-        if (result.bestY[j] > 0) {
-            outFile << "Facility " << j << " opened\n";
-        }
-    }
-
-    outFile << "\nFacility Load and Cost Details:\n";
+    writeCSV(outFile, {"Facility Load and Cost Details:"});
+    writeCSV(outFile, {"Facility ID", "Opened", "Load", "Capacity", "Total Cost (Fixed + Routing)"});
     for (int j = 0; j < m; j++) {
         if (result.bestY[j] > 0) {
             double load = 0;
@@ -281,21 +339,22 @@ void printFinalResult(const RelaxationResult& result, int n, int m, const vector
                     cost += c[i][j] * result.bestX[i][j];
                 }
             }
-            outFile << "Facility " << j << " -> Load: " << load << " / " << facilities[j].M << ", Total Cost (Fixed + Routing): " << cost << "\n";
+            writeCSV(outFile, {to_string(j), "Yes", to_string(load), to_string(facilities[j].M), to_string(cost)});
         }
     }
 
-    outFile << "\nAssignments (x[j][i]):\n";
+    writeCSV(outFile, {});
+    writeCSV(outFile, {"Assignments (x[j][i]):"});
+    writeCSV(outFile, {"Facility ID (j)", "Customer ID (i)", "Assignment Value"});
     for (int j = 0; j < m; j++) {
         for (int i = 0; i < n; i++) {
             if (result.bestX[i][j] > 1e-6) {
-                outFile << "x[" << j << "][" << i << "] = " << result.bestX[i][j] << "\n";
+                writeCSV(outFile, {to_string(j), to_string(i), to_string(result.bestX[i][j])});
             }
         }
     }
     
-    outFile.close();
-    cout << "Final results successfully written to out/lagrangeOutput.txt\n";
+    cout << "Final results successfully written to " << outFile << "\n";
 }
 
 int main(){
