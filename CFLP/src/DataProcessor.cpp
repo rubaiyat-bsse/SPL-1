@@ -53,7 +53,7 @@ vector<City> parseCSV(const string& filename){
     return cities;
 }
 
-vector<Facility> selectFacilities(const vector<City>& allCities, unsigned int seed){
+vector<Facility> selectFacilities(const vector<City>& allCities){
     vector<City> potentials;
     
     // filter by capital status
@@ -63,18 +63,9 @@ vector<Facility> selectFacilities(const vector<City>& allCities, unsigned int se
         }
     }
 
-    // shuffle using rand()
-    if(seed != 0){
-        srand(seed);
-    }
-    else{
-        static bool seeded = false;
-        if (!seeded) {
-            srand(time(NULL));
-            seeded = true;
-        }
-    }
+    srand(time(NULL));
 
+    // fisher-yates shuffle
     for(int i = potentials.size() - 1; i > 0; i--){
         int j = rand() % (i + 1);
         swap(potentials[i], potentials[j]);
@@ -95,20 +86,11 @@ vector<Facility> selectFacilities(const vector<City>& allCities, unsigned int se
     return facilities;
 }
 
-vector<Customer> selectCustomers(const vector<City>& allCities, unsigned int seed){
+vector<Customer> selectCustomers(const vector<City>& allCities){
     vector<City> potentials = allCities;
     
-    // 1. Shuffle using rand()
-    if(seed != 0){
-        srand(seed);
-    }
-    else{
-        static bool seeded = false;
-        if(!seeded){
-            srand(time(NULL));
-            seeded = true;
-        }
-    }
+    // useing a different seed offset to avoid identical shuffles if called in the same second
+    srand(time(NULL) + 12345);
 
     for(int i = potentials.size() - 1; i > 0; i--){
         int j = rand() % (i + 1);

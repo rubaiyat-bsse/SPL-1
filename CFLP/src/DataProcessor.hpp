@@ -27,8 +27,8 @@ struct Customer {
 
 std::vector<City> parseCSV(const std::string& filename);
 
-std::vector<Facility> selectFacilities(const std::vector<City>& allCities, unsigned int seed = 0);
+std::vector<Facility> selectFacilities(const std::vector<City>& allCities);
 
-std::vector<Customer> selectCustomers(const std::vector<City>& allCities, unsigned int seed = 0);
+std::vector<Customer> selectCustomers(const std::vector<City>& allCities);
 
 #endif
