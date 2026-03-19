@@ -1,17 +1,11 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
+#include "DataProcessor.hpp"
+#include "ParameterGenerator.hpp"
+
 using namespace std;
 
 #define MAX_ITERATION 200
 #define THRESHOLD 1e-4
-
-struct Facility{
-    double f;
-    double M;
-};
-
-struct Customer{
-    double d;
-};
 
 struct RelaxationResult{
     double LB;
@@ -267,7 +261,7 @@ RelaxationResult lagrangeRelaxation(
     vector<vector<double>> bestX(n, vector<double>(m, 0));
 
     // clear previous log file on new run
-    ofstream("out/lagrange_log.txt", ios::trunc).close();
+    ofstream("out/lagrange_log.csv", ios::trunc).close();
 
     double prevLB = LB;
     double prevUB = UB;
@@ -322,13 +316,16 @@ RelaxationResult lagrangeRelaxation(
     return {LB, UB, lambda, bestY, bestX};
 }
 
-void printFinalResult(const RelaxationResult& result, int n, int m, const vector<Facility>& facilities, const vector<vector<double>>& c) {
+void printFinalResult(const RelaxationResult& result, const vector<Customer>& customers, const vector<Facility>& facilities, const vector<vector<double>>& c) {
+    int n = customers.size();
+    int m = facilities.size();
+    
     string outFile = "out/lagrangeOutput.csv";
     writeCSV(outFile, {"Optimal Objective Value (Upper Bound)", to_string(result.UB)}, false);
     writeCSV(outFile, {});
 
     writeCSV(outFile, {"Facility Load and Cost Details:"});
-    writeCSV(outFile, {"Facility ID", "Opened", "Load", "Capacity", "Total Cost (Fixed + Routing)"});
+    writeCSV(outFile, {"Facility ID", "City", "Opened", "Load", "Capacity", "Total Cost (Fixed + Routing)"});
     for (int j = 0; j < m; j++) {
         if (result.bestY[j] > 0) {
             double load = 0;
@@ -339,17 +336,17 @@ void printFinalResult(const RelaxationResult& result, int n, int m, const vector
                     cost += c[i][j] * result.bestX[i][j];
                 }
             }
-            writeCSV(outFile, {to_string(j), "Yes", to_string(load), to_string(facilities[j].M), to_string(cost)});
+            writeCSV(outFile, {to_string(j), facilities[j].city.name, "Yes", to_string(load), to_string(facilities[j].M), to_string(cost)});
         }
     }
 
     writeCSV(outFile, {});
     writeCSV(outFile, {"Assignments (x[j][i]):"});
-    writeCSV(outFile, {"Facility ID (j)", "Customer ID (i)", "Assignment Value"});
+    writeCSV(outFile, {"Facility ID (j)", "Facility City", "Customer ID (i)", "Customer City", "Assignment Value"});
     for (int j = 0; j < m; j++) {
         for (int i = 0; i < n; i++) {
             if (result.bestX[i][j] > 1e-6) {
-                writeCSV(outFile, {to_string(j), to_string(i), to_string(result.bestX[i][j])});
+                writeCSV(outFile, {to_string(j), facilities[j].city.name, to_string(i), customers[i].city.name, to_string(result.bestX[i][j])});
             }
         }
     }
@@ -358,29 +355,35 @@ void printFinalResult(const RelaxationResult& result, int n, int m, const vector
 }
 
 int main(){
+    srand(time(NULL));
 
-    int n, m;
-    cin>>n>>m;
-
-    vector<Customer> customers(n);
-    vector<Facility> facilities(m);
-
-    for(int i=0; i<n; i++) cin>>customers[i].d;
-
-    for(int j=0; j<m; j++) cin>>facilities[j].f;
-
-    for(int j=0; j<m; j++) cin>>facilities[j].M;
-
-    vector<vector<double>> c(n, vector<double>(m));
-
-    for(int i=0; i<n; i++){
-        for(int j=0; j<m; j++){
-            cin>>c[i][j];
-        }
+    // process Data
+    string csvPath = "data/bd_cities.csv";
+    vector<City> allCities = parseCSV(csvPath);
+    if(allCities.empty()) {
+        cerr << "Failed to parse cities or file is empty.\n";
+        return 1;
     }
 
+    vector<Facility> facilities = selectFacilities(allCities);
+    vector<Customer> customers = selectCustomers(allCities);
+
+    // generate Parameters
+    generateCustomerParameters(customers);
+    generateFacilityParameters(facilities, customers);
+
+    double costPerKm = 10.0;    // assume
+    vector<vector<double>> c = generateCostMatrix(customers, facilities, costPerKm);
+
+    int n = customers.size();
+    int m = facilities.size();
+
+    cout << "Loaded " << n << " customers and " << m << " facilities.\n";
+    cout << "Running Lagrangian Relaxation Solver...\n";
+
     RelaxationResult result = lagrangeRelaxation(customers, facilities, c);
-    printFinalResult(result, n, m, facilities, c);
+    
+    printFinalResult(result, customers, facilities, c);
 
     return 0;
 }
