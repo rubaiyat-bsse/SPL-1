@@ -1,46 +1,45 @@
-Optimal Objective Value (Upper Bound),534973611.537839
+Optimal Objective Value (Upper Bound),123790986.419467
 
 Facility Load and Cost Details:
 Facility ID,City,Opened,Load,Capacity,Total Cost (Fixed + Routing)
-0,Rajshahi,Yes,13350.000000,10799.400000,10819918.757178
-1,Khulna,Yes,20854.000000,22887.750000,2145216.459323
-2,Gaibandha,Yes,2378.000000,3580.500000,2374492.881279
-3,Naogaon,Yes,13280.000000,10799.400000,9723175.398257
-4,Sylhet,Yes,2859.000000,3042.000000,3630158.400486
-5,Barishal,Yes,426352.000000,885.000000,485093446.918028
-6,Rangpur,Yes,1203.000000,3580.500000,1329970.140718
-7,Chattogram,Yes,19081.000000,9303.272727,19857232.582572
+0,Mymensingh,Yes,13934.000000,34611.000000,2036803.231201
+1,Dhaka,Yes,22340.000000,3785.000000,16614454.994385
+3,Gaibandha,Yes,1181.000000,10611.000000,1000000.000000
+4,Khulna,Yes,12193.000000,8955.500000,9248178.837320
+5,Rangpur,Yes,5893.000000,10611.000000,1000000.000000
+6,Rajshahi,Yes,7694.000000,5377.500000,6343425.372060
+7,Barishal,Yes,60587.000000,6174.000000,87548123.984501
 
 Assignments (x[j][i]):
 Facility ID (j),Facility City,Customer ID (i),Customer City,Assignment Value
-0,Rajshahi,14,Pabna,3812.000000
-0,Rajshahi,20,Kushtia,8366.000000
-0,Rajshahi,30,Raharpur,1172.000000
-1,Khulna,18,Satkhira,2268.000000
-1,Khulna,24,Khulna,18586.000000
-2,Gaibandha,0,Phulpur,504.000000
-2,Gaibandha,4,Gaibandha,1184.000000
-2,Gaibandha,22,Hatibanda,690.000000
-3,Naogaon,6,Sherpur,1025.000000
-3,Naogaon,8,Dhubaria,265.000000
-3,Naogaon,27,Naogaon,2996.000000
-3,Naogaon,29,Sirajganj,8994.000000
-4,Sylhet,5,Sunamganj,1014.000000
-4,Sylhet,13,Netrakona,1845.000000
-5,Barishal,1,Brahmanpara,4100.000000
-5,Barishal,2,Maijdi,2620.000000
-5,Barishal,3,Savar,7674.000000
-5,Barishal,7,Dhaka,382690.000000
-5,Barishal,10,Patuakhali,1297.000000
-5,Barishal,11,Barura,8100.000000
-5,Barishal,12,Faradabad,211.000000
-5,Barishal,21,Baisari,295.000000
-5,Barishal,25,Narayanganj,19365.000000
-6,Rangpur,23,Lalmanirhat,1203.000000
-7,Chattogram,9,Parsuram,594.000000
-7,Chattogram,15,Chandanais,712.000000
-7,Chattogram,16,Chauddagram,8869.000000
-7,Chattogram,17,Dohazari,809.000000
-7,Chattogram,19,Nakhyaungcharipara,1237.000000
-7,Chattogram,26,Cox's Bazar,4470.000000
-7,Chattogram,28,Fulgazi,2390.000000
+0,Mymensingh,9,Sakhipur,468.000000
+0,Mymensingh,15,Arankhola,1187.000000
+0,Mymensingh,16,Kalihati,742.000000
+0,Mymensingh,22,Mymensingh,11537.000000
+1,Dhaka,3,Sripur,2657.000000
+1,Dhaka,4,Shahbazpur,430.000000
+1,Dhaka,6,Faridpur,2426.000000
+1,Dhaka,12,Brahmanbaria,5363.000000
+1,Dhaka,13,Bharella,900.000000
+1,Dhaka,14,Parsuram,591.000000
+1,Dhaka,17,Dhubaria,256.000000
+1,Dhaka,23,Brahmanpara,4092.000000
+1,Dhaka,25,Banchpar,4840.000000
+1,Dhaka,26,Faradabad,209.000000
+1,Dhaka,29,Mirzapur,576.000000
+3,Gaibandha,18,Gaibandha,1181.000000
+4,Khulna,2,Satkhira,2263.000000
+4,Khulna,7,Jhenida,5042.000000
+4,Khulna,30,Jessore,4888.000000
+5,Rangpur,5,Rangpur,5893.000000
+6,Rajshahi,11,Harinakunda,358.000000
+6,Rajshahi,20,Chuadanga,4493.000000
+6,Rajshahi,27,Nawabganj,2843.000000
+7,Barishal,0,Char Fasson,867.000000
+7,Barishal,1,Pirojpur,1205.000000
+7,Barishal,8,Bhandaria,2911.000000
+7,Barishal,10,Chattogram,51623.000000
+7,Barishal,19,Chhagalnaiya,960.000000
+7,Barishal,21,Maijdi,2611.000000
+7,Barishal,24,Fatikchari,204.000000
+7,Barishal,28,Latifpur,206.000000

@@ -27,6 +27,8 @@ struct Customer {
 
 std::vector<City> parseCSV(const std::string& filename);
 
+void writeCSV(const std::string& filename, const std::vector<std::string>& row, bool append = true);
+
 std::vector<Facility> selectFacilities(const std::vector<City>& allCities);
 
 std::vector<Customer> selectCustomers(const std::vector<City>& allCities);

@@ -22,27 +22,6 @@ double polyakStepSize(double UB, double LB, const vector<double>& g){
     return (UB-LB)/norm;
 }
 
-void writeCSV(const string& filename, const vector<string>& row, bool append = true){
-    ofstream file;
-    if(append){
-        file.open(filename, ios::app);
-    }
-    else{
-        file.open(filename, ios::trunc);
-    }
-
-    if(!file.is_open()) return;
-
-    for(size_t i = 0; i < row.size(); i++) {
-        file << row[i];
-        if(i != row.size()-1) {
-            file << ",";
-        }
-    }
-    file << "\n";
-    file.close();
-}
-
 void logIteration(
     int iter,
     double L,
