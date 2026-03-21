@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+  <name>Optimized CFLP Solution</name>
+  <Style id="facilityStyle">
+    <IconStyle>
+      <color>ff0000ff</color>
+      <scale>1.5</scale>
+      <Icon><href>http://maps.google.com/mapfiles/kml/pushpin/red-pushpin.png</href></Icon>
+    </IconStyle>
+  </Style>
+  <Style id="customerStyle">
+    <IconStyle>
+      <color>ffff0000</color>
+      <scale>1.0</scale>
+      <Icon><href>http://maps.google.com/mapfiles/kml/pushpin/blue-pushpin.png</href></Icon>
+    </IconStyle>
+  </Style>
+  <Style id="lineStyle">
+    <LineStyle>
+      <color>7f00ff00</color>
+      <width>2</width>
+    </LineStyle>
+  </Style>
+  <Placemark>
+    <name>Warehouse 0: Mymensingh</name>
+    <styleUrl>#facilityStyle</styleUrl>
+    <description>
+      Capacity: 0
+      Fixed Cost: 1e+06
+    </description>
+    <Point>
+      <coordinates>90.38,24.7504,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Warehouse 1: Rangpur</name>
+    <styleUrl>#facilityStyle</styleUrl>
+    <description>
+      Capacity: 12366
+      Fixed Cost: 1e+06
+    </description>
+    <Point>
+      <coordinates>89.2444,25.75,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Warehouse 2: Naogaon</name>
+    <styleUrl>#facilityStyle</styleUrl>
+    <description>
+      Capacity: 11465.5
+      Fixed Cost: 1e+06
+    </description>
+    <Point>
+      <coordinates>88.947,24.8118,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Warehouse 3: Khulna</name>
+    <styleUrl>#facilityStyle</styleUrl>
+    <description>
+      Capacity: 34581
+      Fixed Cost: 1e+06
+    </description>
+    <Point>
+      <coordinates>89.55,22.8167,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Warehouse 4: Chattogram</name>
+    <styleUrl>#facilityStyle</styleUrl>
+    <description>
+      Capacity: 4960.88
+      Fixed Cost: 1e+06
+    </description>
+    <Point>
+      <coordinates>91.8325,22.335,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Warehouse 6: Sylhet</name>
+    <styleUrl>#facilityStyle</styleUrl>
+    <description>
+      Capacity: 2454
+      Fixed Cost: 1e+06
+    </description>
+    <Point>
+      <coordinates>91.8667,24.9,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Warehouse 7: Rajshahi</name>
+    <styleUrl>#facilityStyle</styleUrl>
+    <description>
+      Capacity: 11465.5
+      Fixed Cost: 1e+06
+    </description>
+    <Point>
+      <coordinates>88.6,24.3667,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Customer 0: Mathba</name>
+    <styleUrl>#customerStyle</styleUrl>
+    <description>Demand: 587</description>
+    <Point>
+      <coordinates>89.9588,22.2862,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Customer 1: Dinajpur</name>
+    <styleUrl>#customerStyle</styleUrl>
+    <description>Demand: 4122</description>
+    <Point>
+      <coordinates>88.65,25.63,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Customer 2: Rajshahi</name>
+    <styleUrl>#customerStyle</styleUrl>
+    <description>Demand: 8957</description>
+    <Point>
+      <coordinates>88.6,24.3667,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Customer 3: Kishmat Dhanbari</name>
+    <styleUrl>#customerStyle</styleUrl>
+    <description>Demand: 714</description>
+    <Point>
+      <coordinates>90.025,24.6167,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Customer 4: Bogra</name>
+    <styleUrl>#customerStyle</styleUrl>
+    <description>Demand: 8013</description>
+    <Point>
+      <coordinates>89.3711,24.851,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Customer 5: Arankhola</name>
+    <styleUrl>#customerStyle</styleUrl>
+    <description>Demand: 1188</description>
+    <Point>
+      <coordinates>90.0806,24.6928,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Customer 6: Dohazari</name>
+    <styleUrl>#customerStyle</styleUrl>
+    <description>Demand: 808</description>
+    <Point>
+      <coordinates>92.0733,22.1639,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Customer 7: Gopalganj</name>
+    <styleUrl>#customerStyle</styleUrl>
+    <description>Demand: 1027</description>
+    <Point>
+      <coordinates>89.8167,23,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Customer 8: Pirojpur</name>
+    <styleUrl>#customerStyle</styleUrl>
+    <description>Demand: 1207</description>
+    <Point>
+      <coordinates>89.9752,22.5796,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Customer 9: Maulavi Bazar</name>
+    <styleUrl>#customerStyle</styleUrl>
+    <description>Demand: 818</description>
+    <Point>
+      <coordinates>91.7708,24.4889,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Customer 10: Barishal</name>
+    <styleUrl>#customerStyle</styleUrl>
+    <description>Demand: 4600</description>
+    <Point>
+      <coordinates>90.3667,22.7,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Customer 11: Tangail</name>
+    <styleUrl>#customerStyle</styleUrl>
+    <description>Demand: 7847</description>
+    <Point>
+      <coordinates>89.92,24.25,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Customer 12: Gazipura</name>
+    <styleUrl>#customerStyle</styleUrl>
+    <description>Demand: 53484</description>
+    <Point>
+      <coordinates>90.3959,23.9234,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Customer 13: Sherpur</name>
+    <styleUrl>#customerStyle</styleUrl>
+    <description>Demand: 1043</description>
+    <Point>
+      <coordinates>89.4159,24.6765,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Customer 14: Sakhipur</name>
+    <styleUrl>#customerStyle</styleUrl>
+    <description>Demand: 475</description>
+    <Point>
+      <coordinates>90.1694,24.3199,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Customer 15: Gopalpur</name>
+    <styleUrl>#customerStyle</styleUrl>
+    <description>Demand: 1011</description>
+    <Point>
+      <coordinates>89.9218,24.5601,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Customer 16: Barura</name>
+    <styleUrl>#customerStyle</styleUrl>
+    <description>Demand: 8108</description>
+    <Point>
+      <coordinates>91.0484,23.3683,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Customer 17: Jagatpur</name>
+    <styleUrl>#customerStyle</styleUrl>
+    <description>Demand: 404</description>
+    <Point>
+      <coordinates>90.766,23.6075,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Customer 18: Majidpur</name>
+    <styleUrl>#customerStyle</styleUrl>
+    <description>Demand: 615</description>
+    <Point>
+      <coordinates>90.7684,23.5797,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Customer 19: Panchari Bazar</name>
+    <styleUrl>#customerStyle</styleUrl>
+    <description>Demand: 1250</description>
+    <Point>
+      <coordinates>91.9027,23.2867,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Customer 20: Naogaon</name>
+    <styleUrl>#customerStyle</styleUrl>
+    <description>Demand: 3006</description>
+    <Point>
+      <coordinates>88.947,24.8118,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Customer 21: Mirzapur</name>
+    <styleUrl>#customerStyle</styleUrl>
+    <description>Demand: 578</description>
+    <Point>
+      <coordinates>90.0984,24.1029,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Customer 22: Chuadanga</name>
+    <styleUrl>#customerStyle</styleUrl>
+    <description>Demand: 4486</description>
+    <Point>
+      <coordinates>88.8577,23.6418,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Customer 23: Savar</name>
+    <styleUrl>#customerStyle</styleUrl>
+    <description>Demand: 7682</description>
+    <Point>
+      <coordinates>90.2577,23.8482,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Customer 24: Chhagalnaiya</name>
+    <styleUrl>#customerStyle</styleUrl>
+    <description>Demand: 954</description>
+    <Point>
+      <coordinates>91.5109,23.0248,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Customer 25: Raharpur</name>
+    <styleUrl>#customerStyle</styleUrl>
+    <description>Demand: 1180</description>
+    <Point>
+      <coordinates>88.325,24.8194,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Customer 26: Khulna</name>
+    <styleUrl>#customerStyle</styleUrl>
+    <description>Demand: 18568</description>
+    <Point>
+      <coordinates>89.55,22.8167,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Customer 27: Bhandaria</name>
+    <styleUrl>#customerStyle</styleUrl>
+    <description>Demand: 2894</description>
+    <Point>
+      <coordinates>90.0627,22.489,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Customer 28: Kalihati</name>
+    <styleUrl>#customerStyle</styleUrl>
+    <description>Demand: 732</description>
+    <Point>
+      <coordinates>89.9833,24.3833,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Customer 29: Daganbhuiya</name>
+    <styleUrl>#customerStyle</styleUrl>
+    <description>Demand: 664</description>
+    <Point>
+      <coordinates>91.3036,22.9366,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Customer 30: Sonagazi</name>
+    <styleUrl>#customerStyle</styleUrl>
+    <description>Demand: 426</description>
+    <Point>
+      <coordinates>91.3916,22.8518,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Route Mathba to Khulna</name>
+    <description>Assigned Demand Flow: 587</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        89.9588,22.2862,0
+        89.55,22.8167,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Dinajpur to Rangpur</name>
+    <description>Assigned Demand Flow: 4122</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        88.65,25.63,0
+        89.2444,25.75,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Rajshahi to Rajshahi</name>
+    <description>Assigned Demand Flow: 8957</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        88.6,24.3667,0
+        88.6,24.3667,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Kishmat Dhanbari to Mymensingh</name>
+    <description>Assigned Demand Flow: 714</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        90.025,24.6167,0
+        90.38,24.7504,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Bogra to Naogaon</name>
+    <description>Assigned Demand Flow: 8013</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        89.3711,24.851,0
+        88.947,24.8118,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Arankhola to Mymensingh</name>
+    <description>Assigned Demand Flow: 1188</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        90.0806,24.6928,0
+        90.38,24.7504,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Dohazari to Chattogram</name>
+    <description>Assigned Demand Flow: 808</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        92.0733,22.1639,0
+        91.8325,22.335,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Gopalganj to Khulna</name>
+    <description>Assigned Demand Flow: 1027</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        89.8167,23,0
+        89.55,22.8167,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Pirojpur to Khulna</name>
+    <description>Assigned Demand Flow: 1207</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        89.9752,22.5796,0
+        89.55,22.8167,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Maulavi Bazar to Sylhet</name>
+    <description>Assigned Demand Flow: 818</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        91.7708,24.4889,0
+        91.8667,24.9,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Barishal to Khulna</name>
+    <description>Assigned Demand Flow: 4600</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        90.3667,22.7,0
+        89.55,22.8167,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Tangail to Mymensingh</name>
+    <description>Assigned Demand Flow: 7847</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        89.92,24.25,0
+        90.38,24.7504,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Gazipura to Mymensingh</name>
+    <description>Assigned Demand Flow: 53484</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        90.3959,23.9234,0
+        90.38,24.7504,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Sherpur to Naogaon</name>
+    <description>Assigned Demand Flow: 1043</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        89.4159,24.6765,0
+        88.947,24.8118,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Sakhipur to Mymensingh</name>
+    <description>Assigned Demand Flow: 475</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        90.1694,24.3199,0
+        90.38,24.7504,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Gopalpur to Mymensingh</name>
+    <description>Assigned Demand Flow: 1011</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        89.9218,24.5601,0
+        90.38,24.7504,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Barura to Chattogram</name>
+    <description>Assigned Demand Flow: 8108</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        91.0484,23.3683,0
+        91.8325,22.335,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Jagatpur to Mymensingh</name>
+    <description>Assigned Demand Flow: 404</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        90.766,23.6075,0
+        90.38,24.7504,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Majidpur to Mymensingh</name>
+    <description>Assigned Demand Flow: 615</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        90.7684,23.5797,0
+        90.38,24.7504,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Panchari Bazar to Chattogram</name>
+    <description>Assigned Demand Flow: 1250</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        91.9027,23.2867,0
+        91.8325,22.335,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Naogaon to Naogaon</name>
+    <description>Assigned Demand Flow: 3006</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        88.947,24.8118,0
+        88.947,24.8118,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Mirzapur to Mymensingh</name>
+    <description>Assigned Demand Flow: 578</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        90.0984,24.1029,0
+        90.38,24.7504,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Chuadanga to Rajshahi</name>
+    <description>Assigned Demand Flow: 4486</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        88.8577,23.6418,0
+        88.6,24.3667,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Savar to Mymensingh</name>
+    <description>Assigned Demand Flow: 7682</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        90.2577,23.8482,0
+        90.38,24.7504,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Chhagalnaiya to Chattogram</name>
+    <description>Assigned Demand Flow: 954</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        91.5109,23.0248,0
+        91.8325,22.335,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Raharpur to Rajshahi</name>
+    <description>Assigned Demand Flow: 1180</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        88.325,24.8194,0
+        88.6,24.3667,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Khulna to Khulna</name>
+    <description>Assigned Demand Flow: 18568</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        89.55,22.8167,0
+        89.55,22.8167,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Bhandaria to Khulna</name>
+    <description>Assigned Demand Flow: 2894</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        90.0627,22.489,0
+        89.55,22.8167,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Kalihati to Mymensingh</name>
+    <description>Assigned Demand Flow: 732</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        89.9833,24.3833,0
+        90.38,24.7504,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Daganbhuiya to Chattogram</name>
+    <description>Assigned Demand Flow: 664</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        91.3036,22.9366,0
+        91.8325,22.335,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Sonagazi to Chattogram</name>
+    <description>Assigned Demand Flow: 426</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        91.3916,22.8518,0
+        91.8325,22.335,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+</Document>
+</kml>

@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 #include "DataProcessor.hpp"
 #include "ParameterGenerator.hpp"
+#include "KMLGenerator.hpp"
 
 using namespace std;
 
@@ -363,6 +364,8 @@ int main(){
     RelaxationResult result = lagrangeRelaxation(customers, facilities, c);
     
     printFinalResult(result, customers, facilities, c);
+    
+    generateKML(facilities, customers, result.bestY, result.bestX, "out/optimized_cflp.kml");
 
     return 0;
 }
