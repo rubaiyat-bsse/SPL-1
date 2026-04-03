@@ -338,7 +338,7 @@ int main(){
     srand(time(NULL));
 
     // process Data
-    string csvPath = "data/bd_cities.csv";
+    string csvPath = "data/upozila/495 UPAZILA BD WITH LAT LONG.csv";
     vector<City> allCities = parseCSV(csvPath);
     if(allCities.empty()) {
         cerr << "Failed to parse cities or file is empty.\n";
