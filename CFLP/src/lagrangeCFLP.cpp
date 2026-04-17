@@ -128,6 +128,7 @@ pair<vector<int>, vector<vector<double>>> repairHeuristic(
     vector<int> yRepair = y;
     vector<vector<double>> xRepair = x;
 
+    // forcefully opening the facility if a single unit of demand is assigned
     for(int j=0; j<m; j++){
         double load=0;
 
@@ -140,6 +141,11 @@ pair<vector<int>, vector<vector<double>>> repairHeuristic(
         }
     }
 
+    /*
+      a facility might end up with way more than it's maximum capacity. 
+      it calculates how much extra demand needs to be transferred & greedily 
+      transfers the extra demand to next cheapest facility.
+    */
     for(int j=0; j<m; j++){
         double load=0;
 
@@ -334,7 +340,9 @@ void printFinalResult(const RelaxationResult& result, const vector<Customer>& cu
     cout << "Final results successfully written to " << outFile << "\n";
 }
 
-int main(){
+#include "lagrangeCFLP.hpp"
+
+void lagrange_RH_1(){
     srand(time(NULL));
 
     // process Data
@@ -342,7 +350,7 @@ int main(){
     vector<City> allCities = parseCSV(csvPath);
     if(allCities.empty()) {
         cerr << "Failed to parse cities or file is empty.\n";
-        return 1;
+        return;
     }
 
     vector<Facility> facilities = selectFacilities(allCities);
@@ -366,6 +374,4 @@ int main(){
     printFinalResult(result, customers, facilities, c);
     
     generateKML(facilities, customers, result.bestY, result.bestX, "out/optimized_cflp.kml");
-
-    return 0;
 }
