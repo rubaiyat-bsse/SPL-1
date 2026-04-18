@@ -398,12 +398,87 @@ RelaxationResult lagrangeRelaxation(
     return {LB, UB, lambda, bestY, bestX};
 }
 
-void printFinalResult(const RelaxationResult& result, const vector<Customer>& customers, const vector<Facility>& facilities, const vector<vector<double>>& c) {
+RelaxationResult lagrangeRelaxation2(
+    const vector<Customer>& customers,
+    const vector<Facility>& facilities,
+    const vector<vector<double>>& c
+){
+    int n = customers.size();
+    int m = facilities.size();
+    vector<double> lambda(m, 0);
+
+    double LB = DBL_MIN;
+    double UB = DBL_MAX;
+
+    vector<int> bestY(m, 0);
+    vector<vector<double>> bestX(n, vector<double>(m, 0));
+
+    // clear previous log file on new run
+    ofstream("out/lagrange_log_2.csv", ios::trunc).close();
+
+    double prevLB = LB;
+    double prevUB = UB;
+    int noChangeCount = 0;
+    const int MAX_NO_CHANGE = 5;
+
+    for(int iter=0; iter<MAX_ITERATION; iter++){
+        vector<int> y = solveFacilitySubproblem(facilities, lambda);
+        vector<vector<double>> x = solveAssignmentSubproblem(customers, c, lambda);
+
+        double L = calculateLagrangianValue(facilities, c, lambda, y, x);
+        LB = max(LB, L);
+
+        auto repaired = repairHeuristic2(facilities, customers, c, y);
+        const vector<int>& yRepair = repaired.first;
+        const vector<vector<double>>& xRepair = repaired.second;
+
+        double primal = computePrimalValue(facilities, c, yRepair, xRepair);
+        if (primal < UB){
+            UB = primal;
+            bestY = yRepair;
+            bestX = xRepair;
+        }
+
+        double gap = (UB-LB)/UB;
+
+        vector<double> g = computeSubgradient(facilities, y, x);
+        double step = polyakStepSize(UB, LB, g);
+        
+        // logIteration has hardcoded names.just temporarily use logIteration and overwrite.
+        logIteration(iter, L, primal, LB, UB, gap, step);
+
+        if(gap < THRESHOLD) break;
+        
+        // early stopping check
+        if(abs(LB - prevLB) < 1e-6 && abs(UB - prevUB) < 1e-6){
+            noChangeCount++;
+            if (noChangeCount >= MAX_NO_CHANGE) {
+                writeCSV("out/lagrange_log.csv", {"Stopping early: No change in bounds for " + to_string(MAX_NO_CHANGE) + " consecutive iterations."});
+                break;
+            }
+        }
+        else{
+            noChangeCount = 0;
+        }
+        
+        prevLB = LB;
+        prevUB = UB;
+
+        updateLambda(lambda, step, g);
+    }
+
+    return {LB, UB, lambda, bestY, bestX};
+}
+
+void printFinalResult(const RelaxationResult& result, const vector<Customer>& customers, const vector<Facility>& facilities, const vector<vector<double>>& c, double executionTime = -1.0) {
     int n = customers.size();
     int m = facilities.size();
     
     string outFile = "out/lagrangeOutput.csv";
     writeCSV(outFile, {"Optimal Objective Value (Upper Bound)", to_string(result.UB)}, false);
+    if(executionTime >= 0.0){
+        writeCSV(outFile, {"Execution Time (Seconds)", to_string(executionTime)});
+    }
     writeCSV(outFile, {});
 
     writeCSV(outFile, {"Facility Load and Cost Details:"});
@@ -442,7 +517,7 @@ void lagrange_RH_1(){
     srand(time(NULL));
 
     // process Data
-    string csvPath = "data/upozila/495 UPAZILA BD WITH LAT LONG.csv";
+    string csvPath = "data/495 UPAZILA BD WITH LAT LONG.csv";
     vector<City> allCities = parseCSV(csvPath);
     if(allCities.empty()) {
         cerr << "Failed to parse cities or file is empty.\n";
@@ -470,4 +545,43 @@ void lagrange_RH_1(){
     printFinalResult(result, customers, facilities, c);
     
     generateKML(facilities, customers, result.bestY, result.bestX, "out/optimized_cflp.kml");
+}
+
+void lagrange_RH_2(){
+    srand(time(NULL));
+
+    // process Data
+    string csvPath = "data/495 UPAZILA BD WITH LAT LONG.csv"; // Updated path
+    vector<City> allCities = parseCSV(csvPath);
+    if(allCities.empty()) {
+        cerr << "Failed to parse cities or file is empty.\n";
+        return;
+    }
+
+    vector<Facility> facilities = selectFacilities(allCities);
+    vector<Customer> customers = selectCustomers(allCities);
+
+    // generate Parameters
+    generateCustomerParameters(customers);
+    generateFacilityParameters(facilities, customers);
+
+    double costPerKm = 10.0;    // assume
+    vector<vector<double>> c = generateCostMatrix(customers, facilities, costPerKm);
+
+    int n = customers.size();
+    int m = facilities.size();
+
+    cout << "Loaded " << n << " customers and " << m << " facilities.\n";
+    cout << "Running Lagrangian Relaxation Solver with RH2 (Tracked Capacity)...\n";
+
+    auto start_time = std::chrono::high_resolution_clock::now();
+    RelaxationResult result = lagrangeRelaxation2(customers, facilities, c);
+    auto end_time = std::chrono::high_resolution_clock::now();
+    
+    std::chrono::duration<double> elapsed = end_time - start_time;
+    cout << "Lagrangian Relaxation completed in " << elapsed.count() << " seconds.\n";
+    
+    printFinalResult(result, customers, facilities, c, elapsed.count());
+    
+    generateKML(facilities, customers, result.bestY, result.bestX, "out/optimized_cflp_rh2.kml");
 }
