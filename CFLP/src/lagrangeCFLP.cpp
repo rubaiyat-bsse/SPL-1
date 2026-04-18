@@ -182,6 +182,102 @@ pair<vector<int>, vector<vector<double>>> repairHeuristic(
     return {yRepair, xRepair};
 }
 
+pair<vector<int>, vector<vector<double>>> repairHeuristic2(
+    const vector<Facility>& facilities,
+    const vector<Customer>& customers,
+    const vector<vector<double>>& c,
+    const vector<int>& y
+){
+    int n = customers.size();
+    int m = facilities.size();
+
+    vector<int> yRepair = y;
+    vector<vector<double>> xRepair(n, vector<double>(m, 0.0));
+
+    // checking if we have enough capacity compared to demand
+    double totalDemand = 0.0;
+    for(int i=0; i<n; i++){
+        totalDemand += customers[i].d;
+    }
+
+    double totalOpenCapacity = 0.0;
+    for(int j=0; j<m; j++){
+        if(yRepair[j] == 1){
+            totalOpenCapacity += facilities[j].M;
+        }
+    }
+
+    // force open facilities if we don't have enough total capacity.
+    // open the ones with cheapest cost first
+    while(totalOpenCapacity < totalDemand){
+        int bestJ = -1;
+        double minFixedCost = DBL_MAX;
+        
+        for (int j = 0; j < m; j++){
+            if (yRepair[j] == 0 && facilities[j].f < minFixedCost){
+                minFixedCost = facilities[j].f;
+                bestJ = j;
+            }
+        }
+        
+        if (bestJ != -1){
+            yRepair[bestJ] = 1;
+            totalOpenCapacity += facilities[bestJ].M;
+        } 
+        else{
+            break;
+        }
+    }
+
+    // Initialize the tracking array
+    vector<double> remaining_capacity(m, 0.0);
+    for(int j=0; j<m; j++){
+        if(yRepair[j] == 1){
+            remaining_capacity[j] = facilities[j].M;
+        }
+    }
+
+    // Sort Customers by Demand (Largest First)
+    // Store as pairs: {demand, original_index}
+    vector<pair<double, int>> sortedCustomers;
+    for(int i=0; i<n; i++){
+        sortedCustomers.push_back({customers[i].d, i});
+    }
+    // sort descending (rbegin to rend)
+    sort(sortedCustomers.rbegin(), sortedCustomers.rend());
+
+    // greedily routing the demands
+    for(auto &item : sortedCustomers){
+        int i = item.second;
+        double unassignedDemand = item.first;
+
+        while(unassignedDemand > 1e-6){
+            int bestJ = -1;
+            double bestCost = DBL_MAX;
+
+            for(int j=0; j<m; j++){
+                // Must have empty seats AND be the cheapest
+                if(remaining_capacity[j] > 1e-6 && c[i][j] < bestCost){
+                    bestCost = c[i][j];
+                    bestJ = j;
+                }
+            }
+
+            if(bestJ == -1){
+                break; // cannot fulfill demand, network is full
+            }
+
+            double move_amount = min(unassignedDemand, remaining_capacity[bestJ]);
+            
+            xRepair[i][bestJ] += move_amount;
+            remaining_capacity[bestJ] -= move_amount;
+            unassignedDemand -= move_amount;
+        }
+    }
+
+    return {yRepair, xRepair};
+}
+
 double computePrimalValue(
     const vector<Facility>& facilities,
     const vector<vector<double>>& c,
