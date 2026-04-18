@@ -8,7 +8,7 @@ using namespace std;
 
 #define PI 3.14159265358979323846
 #define COST_PER_WAREHOUSE 1000000.0
-#define SUPPLY_FACTOR_PER_WAREHOUSE 3
+#define SUPPLY_FACTOR_PER_WAREHOUSE 50
 
 static double toRadians(double degrees){
     return degrees * PI / 180.0;

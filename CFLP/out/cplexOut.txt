@@ -1,0 +1,93 @@
+Loaded 446 customers and 49 facilities.
+Running exact CPLEX Solver for Baseline Comparison...
+Version identifier: 22.1.2.0 | 2024-11-26 | 0edbb82fd
+Tried aggregator 1 time.
+Reduced MIP has 495 rows, 21903 columns, and 43757 nonzeros.
+Reduced MIP has 49 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.01 sec. (19.93 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 495 rows, 21903 columns, and 43757 nonzeros.
+Reduced MIP has 49 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.02 sec. (22.91 ticks)
+Probing time = 0.00 sec. (0.85 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 20 threads.
+Root relaxation solution time = 0.01 sec. (5.83 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+      0     0   1.31125e+09    49                 1.31125e+09       53         
+*     0+    0                       1.35137e+09   1.31125e+09             2.97%
+      0     0   1.33675e+09    20   1.35137e+09     Cuts: 223      133    1.08%
+      0     0   1.34881e+09     3   1.35137e+09     Cuts: 223      166    0.19%
+*     0+    0                       1.35086e+09   1.34881e+09             0.15%
+*     0     0      integral     0   1.35046e+09      Cuts: 59      169    0.00%
+      0     0        cutoff         1.35046e+09   1.35046e+09      169    0.00%
+Elapsed time = 0.18 sec. (222.89 ticks, tree = 0.01 MB, solutions = 3)
+
+Implied bound cuts applied:  411
+Mixed integer rounding cuts applied:  20
+Lift and project cuts applied:  7
+Gomory fractional cuts applied:  48
+
+Root node processing (before b&c):
+  Real time             =    0.18 sec. (224.15 ticks)
+Parallel b&c, 20 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.18 sec. (224.15 ticks)
+CPLEX Exact Optimal Objective Value = 1350460940.972640
+Opened facilities:
+Facility 0 (Gobindaganj) opened
+Facility 2 (Sonagazi) opened
+Facility 3 (Gangni) opened
+Facility 4 (Banaripara) opened
+Facility 5 (Tahirpur) opened
+Facility 6 (Lauhajong) opened
+Facility 8 (Kurigram-S) opened
+Facility 9 (Durgapur) opened
+Facility 10 (Chirirbandar) opened
+Facility 11 (Lakhai) opened
+Facility 12 (Durgapur) opened
+Facility 13 (Hizla) opened
+Facility 14 (Araihazar) opened
+Facility 15 (Raninagar) opened
+Facility 16 (Gouripur) opened
+Facility 17 (Kalaroa) opened
+Facility 18 (Singair) opened
+Facility 19 (Jaldhaka) opened
+Facility 20 (Barkal) opened
+Facility 21 (Kalia) opened
+Facility 22 (Sariakandi) opened
+Facility 23 (Baraigram) opened
+Facility 24 (Manda) opened
+Facility 25 (Mehendiganj) opened
+Facility 26 (Kumarkhali) opened
+Facility 27 (Bhairab) opened
+Facility 28 (Chandanish) opened
+Facility 29 (Sirajganj-S) opened
+Facility 30 (Thanchi) opened
+Facility 31 (Kanaighat) opened
+Facility 32 (Burichong) opened
+Facility 33 (Galachipa) opened
+Facility 34 (Dumki) opened
+Facility 35 (Faridpur) opened
+Facility 36 (Khaliajuri) opened
+Facility 37 (Jhikargacha) opened
+Facility 38 (Rangamati-S) opened
+Facility 39 (Baliadangi) opened
+Facility 40 (Sonargaon) opened
+Facility 41 (Fatikchari) opened
+Facility 42 (Santhia) opened
+Facility 43 (Dakshin Surma) opened
+Facility 44 (Kamalganj) opened
+Facility 45 (Modhyanagar) opened
+Facility 46 (Mohanpur) opened
+Facility 47 (Shariatpur-S) opened
+Facility 48 (Charbhadrasan) opened
+KML Map successfully generated at: out/optimized_cflp_cplex.kml

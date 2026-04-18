@@ -1,24 +1,38 @@
 #include<ilcplex/ilocplex.h>
 #include<bits/stdc++.h>
+#include "DataProcessor.hpp"
+#include "ParameterGenerator.hpp"
+#include "KMLGenerator.hpp"
 
 ILOSTLBEGIN
 
 int main(){
-    int I, J;
-    cin>>I>>J;
+    freopen("out/cplexOut.txt", "w", stdout);
+    srand(42); // using a fixed seed so CPLEX and Lagrangian get the exact same demands & capacities
 
-    vector<double> d(I);
-    vector<double> M(J);
-    vector<double> f(J);
-    vector<vector<double>> c(I, vector<double>(J));
+    // load data 
+    string csvPath = "data/495 UPAZILA BD WITH LAT LONG.csv";
+    vector<City> allCities = parseCSV(csvPath);
+    if(allCities.empty()) {
+        cerr << "Failed to parse cities or file is empty.\n";
+        return 1;
+    }
 
-    for(int i=0; i<I; i++) cin>>d[i];
-    for(int j=0; j<J; j++) cin>>f[j];
-    for(int j=0; j<J; j++) cin>>M[j];
+    vector<Facility> facilities = selectFacilities(allCities);
+    vector<Customer> customers = selectCustomers(allCities);
 
-    for(int i=0; i<I; i++)
-        for(int j=0; j<J; j++)
-            cin>>c[i][j];
+    // generate Parameters
+    generateCustomerParameters(customers);
+    generateFacilityParameters(facilities, customers);
+
+    double costPerKm = 10.0;
+    vector<vector<double>> c = generateCostMatrix(customers, facilities, costPerKm);
+
+    int I = customers.size();
+    int J = facilities.size();
+
+    cout << "Loaded " << I << " customers and " << J << " facilities.\n";
+    cout << "Running exact CPLEX Solver for Baseline Comparison...\n";
 
     IloEnv env;
     try{
@@ -33,7 +47,7 @@ int main(){
         //objective function
         IloExpr obj(env);
         for(int j=0; j<J; j++){
-            obj+=f[j]*y[j];
+            obj+=facilities[j].f*y[j];
             for(int i=0; i<I; i++){
                 obj+=c[i][j]*x[j][i];
             }
@@ -47,7 +61,7 @@ int main(){
             for(int j=0; j<J; j++){
                 expr+=x[j][i];
             }
-            model.add(expr==d[i]);
+            model.add(expr==customers[i].d);
             expr.end();
         }
 
@@ -56,36 +70,41 @@ int main(){
             for(int i=0; i<I; i++){
                 expr+=x[j][i];
             }
-            model.add(expr<=M[j]*y[j]);
+            model.add(expr<=facilities[j].M*y[j]);
             expr.end();
         }
 
         IloCplex cplex(model);
-        cplex.setOut(env.getNullStream());
+        // cplex.setOut(env.getNullStream());
 
         if(!cplex.solve()){
             cout<<"No feasible solution"<<endl;
             return 0;
         }
 
-        cout<< "Optimal Objective Value = "<<cplex.getObjValue() <<endl;
+        cout << "CPLEX Exact Optimal Objective Value = " << fixed << setprecision(6) << cplex.getObjValue() << endl;
+
+        vector<int> bestY(J, 0);
+        vector<vector<double>> bestX(I, vector<double>(J, 0));
 
         cout<< "Opened facilities:"<<endl;
         for(int j=0; j<J; j++){
-            if(cplex.getValue(y[j])>0.5)
-                cout<<"Facility "<<j<<" opened\n";
+            if(cplex.getValue(y[j])>0.5){
+                bestY[j] = 1;
+                cout<<"Facility "<<j<<" ("<<facilities[j].city.name<<") opened\n";
+            }
         }
-
-        cout<<"\nAssignments (x[j][i]): "<<endl;
 
         for(int j=0; j<J; j++){
             for(int i=0; i<I; i++){
                 double val = cplex.getValue(x[j][i]);
                 if(val> 1e-6){
-                    cout<< "x["<<j<<"]["<<i<<"] = "<<val<<endl;
+                    bestX[i][j] = val;
                 }
             }
         }
+
+        generateKML(facilities, customers, bestY, bestX, "out/optimized_cflp_cplex.kml");
 
     } catch(IloException &e){
         cerr << "CPLEX Error: "<<e<<endl;
