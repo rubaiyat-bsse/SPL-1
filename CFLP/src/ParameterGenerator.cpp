@@ -46,27 +46,28 @@ void generateCustomerParameters(vector<Customer>& customers){
 }
 
 void generateFacilityParameters(vector<Facility>& facilities, const vector<Customer>& customers){
-    map<string, double> regionTotalDemand;
-    map<string, int> regionTotalCustomer;
-
+    double globalTotalDemand = 0.0;
     for (int i = 0; i < customers.size(); i++){
-        regionTotalDemand[customers[i].city.admin_name] += customers[i].d;
-        regionTotalCustomer[customers[i].city.admin_name]++;
+        globalTotalDemand += customers[i].d;
     }
 
+    // 1. TIGHT CAPACITY: We want total capacity to be just barely enough, e.g., 1.5x total demand.
+    // Divided equally among the number of facilities as a base scale.
+    double baseCapacityScale = (globalTotalDemand * 1.5) / facilities.size();
+
     for(int j = 0; j < facilities.size(); j++){
+        // Add random variance to capacity (some warehouses are small, some are huge)
+        // Fluctuate between 0.5x and 1.5x of the base scale
+        double randomCapMultiplier = 0.5 + ((rand() % 101) / 100.0); 
+        facilities[j].M = baseCapacityScale * randomCapMultiplier;
+
+        // 2. VARYING FIXED COSTS: Base cost + (Capacity * cost per unit) + Random Noise
+        double baseCost = 500000.0;
+        double capacityCost = 1500.0 * facilities[j].M; // Bigger warehouse costs more to open
+        double randomNoise = (rand() % 200000) - 100000; // Random +/- 100k
         
-        facilities[j].f = COST_PER_WAREHOUSE; 
-        
-        string regionName = facilities[j].city.admin_name;
-        double averageDemand = 0.0;
-        
-        if(regionTotalCustomer[regionName] > 0){
-            averageDemand = regionTotalDemand[regionName] / (double)regionTotalCustomer[regionName];
-        }
-        
-        // facility capacity = 3 * division_average_demand
-        facilities[j].M = SUPPLY_FACTOR_PER_WAREHOUSE * averageDemand;
+        facilities[j].f = baseCost + capacityCost + randomNoise; 
+        if(facilities[j].f < 10000) facilities[j].f = 10000; // prevent negative/zero costs
     }
 }
 

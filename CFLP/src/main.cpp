@@ -1,7 +1,9 @@
 #include "lagrangeCFLP.hpp"
+#include <string>
 
 int main(){
-    lagrange_RH_1();
-    lagrange_RH_2();
+    std::string defaultPath = "data/495 UPAZILA BD WITH LAT LONG.csv";
+    lagrange_RH_1(defaultPath);
+    lagrange_RH_2(defaultPath);
     return 0;
 }

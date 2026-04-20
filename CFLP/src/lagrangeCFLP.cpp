@@ -346,7 +346,8 @@ RelaxationResult lagrangeRelaxation(
     vector<vector<double>> bestX(n, vector<double>(m, 0));
 
     // clear previous log file on new run
-    string logFile = "out/lagrange_log_" + to_string(heuristicVersion) + ".csv";
+    string logBaseDir = "/home/ratul/IIT/spl-1/CFLP/out/";
+    string logFile = logBaseDir + "lagrange_log_" + to_string(heuristicVersion) + ".csv";
     ofstream(logFile, ios::trunc).close();
 
     double prevLB = LB;
@@ -419,7 +420,8 @@ void printFinalResult(
     int n = customers.size();
     int m = facilities.size();
     
-    string outFile = "out/lagrangeOutput_" + to_string(heuristicVersion) + ".csv";
+    string logBaseDir = "/home/ratul/IIT/spl-1/CFLP/out/";
+    string outFile = logBaseDir + "lagrangeOutput_" + to_string(heuristicVersion) + ".csv";
     writeCSV(outFile, {"Optimal Objective Value (Upper Bound)", to_string(result.UB)}, false);
     if(executionTime >= 0.0){
         writeCSV(outFile, {"Execution Time (Seconds)", to_string(executionTime)});
@@ -458,11 +460,10 @@ void printFinalResult(
 
 #include "lagrangeCFLP.hpp"
 
-void runLagrangian(int heuristicVersion){
+void runLagrangian(int heuristicVersion, const string& csvPath){
     srand(42); // using a fixed seed so CPLEX and Lagrangian get the exact same demands & capacities
 
     // process Data
-    string csvPath = "data/495 UPAZILA BD WITH LAT LONG.csv";
     vector<City> allCities = parseCSV(csvPath);
     if(allCities.empty()) {
         cerr << "Failed to parse cities or file is empty.\n";
@@ -494,13 +495,14 @@ void runLagrangian(int heuristicVersion){
     
     printFinalResult(result, customers, facilities, c, elapsed.count(), heuristicVersion);
     
-    string kmlOut = "out/optimized_cflp_rh" + to_string(heuristicVersion) + ".kml";
+    string logBaseDir = "/home/ratul/IIT/spl-1/CFLP/out/";
+    string kmlOut = logBaseDir + "optimized_cflp_rh" + to_string(heuristicVersion) + ".kml";
     generateKML(facilities, customers, result.bestY, result.bestX, kmlOut);
 }
 
-void lagrange_RH_1(){ 
-    runLagrangian(1); 
+void lagrange_RH_1(const string& csvPath){ 
+    runLagrangian(1, csvPath); 
 }
-void lagrange_RH_2(){ 
-    runLagrangian(2); 
+void lagrange_RH_2(const string& csvPath){ 
+    runLagrangian(2, csvPath); 
 }

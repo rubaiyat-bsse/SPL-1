@@ -21,13 +21,13 @@ CPLEX_SRCS = src/cflpCplex.cpp
 CPLEX_OBJS = $(patsubst src/%.cpp,build/%.o,$(CPLEX_SRCS))
 EXEC_CPLEX = build/cflpCplex
 
-# Target: lagrangeCFLP
-LAGRANGE_SRCS = src/main.cpp src/lagrangeCFLP.cpp
-LAGRANGE_OBJS = $(patsubst src/%.cpp,build/%.o,$(LAGRANGE_SRCS))
-EXEC_LAGRANGE = build/lagrangeCFLP
+# Target: lagrange-cli (CLI)
+CLI_SRCS = src/cli.cpp src/lagrangeCFLP.cpp
+CLI_OBJS = $(patsubst src/%.cpp,build/%.o,$(CLI_SRCS))
+EXEC_CLI = build/lagrange-cli
 
 # --- Rules ---
-all: cflpCplex lagrangeCFLP
+all: cflpCplex lagrange-cli
 
 # Rule to build the exact CPLEX baseline
 cflpCplex: $(CORE_OBJS) $(CPLEX_OBJS)
@@ -35,9 +35,9 @@ cflpCplex: $(CORE_OBJS) $(CPLEX_OBJS)
 	$(CXX) $(CORE_OBJS) $(CPLEX_OBJS) -o $(EXEC_CPLEX) $(LDFLAGS_CPLEX)
 
 # Rule to build the lagrange heuristic baseline (Standard build, no CPLEX linkage)
-lagrangeCFLP: $(CORE_OBJS) $(LAGRANGE_OBJS)
+lagrange-cli: $(CORE_OBJS) $(CLI_OBJS)
 	@mkdir -p build
-	$(CXX) $(CORE_OBJS) $(LAGRANGE_OBJS) -o $(EXEC_LAGRANGE)
+	$(CXX) $(CORE_OBJS) $(CLI_OBJS) -o $(EXEC_CLI)
 
 # Pattern rules for object compilation
 # Compiling CPLEX objects requires the heavy include headers
@@ -52,4 +52,4 @@ build/%.o: src/%.cpp
 
 # --- Cleanup ---
 clean:
-	rm -f build/*.o $(EXEC_CPLEX) $(EXEC_LAGRANGE)
+	rm -f build/*.o $(EXEC_CPLEX) $(EXEC_CLI)

@@ -6,88 +6,101 @@ Reduced MIP has 495 rows, 21903 columns, and 43757 nonzeros.
 Reduced MIP has 49 binaries, 0 generals, 0 SOSs, and 0 indicators.
 Presolve time = 0.01 sec. (19.93 ticks)
 Tried aggregator 1 time.
-Detecting symmetries...
 Reduced MIP has 495 rows, 21903 columns, and 43757 nonzeros.
 Reduced MIP has 49 binaries, 0 generals, 0 SOSs, and 0 indicators.
-Presolve time = 0.02 sec. (22.91 ticks)
+Presolve time = 0.01 sec. (18.98 ticks)
 Probing time = 0.00 sec. (0.85 ticks)
 MIP emphasis: balance optimality and feasibility.
 MIP search method: dynamic search.
 Parallel mode: deterministic, using up to 20 threads.
-Root relaxation solution time = 0.01 sec. (5.83 ticks)
+Root relaxation solution time = 0.03 sec. (34.50 ticks)
 
         Nodes                                         Cuts/
    Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
 
-      0     0   1.31125e+09    49                 1.31125e+09       53         
-*     0+    0                       1.35137e+09   1.31125e+09             2.97%
-      0     0   1.33675e+09    20   1.35137e+09     Cuts: 223      133    1.08%
-      0     0   1.34881e+09     3   1.35137e+09     Cuts: 223      166    0.19%
-*     0+    0                       1.35086e+09   1.34881e+09             0.15%
-*     0     0      integral     0   1.35046e+09      Cuts: 59      169    0.00%
-      0     0        cutoff         1.35046e+09   1.35046e+09      169    0.00%
-Elapsed time = 0.18 sec. (222.89 ticks, tree = 0.01 MB, solutions = 3)
+      0     0   5.52095e+09    34                 5.52095e+09     1425         
+*     0+    0                       7.82463e+09   5.52095e+09            29.44%
+*     0+    0                       5.93648e+09   5.52095e+09             7.00%
+      0     0   5.57699e+09    29   5.93648e+09     Cuts: 223     1705    6.06%
+*     0+    0                       5.85503e+09   5.57699e+09             4.75%
+*     0+    0                       5.84443e+09   5.57699e+09             4.58%
+      0     0   5.59844e+09    23   5.84443e+09     Cuts: 223     1887    4.21%
+*     0+    0                       5.73941e+09   5.59844e+09             2.46%
+*     0+    0                       5.69730e+09   5.59844e+09             1.74%
+      0     0   5.60092e+09    22   5.69730e+09     Cuts: 192     2026    1.69%
+      0     0   5.60136e+09    22   5.69730e+09     Cuts: 144     2099    1.68%
+*     0+    0                       5.64119e+09   5.60136e+09             0.71%
+*     0+    0                       5.63638e+09   5.60136e+09             0.62%
+      0     0  -1.00000e+75     0   5.63638e+09   5.60136e+09     2099    0.62%
+      0     0   5.60165e+09    20   5.63638e+09      Cuts: 80     2174    0.62%
+      0     0   5.60172e+09    17   5.63638e+09      Cuts: 33     2215    0.62%
+      0     0   5.60173e+09    17   5.63638e+09      Cuts: 14     2220    0.61%
+*     0+    0                       5.62785e+09   5.60173e+09             0.46%
+      0     2   5.60173e+09    17   5.62785e+09   5.60173e+09     2220    0.46%
+Elapsed time = 2.65 sec. (2406.75 ticks, tree = 0.02 MB, solutions = 9)
+     11     7   5.60826e+09    14   5.62785e+09   5.60179e+09     2476    0.46%
+*   162+   16                       5.62384e+09   5.60406e+09             0.35%
+    225    79   5.61917e+09    12   5.62384e+09   5.60406e+09     7652    0.35%
+*   516+  217                       5.62303e+09   5.60406e+09             0.34%
+    566   227   5.62105e+09     7   5.62303e+09   5.60406e+09    19432    0.34%
+    942   434   5.62015e+09     6   5.62303e+09   5.60837e+09    34040    0.26%
+*  1063   452      integral     0   5.62161e+09   5.60961e+09    35511    0.21%
+   1424   521   5.61947e+09     5   5.62161e+09   5.61254e+09    47051    0.16%
+   1792   715   5.61791e+09     5   5.62161e+09   5.61475e+09    60899    0.12%
+   2176   844   5.62091e+09     6   5.62161e+09   5.61524e+09    70604    0.11%
+   2493   970        cutoff         5.62161e+09   5.61583e+09    81086    0.10%
+   2992  1028   5.61728e+09     8   5.62161e+09   5.61644e+09    85418    0.09%
+Elapsed time = 8.28 sec. (5609.24 ticks, tree = 8.68 MB, solutions = 12)
+*  3094+ 1121                       5.62081e+09   5.61685e+09             0.07%
 
-Implied bound cuts applied:  411
-Mixed integer rounding cuts applied:  20
-Lift and project cuts applied:  7
-Gomory fractional cuts applied:  48
+Implied bound cuts applied:  800
+Flow cuts applied:  4
+Mixed integer rounding cuts applied:  31
+Lift and project cuts applied:  4
+Gomory fractional cuts applied:  12
 
 Root node processing (before b&c):
-  Real time             =    0.18 sec. (224.15 ticks)
+  Real time             =    2.58 sec. (2402.96 ticks)
 Parallel b&c, 20 threads:
-  Real time             =    0.00 sec. (0.00 ticks)
-  Sync time (average)   =    0.00 sec.
+  Real time             =    7.03 sec. (4029.14 ticks)
+  Sync time (average)   =    2.07 sec.
   Wait time (average)   =    0.00 sec.
                           ------------
-Total (root+branch&cut) =    0.18 sec. (224.15 ticks)
-CPLEX Exact Optimal Objective Value = 1350460940.972640
+Total (root+branch&cut) =    9.62 sec. (6432.09 ticks)
+CPLEX Exact Optimal Objective Value = 5620810442.210066
 Opened facilities:
 Facility 0 (Gobindaganj) opened
 Facility 2 (Sonagazi) opened
 Facility 3 (Gangni) opened
 Facility 4 (Banaripara) opened
 Facility 5 (Tahirpur) opened
-Facility 6 (Lauhajong) opened
 Facility 8 (Kurigram-S) opened
-Facility 9 (Durgapur) opened
 Facility 10 (Chirirbandar) opened
 Facility 11 (Lakhai) opened
-Facility 12 (Durgapur) opened
-Facility 13 (Hizla) opened
 Facility 14 (Araihazar) opened
 Facility 15 (Raninagar) opened
 Facility 16 (Gouripur) opened
 Facility 17 (Kalaroa) opened
 Facility 18 (Singair) opened
 Facility 19 (Jaldhaka) opened
-Facility 20 (Barkal) opened
 Facility 21 (Kalia) opened
 Facility 22 (Sariakandi) opened
 Facility 23 (Baraigram) opened
 Facility 24 (Manda) opened
-Facility 25 (Mehendiganj) opened
-Facility 26 (Kumarkhali) opened
 Facility 27 (Bhairab) opened
 Facility 28 (Chandanish) opened
 Facility 29 (Sirajganj-S) opened
 Facility 30 (Thanchi) opened
-Facility 31 (Kanaighat) opened
 Facility 32 (Burichong) opened
 Facility 33 (Galachipa) opened
 Facility 34 (Dumki) opened
-Facility 35 (Faridpur) opened
 Facility 36 (Khaliajuri) opened
 Facility 37 (Jhikargacha) opened
-Facility 38 (Rangamati-S) opened
 Facility 39 (Baliadangi) opened
 Facility 40 (Sonargaon) opened
 Facility 41 (Fatikchari) opened
 Facility 42 (Santhia) opened
 Facility 43 (Dakshin Surma) opened
-Facility 44 (Kamalganj) opened
-Facility 45 (Modhyanagar) opened
-Facility 46 (Mohanpur) opened
 Facility 47 (Shariatpur-S) opened
 Facility 48 (Charbhadrasan) opened
 KML Map successfully generated at: out/optimized_cflp_cplex.kml
