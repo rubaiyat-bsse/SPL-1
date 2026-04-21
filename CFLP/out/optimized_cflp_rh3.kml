@@ -34,17 +34,6 @@
     </Point>
   </Placemark>
   <Placemark>
-    <name>Warehouse 1: Patiya</name>
-    <styleUrl>#facilityStyle</styleUrl>
-    <description>
-      Capacity: 57547
-      Fixed Cost: 8.67465e+07
-    </description>
-    <Point>
-      <coordinates>91.9759,22.295,0</coordinates>
-    </Point>
-  </Placemark>
-  <Placemark>
     <name>Warehouse 2: Sonagazi</name>
     <styleUrl>#facilityStyle</styleUrl>
     <description>
@@ -89,28 +78,6 @@
     </Point>
   </Placemark>
   <Placemark>
-    <name>Warehouse 6: Lauhajong</name>
-    <styleUrl>#facilityStyle</styleUrl>
-    <description>
-      Capacity: 84107.2
-      Fixed Cost: 1.26581e+08
-    </description>
-    <Point>
-      <coordinates>90.3207,23.4743,0</coordinates>
-    </Point>
-  </Placemark>
-  <Placemark>
-    <name>Warehouse 7: Sreemangal</name>
-    <styleUrl>#facilityStyle</styleUrl>
-    <description>
-      Capacity: 132801
-      Fixed Cost: 1.99738e+08
-    </description>
-    <Point>
-      <coordinates>91.7296,24.3065,0</coordinates>
-    </Point>
-  </Placemark>
-  <Placemark>
     <name>Warehouse 8: Kurigram-S</name>
     <styleUrl>#facilityStyle</styleUrl>
     <description>
@@ -141,28 +108,6 @@
     </description>
     <Point>
       <coordinates>91.3024,24.3106,0</coordinates>
-    </Point>
-  </Placemark>
-  <Placemark>
-    <name>Warehouse 12: Durgapur</name>
-    <styleUrl>#facilityStyle</styleUrl>
-    <description>
-      Capacity: 100929
-      Fixed Cost: 1.51812e+08
-    </description>
-    <Point>
-      <coordinates>90.6757,25.1138,0</coordinates>
-    </Point>
-  </Placemark>
-  <Placemark>
-    <name>Warehouse 13: Hizla</name>
-    <styleUrl>#facilityStyle</styleUrl>
-    <description>
-      Capacity: 61973.7
-      Fixed Cost: 9.34863e+07
-    </description>
-    <Point>
-      <coordinates>90.4452,22.9296,0</coordinates>
     </Point>
   </Placemark>
   <Placemark>
@@ -232,17 +177,6 @@
     </Point>
   </Placemark>
   <Placemark>
-    <name>Warehouse 20: Barkal</name>
-    <styleUrl>#facilityStyle</styleUrl>
-    <description>
-      Capacity: 115979
-      Fixed Cost: 1.74455e+08
-    </description>
-    <Point>
-      <coordinates>92.3793,22.7262,0</coordinates>
-    </Point>
-  </Placemark>
-  <Placemark>
     <name>Warehouse 21: Kalia</name>
     <styleUrl>#facilityStyle</styleUrl>
     <description>
@@ -276,14 +210,14 @@
     </Point>
   </Placemark>
   <Placemark>
-    <name>Warehouse 26: Kumarkhali</name>
+    <name>Warehouse 24: Manda</name>
     <styleUrl>#facilityStyle</styleUrl>
     <description>
-      Capacity: 87648.5
-      Fixed Cost: 1.31932e+08
+      Capacity: 54005.7
+      Fixed Cost: 8.16051e+07
     </description>
     <Point>
-      <coordinates>89.2396,23.8596,0</coordinates>
+      <coordinates>88.6701,24.7755,0</coordinates>
     </Point>
   </Placemark>
   <Placemark>
@@ -331,17 +265,6 @@
     </Point>
   </Placemark>
   <Placemark>
-    <name>Warehouse 31: Kanaighat</name>
-    <styleUrl>#facilityStyle</styleUrl>
-    <description>
-      Capacity: 108897
-      Fixed Cost: 1.63796e+08
-    </description>
-    <Point>
-      <coordinates>92.2557,25.0088,0</coordinates>
-    </Point>
-  </Placemark>
-  <Placemark>
     <name>Warehouse 32: Burichong</name>
     <styleUrl>#facilityStyle</styleUrl>
     <description>
@@ -372,17 +295,6 @@
     </description>
     <Point>
       <coordinates>90.3843,22.4645,0</coordinates>
-    </Point>
-  </Placemark>
-  <Placemark>
-    <name>Warehouse 35: Faridpur</name>
-    <styleUrl>#facilityStyle</styleUrl>
-    <description>
-      Capacity: 130145
-      Fixed Cost: 1.95622e+08
-    </description>
-    <Point>
-      <coordinates>89.8333,23.6019,0</coordinates>
     </Point>
   </Placemark>
   <Placemark>
@@ -463,39 +375,6 @@
     </Point>
   </Placemark>
   <Placemark>
-    <name>Warehouse 44: Kamalganj</name>
-    <styleUrl>#facilityStyle</styleUrl>
-    <description>
-      Capacity: 91189.9
-      Fixed Cost: 1.37338e+08
-    </description>
-    <Point>
-      <coordinates>91.861,24.3701,0</coordinates>
-    </Point>
-  </Placemark>
-  <Placemark>
-    <name>Warehouse 45: Modhyanagar</name>
-    <styleUrl>#facilityStyle</styleUrl>
-    <description>
-      Capacity: 127489
-      Fixed Cost: 1.91816e+08
-    </description>
-    <Point>
-      <coordinates>90.8878,23.9407,0</coordinates>
-    </Point>
-  </Placemark>
-  <Placemark>
-    <name>Warehouse 46: Mohanpur</name>
-    <styleUrl>#facilityStyle</styleUrl>
-    <description>
-      Capacity: 123062
-      Fixed Cost: 1.85031e+08
-    </description>
-    <Point>
-      <coordinates>88.4572,24.5519,0</coordinates>
-    </Point>
-  </Placemark>
-  <Placemark>
     <name>Warehouse 47: Shariatpur-S</name>
     <styleUrl>#facilityStyle</styleUrl>
     <description>
@@ -504,6 +383,17 @@
     </description>
     <Point>
       <coordinates>90.3501,23.2197,0</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Warehouse 48: Charbhadrasan</name>
+    <styleUrl>#facilityStyle</styleUrl>
+    <description>
+      Capacity: 74368.5
+      Fixed Cost: 1.12048e+08
+    </description>
+    <Point>
+      <coordinates>89.9953,23.5669,0</coordinates>
     </Point>
   </Placemark>
   <Placemark>
@@ -4099,26 +3989,26 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Raipur to Mehendiganj</name>
+    <name>Route Raipur to Shariatpur-S</name>
     <description>Assigned Demand Flow: 8158</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.7608,23.0367,0
-        90.527,22.8261,0
+        90.3501,23.2197,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Jhenaidah-S to Kumarkhali</name>
+    <name>Route Jhenaidah-S to Gangni</name>
     <description>Assigned Demand Flow: 4316</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.1754,23.5528,0
-        89.2396,23.8596,0
+        88.7422,23.8207,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -4195,44 +4085,44 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Pangsha to Kumarkhali</name>
+    <name>Route Pangsha to Santhia</name>
     <description>Assigned Demand Flow: 5225</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.4127,23.78,0
-        89.2396,23.8596,0
+        89.5353,24.0562,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Porsha to Manda</name>
+    <name>Route Porsha to Chirirbandar</name>
     <description>Assigned Demand Flow: 5724</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         88.1462,25.0526,0
-        88.6701,24.7755,0
+        88.7771,25.6503,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Moulvibazar-S to Kamalganj</name>
+    <name>Route Moulvibazar-S to Dakshin Surma</name>
     <description>Assigned Demand Flow: 4986</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.7685,24.4843,0
-        91.861,24.3701,0
+        91.9051,24.815,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
     <name>Route Dakhin Sunamganj to Tahirpur</name>
-    <description>Assigned Demand Flow: 8037</description>
+    <description>Assigned Demand Flow: 2952.01</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
@@ -4243,14 +4133,26 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Paba to Durgapur</name>
+    <name>Route Dakhin Sunamganj to Dakshin Surma</name>
+    <description>Assigned Demand Flow: 5084.99</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        91.4581,24.915,0
+        91.9051,24.815,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Paba to Raninagar</name>
     <description>Assigned Demand Flow: 5041</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         88.6438,24.4362,0
-        88.7696,24.445,0
+        88.7859,24.7384,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -4267,14 +4169,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Dhamoirhat to Manda</name>
+    <name>Route Dhamoirhat to Chirirbandar</name>
     <description>Assigned Demand Flow: 7838</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         88.8515,25.1504,0
-        88.6701,24.7755,0
+        88.7771,25.6503,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -4291,14 +4193,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Faridganj to Hizla</name>
+    <name>Route Faridganj to Shariatpur-S</name>
     <description>Assigned Demand Flow: 6800</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.7509,23.1275,0
-        90.4452,22.9296,0
+        90.3501,23.2197,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -4315,14 +4217,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Juraichari to Barkal</name>
+    <name>Route Juraichari to Fatikchari</name>
     <description>Assigned Demand Flow: 5206</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         92.3789,22.6708,0
-        92.3793,22.7262,0
+        91.7388,22.7588,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -4339,14 +4241,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Haluaghat to Durgapur</name>
+    <name>Route Haluaghat to Khaliajuri</name>
     <description>Assigned Demand Flow: 7298</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.3407,25.1218,0
-        90.6757,25.1138,0
+        91.1329,24.6893,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -4375,26 +4277,26 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Charghat to Durgapur</name>
-    <description>Assigned Demand Flow: 2196.9</description>
+    <name>Route Charghat to Gangni</name>
+    <description>Assigned Demand Flow: 3957.31</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         88.7518,24.2785,0
-        88.7696,24.445,0
+        88.7422,23.8207,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Charghat to Mohanpur</name>
-    <description>Assigned Demand Flow: 3841.1</description>
+    <name>Route Charghat to Manda</name>
+    <description>Assigned Demand Flow: 2080.69</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         88.7518,24.2785,0
-        88.4572,24.5519,0
+        88.6701,24.7755,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -4423,38 +4325,38 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Netrakona-S to Gouripur</name>
+    <name>Route Netrakona-S to Khaliajuri</name>
     <description>Assigned Demand Flow: 6200</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.7271,24.8817,0
-        90.5683,24.7548,0
+        91.1329,24.6893,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Sunamganj-S to Kamalganj</name>
+    <name>Route Sunamganj-S to Tahirpur</name>
     <description>Assigned Demand Flow: 8588</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.4073,25.0668,0
-        91.861,24.3701,0
+        91.1755,25.099,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Kalukhali to Kumarkhali</name>
+    <name>Route Kalukhali to Santhia</name>
     <description>Assigned Demand Flow: 4860</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.4691,23.7655,0
-        89.2396,23.8596,0
+        89.5353,24.0562,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -4495,14 +4397,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Bishwanath to Kamalganj</name>
+    <name>Route Bishwanath to Dakshin Surma</name>
     <description>Assigned Demand Flow: 8499</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.7567,24.8171,0
-        91.861,24.3701,0
+        91.9051,24.815,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -4543,14 +4445,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Raipura to Modhyanagar</name>
+    <name>Route Raipura to Bhairab</name>
     <description>Assigned Demand Flow: 5252</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.8719,23.9944,0
-        90.8878,23.9407,0
+        90.9802,24.0555,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -4591,14 +4493,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Jaintiapur to Kanaighat</name>
+    <name>Route Jaintiapur to Dakshin Surma</name>
     <description>Assigned Demand Flow: 7040</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         92.1228,25.1353,0
-        92.2557,25.0088,0
+        91.9051,24.815,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -4615,14 +4517,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Delduar to Sirajganj-S</name>
+    <name>Route Delduar to Singair</name>
     <description>Assigned Demand Flow: 4061</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.9651,24.1647,0
-        89.6816,24.4526,0
+        90.146,23.8137,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -4639,14 +4541,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Nandigram to Baraigram</name>
+    <name>Route Nandigram to Raninagar</name>
     <description>Assigned Demand Flow: 7211</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.2457,24.6481,0
-        89.1635,24.317,0
+        88.7859,24.7384,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -4663,14 +4565,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Porshuram to Sonagazi</name>
+    <name>Route Porshuram to Burichong</name>
     <description>Assigned Demand Flow: 4971</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.4446,23.2134,0
-        91.3928,22.8492,0
+        91.1267,23.5535,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -4747,14 +4649,38 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Lakshmipur-Sadar to Mehendiganj</name>
-    <description>Assigned Demand Flow: 6990</description>
+    <name>Route Lakshmipur-Sadar to Sonagazi</name>
+    <description>Assigned Demand Flow: 2988.99</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.8673,22.9537,0
-        90.527,22.8261,0
+        91.3928,22.8492,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Lakshmipur-Sadar to Banaripara</name>
+    <description>Assigned Demand Flow: 3206.72</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        90.8673,22.9537,0
+        90.1623,22.7779,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Lakshmipur-Sadar to Sonargaon</name>
+    <description>Assigned Demand Flow: 794.287</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        90.8673,22.9537,0
+        90.5991,23.6461,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -4795,14 +4721,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Pabna-S to Kumarkhali</name>
+    <name>Route Pabna-S to Santhia</name>
     <description>Assigned Demand Flow: 8795</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.2383,24.0076,0
-        89.2396,23.8596,0
+        89.5353,24.0562,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -4843,14 +4769,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Mohammadpur to Singair</name>
+    <name>Route Mohammadpur to Sonargaon</name>
     <description>Assigned Demand Flow: 5032</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.3589,23.7662,0
-        90.146,23.8137,0
+        90.5991,23.6461,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -4879,14 +4805,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Beanibazar to Kamalganj</name>
+    <name>Route Beanibazar to Dakshin Surma</name>
     <description>Assigned Demand Flow: 5570</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         92.1585,24.822,0
-        91.861,24.3701,0
+        91.9051,24.815,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -4903,8 +4829,20 @@
     </LineString>
   </Placemark>
   <Placemark>
+    <name>Route Boda to Jaldhaka</name>
+    <description>Assigned Demand Flow: 6730.7</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        88.5582,26.2005,0
+        89.0215,26.0228,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
     <name>Route Boda to Baliadangi</name>
-    <description>Assigned Demand Flow: 8525</description>
+    <description>Assigned Demand Flow: 1794.3</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
@@ -4939,14 +4877,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Naldanga to Mohanpur</name>
+    <name>Route Naldanga to Raninagar</name>
     <description>Assigned Demand Flow: 6112</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         88.9605,24.4969,0
-        88.4572,24.5519,0
+        88.7859,24.7384,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -4987,14 +4925,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Juri to Kamalganj</name>
+    <name>Route Juri to Dakshin Surma</name>
     <description>Assigned Demand Flow: 6726</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.942,24.6148,0
-        91.861,24.3701,0
+        91.9051,24.815,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -5131,26 +5069,26 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Barlekha to Kamalganj</name>
+    <name>Route Barlekha to Dakshin Surma</name>
     <description>Assigned Demand Flow: 6355</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         92.1917,24.7073,0
-        91.861,24.3701,0
+        91.9051,24.815,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Nalchity to Banaripara</name>
+    <name>Route Nalchity to Dumki</name>
     <description>Assigned Demand Flow: 4397</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.2688,22.6283,0
-        90.1623,22.7779,0
+        90.3843,22.4645,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -5179,56 +5117,56 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Dewanganj to Durgapur</name>
-    <description>Assigned Demand Flow: 3222.63</description>
+    <name>Route Dewanganj to Gobindaganj</name>
+    <description>Assigned Demand Flow: 5155</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.7582,25.153,0
-        90.6757,25.1138,0
+        89.3869,25.1373,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Dewanganj to Sariakandi</name>
-    <description>Assigned Demand Flow: 1932.37</description>
-    <styleUrl>#lineStyle</styleUrl>
-    <LineString>
-      <tessellate>1</tessellate>
-      <coordinates>
-        89.7582,25.153,0
-        89.571,24.8888,0
-      </coordinates>
-    </LineString>
-  </Placemark>
-  <Placemark>
-    <name>Route Kushtia-S to Kumarkhali</name>
+    <name>Route Kushtia-S to Gangni</name>
     <description>Assigned Demand Flow: 8460</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.122,23.9088,0
-        89.2396,23.8596,0
+        88.7422,23.8207,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Mymensingh-S to Durgapur</name>
+    <name>Route Mymensingh-S to Gouripur</name>
     <description>Assigned Demand Flow: 6179</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.356,24.7851,0
-        90.6757,25.1138,0
+        90.5683,24.7548,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Ishwarganj to Tahirpur</name>
+    <description>Assigned Demand Flow: 4843.02</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        90.5944,24.6923,0
+        91.1755,25.099,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
     <name>Route Ishwarganj to Gouripur</name>
-    <description>Assigned Demand Flow: 6512</description>
+    <description>Assigned Demand Flow: 1668.98</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
@@ -5287,26 +5225,26 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Panchbibi to Gobindaganj</name>
+    <name>Route Panchbibi to Chirirbandar</name>
     <description>Assigned Demand Flow: 8133</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.0191,25.1872,0
-        89.3869,25.1373,0
+        88.7771,25.6503,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Rampal to Kalia</name>
+    <name>Route Rampal to Banaripara</name>
     <description>Assigned Demand Flow: 7207</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.6722,22.5838,0
-        89.7519,23.0414,0
+        90.1623,22.7779,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -5347,14 +5285,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Nakla to Durgapur</name>
+    <name>Route Nakla to Tahirpur</name>
     <description>Assigned Demand Flow: 5009</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.1788,24.9679,0
-        90.6757,25.1138,0
+        91.1755,25.099,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -5432,7 +5370,7 @@
   </Placemark>
   <Placemark>
     <name>Route Sarishabari to Sariakandi</name>
-    <description>Assigned Demand Flow: 8547</description>
+    <description>Assigned Demand Flow: 1852.81</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
@@ -5443,8 +5381,20 @@
     </LineString>
   </Placemark>
   <Placemark>
+    <name>Route Sarishabari to Sirajganj-S</name>
+    <description>Assigned Demand Flow: 6694.19</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        89.8409,24.7669,0
+        89.6816,24.4526,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
     <name>Route Dumuria to Kalaroa</name>
-    <description>Assigned Demand Flow: 6657</description>
+    <description>Assigned Demand Flow: 2788.72</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
@@ -5455,14 +5405,38 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Ramganj to Mehendiganj</name>
-    <description>Assigned Demand Flow: 4127</description>
+    <name>Route Dumuria to Kalia</name>
+    <description>Assigned Demand Flow: 3868.28</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        89.4194,22.8052,0
+        89.7519,23.0414,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Ramganj to Sonargaon</name>
+    <description>Assigned Demand Flow: 290.707</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.8627,23.1001,0
-        90.527,22.8261,0
+        90.5991,23.6461,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Ramganj to Shariatpur-S</name>
+    <description>Assigned Demand Flow: 3836.29</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        90.8627,23.1001,0
+        90.3501,23.2197,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -5516,7 +5490,7 @@
   </Placemark>
   <Placemark>
     <name>Route Debiganj to Jaldhaka</name>
-    <description>Assigned Demand Flow: 846.701</description>
+    <description>Assigned Demand Flow: 5044</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
@@ -5527,20 +5501,8 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Debiganj to Baliadangi</name>
-    <description>Assigned Demand Flow: 4197.3</description>
-    <styleUrl>#lineStyle</styleUrl>
-    <LineString>
-      <tessellate>1</tessellate>
-      <coordinates>
-        88.7542,26.1247,0
-        88.2753,26.0902,0
-      </coordinates>
-    </LineString>
-  </Placemark>
-  <Placemark>
     <name>Route Mithamoin to Lakhai</name>
-    <description>Assigned Demand Flow: 7863</description>
+    <description>Assigned Demand Flow: 2510.64</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
@@ -5551,26 +5513,38 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Bholahat to Mohanpur</name>
+    <name>Route Mithamoin to Khaliajuri</name>
+    <description>Assigned Demand Flow: 5352.36</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        91.0634,24.4196,0
+        91.1329,24.6893,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Bholahat to Manda</name>
     <description>Assigned Demand Flow: 5871</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         88.2279,24.9457,0
-        88.4572,24.5519,0
+        88.6701,24.7755,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Puthia to Mohanpur</name>
+    <name>Route Puthia to Raninagar</name>
     <description>Assigned Demand Flow: 7689</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         88.8367,24.3638,0
-        88.4572,24.5519,0
+        88.7859,24.7384,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -5611,14 +5585,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Magura-S to Faridpur</name>
+    <name>Route Magura-S to Kalia</name>
     <description>Assigned Demand Flow: 8021</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.4364,23.429,0
-        89.8333,23.6019,0
+        89.7519,23.0414,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -5636,7 +5610,7 @@
   </Placemark>
   <Placemark>
     <name>Route Kaliganj to Araihazar</name>
-    <description>Assigned Demand Flow: 2529.2</description>
+    <description>Assigned Demand Flow: 7857</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
@@ -5647,38 +5621,26 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Kaliganj to Modhyanagar</name>
-    <description>Assigned Demand Flow: 5327.8</description>
-    <styleUrl>#lineStyle</styleUrl>
-    <LineString>
-      <tessellate>1</tessellate>
-      <coordinates>
-        90.5731,23.9645,0
-        90.8878,23.9407,0
-      </coordinates>
-    </LineString>
-  </Placemark>
-  <Placemark>
-    <name>Route Bhaluka to Modhyanagar</name>
+    <name>Route Bhaluka to Gouripur</name>
     <description>Assigned Demand Flow: 7078</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.3866,24.4079,0
-        90.8878,23.9407,0
+        90.5683,24.7548,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Jhenaigati to Durgapur</name>
+    <name>Route Jhenaigati to Gobindaganj</name>
     <description>Assigned Demand Flow: 4832</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.063,25.1859,0
-        90.6757,25.1138,0
+        89.3869,25.1373,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -5695,14 +5657,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Tarakanda to Durgapur</name>
+    <name>Route Tarakanda to Gouripur</name>
     <description>Assigned Demand Flow: 6327</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.488,24.856,0
-        90.6757,25.1138,0
+        90.5683,24.7548,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -5719,14 +5681,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Gazipur-S to Araihazar</name>
+    <name>Route Gazipur-S to Sonargaon</name>
     <description>Assigned Demand Flow: 6620</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.4202,23.9999,0
-        90.6536,23.7917,0
+        90.5991,23.6461,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -5743,26 +5705,26 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Godagari to Mohanpur</name>
+    <name>Route Godagari to Manda</name>
     <description>Assigned Demand Flow: 8340</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         88.3361,24.4587,0
-        88.4572,24.5519,0
+        88.6701,24.7755,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Narshingdi-S to Modhyanagar</name>
+    <name>Route Narshingdi-S to Araihazar</name>
     <description>Assigned Demand Flow: 5333</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.7176,23.9193,0
-        90.8878,23.9407,0
+        90.6536,23.7917,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -5803,26 +5765,26 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Sylhet-S to Kamalganj</name>
+    <name>Route Sylhet-S to Dakshin Surma</name>
     <description>Assigned Demand Flow: 6107</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.8688,24.8951,0
-        91.861,24.3701,0
+        91.9051,24.815,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Nangalkot to Sonagazi</name>
+    <name>Route Nangalkot to Burichong</name>
     <description>Assigned Demand Flow: 5293</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.1977,23.1694,0
-        91.3928,22.8492,0
+        91.1267,23.5535,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -5839,26 +5801,26 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Langadu to Rangamati-S</name>
+    <name>Route Langadu to Fatikchari</name>
     <description>Assigned Demand Flow: 8765</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         92.1535,22.8993,0
-        92.1789,22.6533,0
+        91.7388,22.7588,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Kaunia to Jaldhaka</name>
+    <name>Route Kaunia to Kurigram-S</name>
     <description>Assigned Demand Flow: 4375</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.4317,25.7742,0
-        89.0215,26.0228,0
+        89.6816,25.8282,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -5899,14 +5861,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Sreepur to Modhyanagar</name>
+    <name>Route Sreepur to Araihazar</name>
     <description>Assigned Demand Flow: 8630</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.4809,24.1997,0
-        90.8878,23.9407,0
+        90.6536,23.7917,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -5947,26 +5909,26 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Nagarpur to Santhia</name>
+    <name>Route Nagarpur to Singair</name>
     <description>Assigned Demand Flow: 5124</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.8762,24.0577,0
-        89.5353,24.0562,0
+        90.146,23.8137,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Rajarhat to Jaldhaka</name>
+    <name>Route Rajarhat to Kurigram-S</name>
     <description>Assigned Demand Flow: 4924</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.5466,25.799,0
-        89.0215,26.0228,0
+        89.6816,25.8282,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -6007,14 +5969,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Kaliganj to Modhyanagar</name>
+    <name>Route Kaliganj to Araihazar</name>
     <description>Assigned Demand Flow: 5306</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.5731,23.9645,0
-        90.8878,23.9407,0
+        90.6536,23.7917,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -6043,26 +6005,26 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Daulatpur to Mohanpur</name>
+    <name>Route Daulatpur to Gangni</name>
     <description>Assigned Demand Flow: 8755</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         88.8738,24.0113,0
-        88.4572,24.5519,0
+        88.7422,23.8207,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Shapahar to Mohanpur</name>
+    <name>Route Shapahar to Chirirbandar</name>
     <description>Assigned Demand Flow: 5764</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         88.5879,25.1259,0
-        88.4572,24.5519,0
+        88.7771,25.6503,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -6079,14 +6041,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Baghaichari to Barkal</name>
+    <name>Route Baghaichari to Fatikchari</name>
     <description>Assigned Demand Flow: 7853</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         92.1914,23.1649,0
-        92.3793,22.7262,0
+        91.7388,22.7588,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -6151,14 +6113,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Chunarughat to Sreemangal</name>
+    <name>Route Chunarughat to Lakhai</name>
     <description>Assigned Demand Flow: 7780</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.5172,24.1974,0
-        91.7296,24.3065,0
+        91.3024,24.3106,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -6187,14 +6149,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Shibpur to Modhyanagar</name>
+    <name>Route Shibpur to Bhairab</name>
     <description>Assigned Demand Flow: 7004</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.7526,23.9806,0
-        90.8878,23.9407,0
+        90.9802,24.0555,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -6247,14 +6209,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Mahalchari to Rangamati-S</name>
+    <name>Route Mahalchari to Fatikchari</name>
     <description>Assigned Demand Flow: 7659</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         92.0298,22.9317,0
-        92.1789,22.6533,0
+        91.7388,22.7588,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -6307,26 +6269,26 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Hakimpur to Gobindaganj</name>
+    <name>Route Hakimpur to Chirirbandar</name>
     <description>Assigned Demand Flow: 6948</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.0132,25.2746,0
-        89.3869,25.1373,0
+        88.7771,25.6503,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Zakiganj to Kanaighat</name>
+    <name>Route Zakiganj to Dakshin Surma</name>
     <description>Assigned Demand Flow: 5615</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         92.3678,24.8781,0
-        92.2557,25.0088,0
+        91.9051,24.815,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -6343,14 +6305,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Golapganj to Kamalganj</name>
+    <name>Route Golapganj to Dakshin Surma</name>
     <description>Assigned Demand Flow: 5964</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         92.0151,24.8581,0
-        91.861,24.3701,0
+        91.9051,24.815,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -6367,26 +6329,38 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Muladi to Hizla</name>
+    <name>Route Muladi to Banaripara</name>
     <description>Assigned Demand Flow: 7952</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.389,22.8875,0
-        90.4452,22.9296,0
+        90.1623,22.7779,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Homna to Modhyanagar</name>
-    <description>Assigned Demand Flow: 7361</description>
+    <name>Route Homna to Araihazar</name>
+    <description>Assigned Demand Flow: 5619.8</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.7833,23.6825,0
-        90.8878,23.9407,0
+        90.6536,23.7917,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Homna to Sonargaon</name>
+    <description>Assigned Demand Flow: 1741.2</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        90.7833,23.6825,0
+        90.5991,23.6461,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -6403,14 +6377,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Dinajpur-S to Mohanpur</name>
+    <name>Route Dinajpur-S to Chirirbandar</name>
     <description>Assigned Demand Flow: 6645</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         88.6438,25.6221,0
-        88.4572,24.5519,0
+        88.7771,25.6503,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -6427,14 +6401,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Jhalokathi-S to Banaripara</name>
+    <name>Route Jhalokathi-S to Dumki</name>
     <description>Assigned Demand Flow: 8099</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.187,22.5721,0
-        90.1623,22.7779,0
+        90.3843,22.4645,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -6463,38 +6437,38 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Karnaphuli to Rangamati-S</name>
+    <name>Route Karnaphuli to Fatikchari</name>
     <description>Assigned Demand Flow: 5514</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         92.1069,22.5819,0
-        92.1789,22.6533,0
+        91.7388,22.7588,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Niamatpur to Mohanpur</name>
+    <name>Route Niamatpur to Manda</name>
     <description>Assigned Demand Flow: 5511</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         88.5698,24.8336,0
-        88.4572,24.5519,0
+        88.6701,24.7755,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Chauhali to Santhia</name>
+    <name>Route Chauhali to Sirajganj-S</name>
     <description>Assigned Demand Flow: 7859</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.7541,24.194,0
-        89.5353,24.0562,0
+        89.6816,24.4526,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -6559,62 +6533,74 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Nabinagar to Modhyanagar</name>
+    <name>Route Nabinagar to Bhairab</name>
     <description>Assigned Demand Flow: 6563</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.9605,23.8887,0
-        90.8878,23.9407,0
+        90.9802,24.0555,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Kamalnagar to Sonagazi</name>
+    <name>Route Kamalnagar to Dumki</name>
     <description>Assigned Demand Flow: 4192</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.9939,22.5932,0
-        91.3928,22.8492,0
+        90.3843,22.4645,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Bhurungamari to Jaldhaka</name>
+    <name>Route Bhurungamari to Kurigram-S</name>
     <description>Assigned Demand Flow: 6584</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.6699,26.109,0
-        89.0215,26.0228,0
+        89.6816,25.8282,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Hatiya to Sonagazi</name>
+    <name>Route Hatiya to Galachipa</name>
     <description>Assigned Demand Flow: 8664</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.1401,22.2881,0
-        91.3928,22.8492,0
+        90.4102,22.1634,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
     <name>Route Mirzapur to Singair</name>
-    <description>Assigned Demand Flow: 6226</description>
+    <description>Assigned Demand Flow: 3477.56</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.1655,24.1149,0
         90.146,23.8137,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Mirzapur to Bhairab</name>
+    <description>Assigned Demand Flow: 2748.44</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        90.1655,24.1149,0
+        90.9802,24.0555,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -6631,14 +6617,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Tanore to Mohanpur</name>
+    <name>Route Tanore to Manda</name>
     <description>Assigned Demand Flow: 4850</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         88.5746,24.5873,0
-        88.4572,24.5519,0
+        88.6701,24.7755,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -6667,38 +6653,26 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Rajosthali to Patiya</name>
-    <description>Assigned Demand Flow: 2772.61</description>
+    <name>Route Rajosthali to Chandanish</name>
+    <description>Assigned Demand Flow: 6286</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         92.1523,22.3762,0
-        91.9759,22.295,0
+        92.0126,22.2439,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Rajosthali to Barkal</name>
-    <description>Assigned Demand Flow: 3513.39</description>
-    <styleUrl>#lineStyle</styleUrl>
-    <LineString>
-      <tessellate>1</tessellate>
-      <coordinates>
-        92.1523,22.3762,0
-        92.3793,22.7262,0
-      </coordinates>
-    </LineString>
-  </Placemark>
-  <Placemark>
-    <name>Route Kaptai to Barkal</name>
+    <name>Route Kaptai to Chandanish</name>
     <description>Assigned Demand Flow: 6719</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         92.2212,22.4944,0
-        92.3793,22.7262,0
+        92.0126,22.2439,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -6715,14 +6689,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Gomostapur to Mohanpur</name>
+    <name>Route Gomostapur to Manda</name>
     <description>Assigned Demand Flow: 4059</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         88.2898,24.7934,0
-        88.4572,24.5519,0
+        88.6701,24.7755,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -6739,26 +6713,26 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Fenchuganj to Kamalganj</name>
+    <name>Route Fenchuganj to Dakshin Surma</name>
     <description>Assigned Demand Flow: 4631</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.9441,24.6958,0
-        91.861,24.3701,0
+        91.9051,24.815,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Mithapukur to Kurigram-S</name>
+    <name>Route Mithapukur to Chirirbandar</name>
     <description>Assigned Demand Flow: 6060</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.28,25.5723,0
-        89.6816,25.8282,0
+        88.7771,25.6503,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -6775,38 +6749,50 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Ashuganj to Modhyanagar</name>
+    <name>Route Ashuganj to Bhairab</name>
     <description>Assigned Demand Flow: 7675</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.9964,24.0277,0
-        90.8878,23.9407,0
+        90.9802,24.0555,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Bagha to Mohanpur</name>
+    <name>Route Bagha to Gangni</name>
     <description>Assigned Demand Flow: 8449</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         88.8371,24.1975,0
-        88.4572,24.5519,0
+        88.7422,23.8207,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Khoksha to Kumarkhali</name>
-    <description>Assigned Demand Flow: 6868</description>
+    <name>Route Khoksha to Baraigram</name>
+    <description>Assigned Demand Flow: 4224.46</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.2895,23.8033,0
-        89.2396,23.8596,0
+        89.1635,24.317,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Khoksha to Santhia</name>
+    <description>Assigned Demand Flow: 2643.54</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        89.2895,23.8033,0
+        89.5353,24.0562,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -6859,62 +6845,74 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Nalitabari to Durgapur</name>
-    <description>Assigned Demand Flow: 6500</description>
+    <name>Route Nalitabari to Kurigram-S</name>
+    <description>Assigned Demand Flow: 5917.46</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.194,25.085,0
-        90.6757,25.1138,0
+        89.6816,25.8282,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Companiganj to Barkal</name>
+    <name>Route Nalitabari to Sariakandi</name>
+    <description>Assigned Demand Flow: 582.544</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        90.194,25.085,0
+        89.571,24.8888,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Companiganj to Sonagazi</name>
     <description>Assigned Demand Flow: 5221</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.2779,22.8737,0
-        92.3793,22.7262,0
+        91.3928,22.8492,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Manikchari to Barkal</name>
+    <name>Route Manikchari to Fatikchari</name>
     <description>Assigned Demand Flow: 6239</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.8367,22.8417,0
-        92.3793,22.7262,0
+        91.7388,22.7588,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Belaichari to Barkal</name>
+    <name>Route Belaichari to Chandanish</name>
     <description>Assigned Demand Flow: 7588</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         92.3437,22.5117,0
-        92.3793,22.7262,0
+        92.0126,22.2439,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Atpara to Gouripur</name>
+    <name>Route Atpara to Khaliajuri</name>
     <description>Assigned Demand Flow: 8095</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.8604,24.8098,0
-        90.5683,24.7548,0
+        91.1329,24.6893,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -6943,38 +6941,38 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Lalpur to Mohanpur</name>
+    <name>Route Lalpur to Gangni</name>
     <description>Assigned Demand Flow: 4180</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         88.7377,24.1997,0
-        88.4572,24.5519,0
+        88.7422,23.8207,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Ramgati to Mehendiganj</name>
+    <name>Route Ramgati to Dumki</name>
     <description>Assigned Demand Flow: 5482</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.9318,22.7452,0
-        90.527,22.8261,0
+        90.3843,22.4645,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Shailkupa to Kumarkhali</name>
+    <name>Route Shailkupa to Gangni</name>
     <description>Assigned Demand Flow: 4779</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.242,23.6841,0
-        89.2396,23.8596,0
+        88.7422,23.8207,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -6991,26 +6989,38 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Khanshama to Baliadangi</name>
-    <description>Assigned Demand Flow: 7871</description>
+    <name>Route Khanshama to Chirirbandar</name>
+    <description>Assigned Demand Flow: 5113.18</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         88.7314,25.925,0
-        88.2753,26.0902,0
+        88.7771,25.6503,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Bhola-S to Mehendiganj</name>
+    <name>Route Khanshama to Jaldhaka</name>
+    <description>Assigned Demand Flow: 2757.82</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        88.7314,25.925,0
+        89.0215,26.0228,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Bhola-S to Dumki</name>
     <description>Assigned Demand Flow: 6807</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.6439,22.6855,0
-        90.527,22.8261,0
+        90.3843,22.4645,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -7039,14 +7049,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Naikhyongchari to Barkal</name>
+    <name>Route Naikhyongchari to Thanchi</name>
     <description>Assigned Demand Flow: 6019</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         92.1757,21.4269,0
-        92.3793,22.7262,0
+        92.4357,21.8211,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -7075,14 +7085,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Melandaha to Mohanpur</name>
+    <name>Route Melandaha to Baliadangi</name>
     <description>Assigned Demand Flow: 7998</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         24.9391,24.9391,0
-        88.4572,24.5519,0
+        88.2753,26.0902,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -7099,14 +7109,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Palash to Modhyanagar</name>
+    <name>Route Palash to Bhairab</name>
     <description>Assigned Demand Flow: 8934</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.6543,23.9372,0
-        90.8878,23.9407,0
+        90.9802,24.0555,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -7123,26 +7133,26 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Kishoreganj-S to Sreemangal</name>
-    <description>Assigned Demand Flow: 3132.83</description>
+    <name>Route Kishoreganj-S to Bhairab</name>
+    <description>Assigned Demand Flow: 5564.99</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.7866,24.4331,0
-        91.7296,24.3065,0
+        90.9802,24.0555,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Kishoreganj-S to Gouripur</name>
-    <description>Assigned Demand Flow: 4165.17</description>
+    <name>Route Kishoreganj-S to Khaliajuri</name>
+    <description>Assigned Demand Flow: 1733.01</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.7866,24.4331,0
-        90.5683,24.7548,0
+        91.1329,24.6893,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -7159,14 +7169,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Haimchar to Hizla</name>
+    <name>Route Haimchar to Shariatpur-S</name>
     <description>Assigned Demand Flow: 8954</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.592,23.0595,0
-        90.4452,22.9296,0
+        90.3501,23.2197,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -7183,26 +7193,38 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Nageswari to Durgapur</name>
+    <name>Route Nageswari to Kurigram-S</name>
     <description>Assigned Demand Flow: 8900</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.6957,25.9642,0
-        90.6757,25.1138,0
+        89.6816,25.8282,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Rangunia to Barkal</name>
-    <description>Assigned Demand Flow: 5058</description>
+    <name>Route Rangunia to Chandanish</name>
+    <description>Assigned Demand Flow: 3271.66</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         92.0518,22.4698,0
-        92.3793,22.7262,0
+        92.0126,22.2439,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Rangunia to Fatikchari</name>
+    <description>Assigned Demand Flow: 1786.34</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        92.0518,22.4698,0
+        91.7388,22.7588,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -7219,14 +7241,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Bahubal to Sreemangal</name>
+    <name>Route Bahubal to Lakhai</name>
     <description>Assigned Demand Flow: 4634</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.5378,24.3412,0
-        91.7296,24.3065,0
+        91.3024,24.3106,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -7243,26 +7265,26 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Kishoreganj to Sreemangal</name>
+    <name>Route Kishoreganj to Khaliajuri</name>
     <description>Assigned Demand Flow: 8236</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.7866,24.4331,0
-        91.7296,24.3065,0
+        91.1329,24.6893,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Shyamnagar to Kalaroa</name>
+    <name>Route Shyamnagar to Banaripara</name>
     <description>Assigned Demand Flow: 4077</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.5527,22.3568,0
-        89.0394,22.8583,0
+        90.1623,22.7779,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -7279,14 +7301,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Sirajdikhan to Lauhajong</name>
+    <name>Route Sirajdikhan to Sonargaon</name>
     <description>Assigned Demand Flow: 4673</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.3937,23.5962,0
-        90.3207,23.4743,0
+        90.5991,23.6461,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -7303,20 +7325,8 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Satkania to Patiya</name>
-    <description>Assigned Demand Flow: 569.027</description>
-    <styleUrl>#lineStyle</styleUrl>
-    <LineString>
-      <tessellate>1</tessellate>
-      <coordinates>
-        92.0812,22.1,0
-        91.9759,22.295,0
-      </coordinates>
-    </LineString>
-  </Placemark>
-  <Placemark>
     <name>Route Satkania to Chandanish</name>
-    <description>Assigned Demand Flow: 7061.97</description>
+    <description>Assigned Demand Flow: 7631</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
@@ -7327,14 +7337,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Faridpur-S to Faridpur</name>
+    <name>Route Faridpur-S to Charbhadrasan</name>
     <description>Assigned Demand Flow: 5729</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.8333,23.6019,0
-        89.8333,23.6019,0
+        89.9953,23.5669,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -7363,14 +7373,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Sreenagar to Lauhajong</name>
+    <name>Route Sreenagar to Sonargaon</name>
     <description>Assigned Demand Flow: 5240</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.295,23.5429,0
-        90.3207,23.4743,0
+        90.5991,23.6461,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -7411,38 +7421,38 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Saltha to Faridpur</name>
+    <name>Route Saltha to Charbhadrasan</name>
     <description>Assigned Demand Flow: 7730</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.7826,23.4328,0
-        89.8333,23.6019,0
+        89.9953,23.5669,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Daulatkhan to Mehendiganj</name>
+    <name>Route Daulatkhan to Dumki</name>
     <description>Assigned Demand Flow: 7149</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.7414,22.6051,0
-        90.527,22.8261,0
+        90.3843,22.4645,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Shibchar to Lauhajong</name>
+    <name>Route Shibchar to Shariatpur-S</name>
     <description>Assigned Demand Flow: 6236</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.187,23.3346,0
-        90.3207,23.4743,0
+        90.3501,23.2197,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -7471,44 +7481,56 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Pekua to Patiya</name>
+    <name>Route Pekua to Thanchi</name>
     <description>Assigned Demand Flow: 8620</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.9574,21.8327,0
-        91.9759,22.295,0
+        92.4357,21.8211,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Bochaganj to Baliadangi</name>
+    <name>Route Bochaganj to Chirirbandar</name>
     <description>Assigned Demand Flow: 5561</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         88.4622,25.7997,0
-        88.2753,26.0902,0
+        88.7771,25.6503,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Chakoria to Patiya</name>
+    <name>Route Chakoria to Thanchi</name>
     <description>Assigned Demand Flow: 5792</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         92.0469,21.725,0
-        91.9759,22.295,0
+        92.4357,21.8211,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Nagarkanda to Sonargaon</name>
+    <description>Assigned Demand Flow: 4464.17</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        89.8949,23.421,0
+        90.5991,23.6461,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
     <name>Route Nagarkanda to Charbhadrasan</name>
-    <description>Assigned Demand Flow: 6680</description>
+    <description>Assigned Demand Flow: 2215.83</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
@@ -7531,38 +7553,50 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Baliakandi to Faridpur</name>
+    <name>Route Baliakandi to Charbhadrasan</name>
     <description>Assigned Demand Flow: 5699</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.5474,23.6347,0
-        89.8333,23.6019,0
+        89.9953,23.5669,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Kulaura to Kamalganj</name>
+    <name>Route Kulaura to Dakshin Surma</name>
     <description>Assigned Demand Flow: 7556</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         92.0347,24.5255,0
-        91.861,24.3701,0
+        91.9051,24.815,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Bagatipara to Mohanpur</name>
-    <description>Assigned Demand Flow: 6281</description>
+    <name>Route Bagatipara to Raninagar</name>
+    <description>Assigned Demand Flow: 5554.06</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         88.9641,24.3024,0
-        88.4572,24.5519,0
+        88.7859,24.7384,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Bagatipara to Baraigram</name>
+    <description>Assigned Demand Flow: 726.942</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        88.9641,24.3024,0
+        89.1635,24.317,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -7579,50 +7613,50 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Satkhira-S to Jhikargacha</name>
+    <name>Route Satkhira-S to Kalaroa</name>
     <description>Assigned Demand Flow: 6705</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.0705,22.7185,0
-        89.0991,23.0999,0
+        89.0394,22.8583,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Birganj to Baliadangi</name>
+    <name>Route Birganj to Chirirbandar</name>
     <description>Assigned Demand Flow: 5993</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         88.6555,25.8608,0
-        88.2753,26.0902,0
+        88.7771,25.6503,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Rowangchari to Barkal</name>
+    <name>Route Rowangchari to Thanchi</name>
     <description>Assigned Demand Flow: 5069</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         92.3367,22.1832,0
-        92.3793,22.7262,0
+        92.4357,21.8211,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Raojan to Barkal</name>
+    <name>Route Raojan to Fatikchari</name>
     <description>Assigned Demand Flow: 6493</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.9104,22.5349,0
-        92.3793,22.7262,0
+        91.7388,22.7588,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -7639,14 +7673,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Ulipur to Durgapur</name>
+    <name>Route Ulipur to Kurigram-S</name>
     <description>Assigned Demand Flow: 5258</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.6205,25.6564,0
-        90.6757,25.1138,0
+        89.6816,25.8282,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -7663,14 +7697,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Osmaninagar to Kamalganj</name>
+    <name>Route Osmaninagar to Dakshin Surma</name>
     <description>Assigned Demand Flow: 5016</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.7466,24.719,0
-        91.861,24.3701,0
+        91.9051,24.815,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -7687,20 +7721,32 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Zianagar to Banaripara</name>
+    <name>Route Zianagar to Dumki</name>
     <description>Assigned Demand Flow: 4478</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.9603,22.4858,0
-        90.1623,22.7779,0
+        90.3843,22.4645,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Sharsha to Kalaroa</name>
+    <description>Assigned Demand Flow: 8171.06</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        88.9266,23.0529,0
+        89.0394,22.8583,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
     <name>Route Sharsha to Jhikargacha</name>
-    <description>Assigned Demand Flow: 8461</description>
+    <description>Assigned Demand Flow: 289.944</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
@@ -7711,20 +7757,8 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Bogura-S to Raninagar</name>
-    <description>Assigned Demand Flow: 2241.8</description>
-    <styleUrl>#lineStyle</styleUrl>
-    <LineString>
-      <tessellate>1</tessellate>
-      <coordinates>
-        89.373,24.8481,0
-        88.7859,24.7384,0
-      </coordinates>
-    </LineString>
-  </Placemark>
-  <Placemark>
     <name>Route Bogura-S to Sariakandi</name>
-    <description>Assigned Demand Flow: 3350.2</description>
+    <description>Assigned Demand Flow: 5592</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
@@ -7735,38 +7769,38 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Kapasia to Modhyanagar</name>
+    <name>Route Kapasia to Araihazar</name>
     <description>Assigned Demand Flow: 8983</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.5666,24.1124,0
-        90.8878,23.9407,0
+        90.6536,23.7917,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Mirpur to Kumarkhali</name>
+    <name>Route Mirpur to Gangni</name>
     <description>Assigned Demand Flow: 8265</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         88.9949,23.9317,0
-        89.2396,23.8596,0
+        88.7422,23.8207,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Lohagara to Patiya</name>
+    <name>Route Lohagara to Chandanish</name>
     <description>Assigned Demand Flow: 6873</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         92.1008,22.0402,0
-        91.9759,22.295,0
+        92.0126,22.2439,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -7783,14 +7817,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Lohagara to Patiya</name>
+    <name>Route Lohagara to Chandanish</name>
     <description>Assigned Demand Flow: 4667</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         92.1008,22.0402,0
-        91.9759,22.295,0
+        92.0126,22.2439,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -7807,26 +7841,26 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Goalanda to Faridpur</name>
+    <name>Route Goalanda to Charbhadrasan</name>
     <description>Assigned Demand Flow: 4474</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.7637,23.7237,0
-        89.8333,23.6019,0
+        89.9953,23.5669,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Tarail to Sreemangal</name>
+    <name>Route Tarail to Khaliajuri</name>
     <description>Assigned Demand Flow: 4149</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.8908,24.5491,0
-        91.7296,24.3065,0
+        91.1329,24.6893,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -7867,26 +7901,26 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Banskhali to Patiya</name>
+    <name>Route Banskhali to Chandanish</name>
     <description>Assigned Demand Flow: 5691</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.9463,22.0254,0
-        91.9759,22.295,0
+        92.0126,22.2439,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Nanniarchar to Barkal</name>
+    <name>Route Nanniarchar to Fatikchari</name>
     <description>Assigned Demand Flow: 6682</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         92.1107,22.8622,0
-        92.3793,22.7262,0
+        91.7388,22.7588,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -7903,14 +7937,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Pakundia to Sreemangal</name>
+    <name>Route Pakundia to Bhairab</name>
     <description>Assigned Demand Flow: 5032</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.6797,24.3297,0
-        91.7296,24.3065,0
+        90.9802,24.0555,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -7927,26 +7961,50 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Shajahanpur to Raninagar</name>
+    <name>Route Shajahanpur to Sariakandi</name>
     <description>Assigned Demand Flow: 8538</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.3838,24.7661,0
-        88.7859,24.7384,0
+        89.571,24.8888,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Rajbari-S to Faridpur</name>
-    <description>Assigned Demand Flow: 8468</description>
+    <name>Route Rajbari-S to Kalia</name>
+    <description>Assigned Demand Flow: 810.586</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.6467,23.7639,0
-        89.8333,23.6019,0
+        89.7519,23.0414,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Rajbari-S to Santhia</name>
+    <description>Assigned Demand Flow: 2938.77</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        89.6467,23.7639,0
+        89.5353,24.0562,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Rajbari-S to Charbhadrasan</name>
+    <description>Assigned Demand Flow: 4718.64</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        89.6467,23.7639,0
+        89.9953,23.5669,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -7975,14 +8033,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Balaganj to Kamalganj</name>
+    <name>Route Balaganj to Dakshin Surma</name>
     <description>Assigned Demand Flow: 6200</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.8177,24.6614,0
-        91.861,24.3701,0
+        91.9051,24.815,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -7999,14 +8057,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Jamalpur-S to Durgapur</name>
+    <name>Route Jamalpur-S to Sariakandi</name>
     <description>Assigned Demand Flow: 5041</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.9463,24.925,0
-        90.6757,25.1138,0
+        89.571,24.8888,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -8023,14 +8081,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Boalkhali to Patiya</name>
+    <name>Route Boalkhali to Chandanish</name>
     <description>Assigned Demand Flow: 5348</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.9173,22.3791,0
-        91.9759,22.295,0
+        92.0126,22.2439,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -8059,14 +8117,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Doarabazar to Kamalganj</name>
+    <name>Route Doarabazar to Dakshin Surma</name>
     <description>Assigned Demand Flow: 5100</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.5588,25.0483,0
-        91.861,24.3701,0
+        91.9051,24.815,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -8083,14 +8141,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Ukhiya to Barkal</name>
+    <name>Route Ukhiya to Thanchi</name>
     <description>Assigned Demand Flow: 5694</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         92.1389,21.2447,0
-        92.3793,22.7262,0
+        92.4357,21.8211,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -8107,14 +8165,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Fulchari to Raninagar</name>
+    <name>Route Fulchari to Gobindaganj</name>
     <description>Assigned Demand Flow: 6604</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.5959,25.3198,0
-        88.7859,24.7384,0
+        89.3869,25.1373,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -8131,26 +8189,26 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Dharmapasha to Sreemangal</name>
+    <name>Route Dharmapasha to Khaliajuri</name>
     <description>Assigned Demand Flow: 5802</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.012,24.8993,0
-        91.7296,24.3065,0
+        91.1329,24.6893,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Sonatala to Raninagar</name>
+    <name>Route Sonatala to Gobindaganj</name>
     <description>Assigned Demand Flow: 5438</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.4978,25.0398,0
-        88.7859,24.7384,0
+        89.3869,25.1373,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -8167,20 +8225,8 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Meghna to Lauhajong</name>
-    <description>Assigned Demand Flow: 5454.19</description>
-    <styleUrl>#lineStyle</styleUrl>
-    <LineString>
-      <tessellate>1</tessellate>
-      <coordinates>
-        90.7007,23.6256,0
-        90.3207,23.4743,0
-      </coordinates>
-    </LineString>
-  </Placemark>
-  <Placemark>
     <name>Route Meghna to Sonargaon</name>
-    <description>Assigned Demand Flow: 1456.81</description>
+    <description>Assigned Demand Flow: 6911</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
@@ -8203,32 +8249,44 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Rajapur to Banaripara</name>
+    <name>Route Rajapur to Dumki</name>
     <description>Assigned Demand Flow: 5707</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.1431,22.574,0
-        90.1623,22.7779,0
+        90.3843,22.4645,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Kachua to Lauhajong</name>
+    <name>Route Kachua to Burichong</name>
     <description>Assigned Demand Flow: 5743</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.889,23.3411,0
-        90.3207,23.4743,0
+        91.1267,23.5535,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Lalmohan to Galachipa</name>
+    <description>Assigned Demand Flow: 2117.18</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        90.7319,22.3411,0
+        90.4102,22.1634,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
     <name>Route Lalmohan to Dumki</name>
-    <description>Assigned Demand Flow: 4984</description>
+    <description>Assigned Demand Flow: 2866.82</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
@@ -8239,14 +8297,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Nachol to Mohanpur</name>
+    <name>Route Nachol to Manda</name>
     <description>Assigned Demand Flow: 8253</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         88.4137,24.7327,0
-        88.4572,24.5519,0
+        88.6701,24.7755,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -8263,14 +8321,26 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Phulpur to Durgapur</name>
-    <description>Assigned Demand Flow: 8201</description>
+    <name>Route Phulpur to Tahirpur</name>
+    <description>Assigned Demand Flow: 2713.28</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.4481,24.9621,0
-        90.6757,25.1138,0
+        91.1755,25.099,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Phulpur to Khaliajuri</name>
+    <description>Assigned Demand Flow: 5487.72</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        90.4481,24.9621,0
+        91.1329,24.6893,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -8287,50 +8357,50 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Matlab (Uttar) to Lauhajong</name>
+    <name>Route Matlab (Uttar) to Sonargaon</name>
     <description>Assigned Demand Flow: 5725</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.6181,23.3837,0
-        90.3207,23.4743,0
+        90.5991,23.6461,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Eidgaon to Patiya</name>
+    <name>Route Eidgaon to Thanchi</name>
     <description>Assigned Demand Flow: 7445</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         92.0684,21.5527,0
-        91.9759,22.295,0
+        92.4357,21.8211,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Matiranga to Barkal</name>
+    <name>Route Matiranga to Fatikchari</name>
     <description>Assigned Demand Flow: 7556</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.8733,23.0408,0
-        92.3793,22.7262,0
+        91.7388,22.7588,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Habiganj-S to Sreemangal</name>
+    <name>Route Habiganj-S to Lakhai</name>
     <description>Assigned Demand Flow: 5907</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.4169,24.384,0
-        91.7296,24.3065,0
+        91.3024,24.3106,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -8347,26 +8417,26 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Boalmari to Lauhajong</name>
+    <name>Route Boalmari to Charbhadrasan</name>
     <description>Assigned Demand Flow: 6272</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.684,23.391,0
-        90.3207,23.4743,0
+        89.9953,23.5669,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Dhobaura to Durgapur</name>
+    <name>Route Dhobaura to Tahirpur</name>
     <description>Assigned Demand Flow: 5863</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.5234,25.0902,0
-        90.6757,25.1138,0
+        91.1755,25.099,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -8383,14 +8453,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Narayanganj-S to Lauhajong</name>
+    <name>Route Narayanganj-S to Sonargaon</name>
     <description>Assigned Demand Flow: 5818</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.5002,23.6238,0
-        90.3207,23.4743,0
+        90.5991,23.6461,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -8407,80 +8477,92 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Cumilla-S Daksin to Sreemangal</name>
+    <name>Route Cumilla-S Daksin to Burichong</name>
     <description>Assigned Demand Flow: 5652</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.1809,23.4607,0
-        91.7296,24.3065,0
+        91.1267,23.5535,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Barhatta to Sreemangal</name>
+    <name>Route Barhatta to Khaliajuri</name>
     <description>Assigned Demand Flow: 6884</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.8842,24.8986,0
-        91.7296,24.3065,0
+        91.1329,24.6893,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Basail to Lauhajong</name>
-    <description>Assigned Demand Flow: 5070</description>
+    <name>Route Basail to Singair</name>
+    <description>Assigned Demand Flow: 2427.89</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.0513,24.2331,0
-        90.3207,23.4743,0
+        90.146,23.8137,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Companiganj to Kamalganj</name>
+    <name>Route Basail to Sirajganj-S</name>
+    <description>Assigned Demand Flow: 2642.11</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        90.0513,24.2331,0
+        89.6816,24.4526,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Companiganj to Dakshin Surma</name>
     <description>Assigned Demand Flow: 7808</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.7548,25.0881,0
-        91.861,24.3701,0
+        91.9051,24.815,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Sitakunda to Barkal</name>
+    <name>Route Sitakunda to Fatikchari</name>
     <description>Assigned Demand Flow: 6628</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.6809,22.6171,0
-        92.3793,22.7262,0
+        91.7388,22.7588,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Ghior to Lauhajong</name>
+    <name>Route Ghior to Singair</name>
     <description>Assigned Demand Flow: 6780</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.8716,23.8971,0
-        90.3207,23.4743,0
+        90.146,23.8137,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
     <name>Route Barishal-S to Banaripara</name>
-    <description>Assigned Demand Flow: 6907</description>
+    <description>Assigned Demand Flow: 1450.69</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
@@ -8491,14 +8573,26 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Bajitpur to Sreemangal</name>
+    <name>Route Barishal-S to Dumki</name>
+    <description>Assigned Demand Flow: 5456.31</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        90.3535,22.701,0
+        90.3843,22.4645,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Bajitpur to Bhairab</name>
     <description>Assigned Demand Flow: 5342</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.9522,24.2138,0
-        91.7296,24.3065,0
+        90.9802,24.0555,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -8515,50 +8609,62 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Mirsharai to Barkal</name>
+    <name>Route Mirsharai to Fatikchari</name>
     <description>Assigned Demand Flow: 5025</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.5742,22.773,0
-        92.3793,22.7262,0
+        91.7388,22.7588,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Gowainghat to Kanaighat</name>
+    <name>Route Gowainghat to Dakshin Surma</name>
     <description>Assigned Demand Flow: 6785</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.9823,25.091,0
-        92.2557,25.0088,0
+        91.9051,24.815,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Monohorganj to Sonagazi</name>
+    <name>Route Monohorganj to Burichong</name>
     <description>Assigned Demand Flow: 6423</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.1158,23.1123,0
-        91.3928,22.8492,0
+        91.1267,23.5535,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Pirgacha to Raninagar</name>
-    <description>Assigned Demand Flow: 6139</description>
+    <name>Route Pirgacha to Kurigram-S</name>
+    <description>Assigned Demand Flow: 4036.96</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.4056,25.6578,0
-        88.7859,24.7384,0
+        89.6816,25.8282,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Pirgacha to Jaldhaka</name>
+    <description>Assigned Demand Flow: 2102.04</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        89.4056,25.6578,0
+        89.0215,26.0228,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -8576,7 +8682,7 @@
   </Placemark>
   <Placemark>
     <name>Route Atghoria to Baraigram</name>
-    <description>Assigned Demand Flow: 3770.68</description>
+    <description>Assigned Demand Flow: 5376</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
@@ -8587,92 +8693,80 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Atghoria to Santhia</name>
-    <description>Assigned Demand Flow: 1605.32</description>
-    <styleUrl>#lineStyle</styleUrl>
-    <LineString>
-      <tessellate>1</tessellate>
-      <coordinates>
-        89.2431,24.1134,0
-        89.5353,24.0562,0
-      </coordinates>
-    </LineString>
-  </Placemark>
-  <Placemark>
-    <name>Route Shibganj to Raninagar</name>
+    <name>Route Shibganj to Gobindaganj</name>
     <description>Assigned Demand Flow: 4858</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.3203,25.0006,0
-        88.7859,24.7384,0
+        89.3869,25.1373,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Nandail to Sreemangal</name>
+    <name>Route Nandail to Khaliajuri</name>
     <description>Assigned Demand Flow: 6337</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.6904,24.5687,0
-        91.7296,24.3065,0
+        91.1329,24.6893,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Sayedpur to Jaldhaka</name>
+    <name>Route Sayedpur to Chirirbandar</name>
     <description>Assigned Demand Flow: 4686</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         88.8983,25.783,0
-        89.0215,26.0228,0
+        88.7771,25.6503,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Dohar to Lauhajong</name>
+    <name>Route Dohar to Charbhadrasan</name>
     <description>Assigned Demand Flow: 6882</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.1197,23.6182,0
-        90.3207,23.4743,0
+        89.9953,23.5669,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Sherpur-S to Durgapur</name>
+    <name>Route Sherpur-S to Sariakandi</name>
     <description>Assigned Demand Flow: 5045</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.0137,25.0194,0
-        90.6757,25.1138,0
+        89.571,24.8888,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Daganbhuiyan to Barkal</name>
+    <name>Route Daganbhuiyan to Sonagazi</name>
     <description>Assigned Demand Flow: 6348</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.318,22.9124,0
-        92.3793,22.7262,0
+        91.3928,22.8492,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
     <name>Route Haziganj to Burichong</name>
-    <description>Assigned Demand Flow: 5930</description>
+    <description>Assigned Demand Flow: 2208.75</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
@@ -8683,38 +8777,50 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Sherpur to Durgapur</name>
+    <name>Route Haziganj to Sonargaon</name>
+    <description>Assigned Demand Flow: 3721.25</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        90.8508,23.252,0
+        90.5991,23.6461,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Sherpur to Sariakandi</name>
     <description>Assigned Demand Flow: 6361</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.0137,25.0194,0
-        90.6757,25.1138,0
+        89.571,24.8888,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Rajnagar to Mohanpur</name>
+    <name>Route Rajnagar to Manda</name>
     <description>Assigned Demand Flow: 7452</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         86.1607,24.5316,0
-        88.4572,24.5519,0
+        88.6701,24.7755,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Shibganj to Raninagar</name>
+    <name>Route Shibganj to Gobindaganj</name>
     <description>Assigned Demand Flow: 5296</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.3203,25.0006,0
-        88.7859,24.7384,0
+        89.3869,25.1373,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -8731,8 +8837,20 @@
     </LineString>
   </Placemark>
   <Placemark>
+    <name>Route Akkelpur to Gobindaganj</name>
+    <description>Assigned Demand Flow: 2891.27</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        89.0203,24.9692,0
+        89.3869,25.1373,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
     <name>Route Akkelpur to Raninagar</name>
-    <description>Assigned Demand Flow: 8140</description>
+    <description>Assigned Demand Flow: 5248.73</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
@@ -8743,38 +8861,38 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Monohardi to Modhyanagar</name>
+    <name>Route Monohardi to Bhairab</name>
     <description>Assigned Demand Flow: 5626</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.7032,24.141,0
-        90.8878,23.9407,0
+        90.9802,24.0555,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Itna to Sreemangal</name>
+    <name>Route Itna to Khaliajuri</name>
     <description>Assigned Demand Flow: 4142</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.0957,24.5277,0
-        91.7296,24.3065,0
+        91.1329,24.6893,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Kaliganj to Modhyanagar</name>
+    <name>Route Kaliganj to Araihazar</name>
     <description>Assigned Demand Flow: 7386</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.5731,23.9645,0
-        90.8878,23.9407,0
+        90.6536,23.7917,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -8791,50 +8909,62 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Harinakunda to Santhia</name>
+    <name>Route Harinakunda to Gangni</name>
     <description>Assigned Demand Flow: 4712</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.043,23.6488,0
-        89.5353,24.0562,0
+        88.7422,23.8207,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Sandwip to Barkal</name>
-    <description>Assigned Demand Flow: 5475</description>
+    <name>Route Sandwip to Sonagazi</name>
+    <description>Assigned Demand Flow: 2027.2</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.5015,22.4937,0
-        92.3793,22.7262,0
+        91.3928,22.8492,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Hossainpur to Sreemangal</name>
+    <name>Route Sandwip to Fatikchari</name>
+    <description>Assigned Demand Flow: 3447.8</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        91.5015,22.4937,0
+        91.7388,22.7588,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Hossainpur to Bhairab</name>
     <description>Assigned Demand Flow: 8299</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.6548,24.4174,0
-        91.7296,24.3065,0
+        90.9802,24.0555,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Bakshiganj to Durgapur</name>
+    <name>Route Bakshiganj to Gobindaganj</name>
     <description>Assigned Demand Flow: 7324</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.8681,25.1844,0
-        90.6757,25.1138,0
+        89.3869,25.1373,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -8851,38 +8981,38 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Shivalaya to Lauhajong</name>
+    <name>Route Shivalaya to Santhia</name>
     <description>Assigned Demand Flow: 4849</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.7055,23.8471,0
-        90.3207,23.4743,0
+        89.5353,24.0562,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Rowmari to Durgapur</name>
+    <name>Route Rowmari to Kurigram-S</name>
     <description>Assigned Demand Flow: 5371</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.8306,25.5754,0
-        90.6757,25.1138,0
+        89.6816,25.8282,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Belabo to Modhyanagar</name>
+    <name>Route Belabo to Bhairab</name>
     <description>Assigned Demand Flow: 8938</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.8514,24.1051,0
-        90.8878,23.9407,0
+        90.9802,24.0555,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -8911,14 +9041,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Chhatak to Kamalganj</name>
+    <name>Route Chhatak to Dakshin Surma</name>
     <description>Assigned Demand Flow: 5437</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.6664,25.0417,0
-        91.861,24.3701,0
+        91.9051,24.815,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -8935,74 +9065,62 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Austagram to Sreemangal</name>
+    <name>Route Austagram to Lakhai</name>
     <description>Assigned Demand Flow: 7012</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.1185,24.2795,0
-        91.7296,24.3065,0
+        91.3024,24.3106,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Tungipara to Hizla</name>
-    <description>Assigned Demand Flow: 5217.72</description>
+    <name>Route Tungipara to Banaripara</name>
+    <description>Assigned Demand Flow: 8003</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.8985,22.9073,0
-        90.4452,22.9296,0
+        90.1623,22.7779,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Tungipara to Kalia</name>
-    <description>Assigned Demand Flow: 2785.28</description>
-    <styleUrl>#lineStyle</styleUrl>
-    <LineString>
-      <tessellate>1</tessellate>
-      <coordinates>
-        89.8985,22.9073,0
-        89.7519,23.0414,0
-      </coordinates>
-    </LineString>
-  </Placemark>
-  <Placemark>
-    <name>Route Debhata to Jhikargacha</name>
+    <name>Route Debhata to Kalaroa</name>
     <description>Assigned Demand Flow: 4623</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         88.9892,22.5809,0
-        89.0991,23.0999,0
+        89.0394,22.8583,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Gouranadi to Hizla</name>
+    <name>Route Gouranadi to Banaripara</name>
     <description>Assigned Demand Flow: 6074</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.2221,22.9743,0
-        90.4452,22.9296,0
+        90.1623,22.7779,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Bakerganj to Hizla</name>
+    <name>Route Bakerganj to Dumki</name>
     <description>Assigned Demand Flow: 6722</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.3384,22.5405,0
-        90.4452,22.9296,0
+        90.3843,22.4645,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -9019,164 +9137,164 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Madarganj to Santhia</name>
+    <name>Route Madarganj to Sariakandi</name>
     <description>Assigned Demand Flow: 5737</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.7167,24.9068,0
-        89.5353,24.0562,0
+        89.571,24.8888,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Dashar to Hizla</name>
+    <name>Route Dashar to Shariatpur-S</name>
     <description>Assigned Demand Flow: 7818</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.1448,23.0786,0
-        90.4452,22.9296,0
+        90.3501,23.2197,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Cumilla-S to Sreemangal</name>
+    <name>Route Cumilla-S to Burichong</name>
     <description>Assigned Demand Flow: 6997</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.1809,23.4607,0
-        91.7296,24.3065,0
+        91.1267,23.5535,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Natore-S to Mohanpur</name>
+    <name>Route Natore-S to Baraigram</name>
     <description>Assigned Demand Flow: 6091</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         88.975,24.4084,0
-        88.4572,24.5519,0
+        89.1635,24.317,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Anwara to Patiya</name>
+    <name>Route Anwara to Chandanish</name>
     <description>Assigned Demand Flow: 5236</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.866,22.2337,0
-        91.9759,22.295,0
+        92.0126,22.2439,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Akhaura to Sreemangal</name>
+    <name>Route Akhaura to Burichong</name>
     <description>Assigned Demand Flow: 7828</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.2097,23.8686,0
-        91.7296,24.3065,0
+        91.1267,23.5535,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Baniachong to Sreemangal</name>
+    <name>Route Baniachong to Lakhai</name>
     <description>Assigned Demand Flow: 6670</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.3566,24.5063,0
-        91.7296,24.3065,0
+        91.3024,24.3106,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Kaliganj to Modhyanagar</name>
+    <name>Route Kaliganj to Araihazar</name>
     <description>Assigned Demand Flow: 5803</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.5731,23.9645,0
-        90.8878,23.9407,0
+        90.6536,23.7917,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Panchari to Barkal</name>
+    <name>Route Panchari to Fatikchari</name>
     <description>Assigned Demand Flow: 4846</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.899,23.3029,0
-        92.3793,22.7262,0
+        91.7388,22.7588,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Dhunot to Santhia</name>
+    <name>Route Dhunot to Sirajganj-S</name>
     <description>Assigned Demand Flow: 6801</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.5403,24.678,0
-        89.5353,24.0562,0
+        89.6816,24.4526,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Kalapara to Hizla</name>
+    <name>Route Kalapara to Galachipa</name>
     <description>Assigned Demand Flow: 8308</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.2315,21.9849,0
-        90.4452,22.9296,0
+        90.4102,22.1634,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Patuakhali-S to Hizla</name>
+    <name>Route Patuakhali-S to Dumki</name>
     <description>Assigned Demand Flow: 4427</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.3452,22.3588,0
-        90.4452,22.9296,0
+        90.3843,22.4645,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Kazipur to Santhia</name>
+    <name>Route Kazipur to Sirajganj-S</name>
     <description>Assigned Demand Flow: 7094</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.6346,24.6545,0
-        89.5353,24.0562,0
+        89.6816,24.4526,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
     <name>Route Mohadevpur to Raninagar</name>
-    <description>Assigned Demand Flow: 8533</description>
+    <description>Assigned Demand Flow: 6961.02</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
@@ -9187,50 +9305,62 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Nabiganj to Sreemangal</name>
+    <name>Route Mohadevpur to Manda</name>
+    <description>Assigned Demand Flow: 1571.98</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        88.7518,24.9198,0
+        88.6701,24.7755,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Nabiganj to Dakshin Surma</name>
     <description>Assigned Demand Flow: 7570</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.5136,24.5672,0
-        91.7296,24.3065,0
+        91.9051,24.815,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Kabir Hat to Hizla</name>
+    <name>Route Kabir Hat to Sonagazi</name>
     <description>Assigned Demand Flow: 8945</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.1989,22.7956,0
-        90.4452,22.9296,0
+        91.3928,22.8492,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Muradnagar to Modhyanagar</name>
+    <name>Route Muradnagar to Burichong</name>
     <description>Assigned Demand Flow: 6071</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.944,23.7149,0
-        90.8878,23.9407,0
+        91.1267,23.5535,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Chouddagram to Barkal</name>
+    <name>Route Chouddagram to Burichong</name>
     <description>Assigned Demand Flow: 8937</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.3132,23.228,0
-        92.3793,22.7262,0
+        91.1267,23.5535,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -9247,74 +9377,86 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Bandar to Lauhajong</name>
+    <name>Route Bandar to Sonargaon</name>
     <description>Assigned Demand Flow: 4313</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.5315,23.6332,0
-        90.3207,23.4743,0
+        90.5991,23.6461,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Pirganj to Raninagar</name>
-    <description>Assigned Demand Flow: 4611</description>
+    <name>Route Pirganj to Gobindaganj</name>
+    <description>Assigned Demand Flow: 170.766</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.3132,25.4362,0
-        88.7859,24.7384,0
+        89.3869,25.1373,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Madhukhali to Lauhajong</name>
+    <name>Route Pirganj to Chirirbandar</name>
+    <description>Assigned Demand Flow: 4440.23</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        89.3132,25.4362,0
+        88.7771,25.6503,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Madhukhali to Charbhadrasan</name>
     <description>Assigned Demand Flow: 7571</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.6287,23.5441,0
-        90.3207,23.4743,0
+        89.9953,23.5669,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Muksudpur to Lauhajong</name>
+    <name>Route Muksudpur to Charbhadrasan</name>
     <description>Assigned Demand Flow: 6865</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.8669,23.3198,0
-        90.3207,23.4743,0
+        89.9953,23.5669,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Khagrachari-S to Barkal</name>
+    <name>Route Khagrachari-S to Fatikchari</name>
     <description>Assigned Demand Flow: 6869</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.9888,23.1117,0
-        92.3793,22.7262,0
+        91.7388,22.7588,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Bagherpara to Lauhajong</name>
+    <name>Route Bagherpara to Jhikargacha</name>
     <description>Assigned Demand Flow: 4624</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.3488,23.2173,0
-        90.3207,23.4743,0
+        89.0991,23.0999,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -9331,14 +9473,14 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Joypurhat-S to Raninagar</name>
+    <name>Route Joypurhat-S to Gobindaganj</name>
     <description>Assigned Demand Flow: 6152</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.0227,25.0968,0
-        88.7859,24.7384,0
+        89.3869,25.1373,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -9355,158 +9497,170 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Lalmai to Sreemangal</name>
+    <name>Route Lalmai to Burichong</name>
     <description>Assigned Demand Flow: 4084</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.1467,23.359,0
-        91.7296,24.3065,0
+        91.1267,23.5535,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Sreepur to Modhyanagar</name>
+    <name>Route Sreepur to Araihazar</name>
     <description>Assigned Demand Flow: 8786</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.4809,24.1997,0
-        90.8878,23.9407,0
+        90.6536,23.7917,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Bancharampur to Modhyanagar</name>
+    <name>Route Bancharampur to Araihazar</name>
     <description>Assigned Demand Flow: 6684</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.8038,23.7753,0
-        90.8878,23.9407,0
+        90.6536,23.7917,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Tongibari to Lauhajong</name>
+    <name>Route Tongibari to Sonargaon</name>
     <description>Assigned Demand Flow: 8141</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.4668,23.5097,0
-        90.3207,23.4743,0
+        90.5991,23.6461,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Purbadhala to Durgapur</name>
+    <name>Route Purbadhala to Gouripur</name>
     <description>Assigned Demand Flow: 4828</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.6003,24.9431,0
-        90.6757,25.1138,0
+        90.5683,24.7548,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Madhabpur to Sreemangal</name>
+    <name>Route Madhabpur to Bhairab</name>
     <description>Assigned Demand Flow: 7239</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.2963,24.0998,0
-        91.7296,24.3065,0
+        90.9802,24.0555,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Islampur to Raninagar</name>
+    <name>Route Islampur to Gobindaganj</name>
     <description>Assigned Demand Flow: 8703</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.4079,25.1108,0
-        88.7859,24.7384,0
+        89.3869,25.1373,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Ishwardi to Santhia</name>
+    <name>Route Ishwardi to Baraigram</name>
     <description>Assigned Demand Flow: 7989</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         89.0657,24.1292,0
-        89.5353,24.0562,0
+        89.1635,24.317,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Bheramara to Santhia</name>
+    <name>Route Bheramara to Gangni</name>
     <description>Assigned Demand Flow: 5258</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         88.9922,24.021,0
-        89.5353,24.0562,0
+        88.7422,23.8207,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Gaffargaon to Sreemangal</name>
+    <name>Route Gaffargaon to Gouripur</name>
     <description>Assigned Demand Flow: 7724</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.5492,24.4173,0
-        91.7296,24.3065,0
+        90.5683,24.7548,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Muktagacha to Durgapur</name>
+    <name>Route Muktagacha to Khaliajuri</name>
     <description>Assigned Demand Flow: 6667</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.2561,24.766,0
-        90.6757,25.1138,0
+        91.1329,24.6893,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Kutubdia to Patiya</name>
-    <description>Assigned Demand Flow: 7306</description>
+    <name>Route Kutubdia to Chandanish</name>
+    <description>Assigned Demand Flow: 3802.1</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.8583,21.8167,0
-        91.9759,22.295,0
+        92.0126,22.2439,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Birol to Mohanpur</name>
+    <name>Route Kutubdia to Thanchi</name>
+    <description>Assigned Demand Flow: 3503.9</description>
+    <styleUrl>#lineStyle</styleUrl>
+    <LineString>
+      <tessellate>1</tessellate>
+      <coordinates>
+        91.8583,21.8167,0
+        92.4357,21.8211,0
+      </coordinates>
+    </LineString>
+  </Placemark>
+  <Placemark>
+    <name>Route Birol to Chirirbandar</name>
     <description>Assigned Demand Flow: 6921</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         88.5565,25.6328,0
-        88.4572,24.5519,0
+        88.7771,25.6503,0
       </coordinates>
     </LineString>
   </Placemark>
@@ -9523,38 +9677,38 @@
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route B.Baria-S to Sreemangal</name>
+    <name>Route B.Baria-S to Bhairab</name>
     <description>Assigned Demand Flow: 4128</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         91.1115,23.9608,0
-        91.7296,24.3065,0
+        90.9802,24.0555,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Bauphal to Hizla</name>
+    <name>Route Bauphal to Dumki</name>
     <description>Assigned Demand Flow: 8560</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.5565,22.4193,0
-        90.4452,22.9296,0
+        90.3843,22.4645,0
       </coordinates>
     </LineString>
   </Placemark>
   <Placemark>
-    <name>Route Bhedarganj to Hizla</name>
+    <name>Route Bhedarganj to Shariatpur-S</name>
     <description>Assigned Demand Flow: 5902</description>
     <styleUrl>#lineStyle</styleUrl>
     <LineString>
       <tessellate>1</tessellate>
       <coordinates>
         90.4455,23.1971,0
-        90.4452,22.9296,0
+        90.3501,23.2197,0
       </coordinates>
     </LineString>
   </Placemark>

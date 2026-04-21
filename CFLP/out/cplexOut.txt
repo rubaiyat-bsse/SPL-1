@@ -1,15 +1,16 @@
-CPLEX Exact Optimal Objective Value = 5814199555.164673
+CPLEX Exact Optimal Objective Value = 5687193678.813062
 Opened facilities:
 Facility 0 (Gobindaganj) opened
-Facility 1 (Patiya) opened
 Facility 2 (Sonagazi) opened
 Facility 3 (Gangni) opened
 Facility 4 (Banaripara) opened
+Facility 5 (Tahirpur) opened
 Facility 8 (Kurigram-S) opened
 Facility 9 (Durgapur) opened
 Facility 10 (Chirirbandar) opened
 Facility 11 (Lakhai) opened
-Facility 12 (Durgapur) opened
+Facility 13 (Hizla) opened
+Facility 14 (Araihazar) opened
 Facility 16 (Gouripur) opened
 Facility 17 (Kalaroa) opened
 Facility 18 (Singair) opened
@@ -19,6 +20,7 @@ Facility 22 (Sariakandi) opened
 Facility 24 (Manda) opened
 Facility 26 (Kumarkhali) opened
 Facility 27 (Bhairab) opened
+Facility 28 (Chandanish) opened
 Facility 29 (Sirajganj-S) opened
 Facility 30 (Thanchi) opened
 Facility 32 (Burichong) opened
@@ -26,10 +28,9 @@ Facility 33 (Galachipa) opened
 Facility 34 (Dumki) opened
 Facility 36 (Khaliajuri) opened
 Facility 37 (Jhikargacha) opened
-Facility 38 (Rangamati-S) opened
 Facility 39 (Baliadangi) opened
 Facility 40 (Sonargaon) opened
+Facility 41 (Fatikchari) opened
 Facility 42 (Santhia) opened
 Facility 43 (Dakshin Surma) opened
-Facility 47 (Shariatpur-S) opened
 Facility 48 (Charbhadrasan) opened

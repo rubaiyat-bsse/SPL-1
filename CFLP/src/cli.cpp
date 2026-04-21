@@ -75,11 +75,16 @@ int main(int argc, char* argv[]){
             cout << "-> Running Lagrangian RH 2...\n";
             auto lh2Result = lagrange_RH_2(inputFile);
 
+            cout << "-> Running Lagrangian RH 3 (CPLEX Middle-Ground)...\n";
+            auto lh3Result = lagrange_RH_3(inputFile);
+
             double gap1 = ((lh1Result.first - cplexResult.first) / cplexResult.first) * 100.0;
             double gap2 = ((lh2Result.first - cplexResult.first) / cplexResult.first) * 100.0;
+            double gap3 = ((lh3Result.first - cplexResult.first) / cplexResult.first) * 100.0;
 
             double speedup1 = (lh1Result.second > 1e-6) ? (cplexResult.second / lh1Result.second) : 0.0;
             double speedup2 = (lh2Result.second > 1e-6) ? (cplexResult.second / lh2Result.second) : 0.0;
+            double speedup3 = (lh3Result.second > 1e-6) ? (cplexResult.second / lh3Result.second) : 0.0;
 
             cout << "\n=================================== RESULTS ===================================\n";
             cout << left << setw(15) << "Solver" 
@@ -107,6 +112,13 @@ int main(int argc, char* argv[]){
                  << setw(15) << fixed << setprecision(6) << lh2Result.second 
                  << "+" << fixed << setprecision(4) << gap2 << "%      ";
             if (speedup2 > 1.0) cout << fixed << setprecision(1) << speedup2 << "x faster\n";
+            else cout << "-\n";
+
+            cout << left << setw(15) << "Lagrange RH3" 
+                 << setw(20) << fixed << setprecision(2) << lh3Result.first 
+                 << setw(15) << fixed << setprecision(6) << lh3Result.second 
+                 << "+" << fixed << setprecision(4) << gap3 << "%      ";
+            if (speedup3 > 1.0) cout << fixed << setprecision(1) << speedup3 << "x faster\n";
             else cout << "-\n";
 
             cout << "===============================================================================\n";

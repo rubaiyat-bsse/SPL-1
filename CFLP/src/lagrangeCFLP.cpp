@@ -1,8 +1,10 @@
 #include <bits/stdc++.h>
+#include <ilcplex/ilocplex.h>
 #include "DataProcessor.hpp"
 #include "ParameterGenerator.hpp"
 #include "KMLGenerator.hpp"
 
+ILOSTLBEGIN
 using namespace std;
 
 #define MAX_ITERATION 200
@@ -280,6 +282,85 @@ pair<vector<int>, vector<vector<double>>> repairHeuristic2(
     return {yRepair, xRepair};
 }
 
+pair<vector<int>, vector<vector<double>>> repairHeuristic3(
+    const vector<Facility>& facilities,
+    const vector<Customer>& customers,
+    const vector<vector<double>>& c,
+    const vector<int>& y
+){
+    int I = customers.size();
+    int J = facilities.size();
+
+    vector<int> bestY = y;
+    vector<vector<double>> bestX(I, vector<double>(J, 0.0));
+
+    // environment setup
+    IloEnv env;
+    try {
+        IloModel model(env);
+
+        IloArray<IloNumVarArray> x_var(env, J);
+        for(int j = 0; j < J; j++)
+            x_var[j] = IloNumVarArray(env, I, 0.0, IloInfinity, ILOFLOAT);
+
+        IloBoolVarArray y_var(env, J);
+
+        IloExpr obj(env);
+        for(int j = 0; j < J; j++){
+            obj += facilities[j].f * y_var[j];
+            for(int i = 0; i < I; i++){
+                obj += c[i][j] * x_var[j][i];
+            }
+        }
+        model.add(IloMinimize(env, obj));
+        obj.end();
+
+        for(int i = 0; i < I; i++){
+            IloExpr expr(env);
+            for(int j = 0; j < J; j++){
+                expr += x_var[j][i];
+            }
+            model.add(expr == customers[i].d);
+            expr.end();
+        }
+
+        for(int j = 0; j < J; j++){
+            IloExpr expr(env);
+            for(int i = 0; i < I; i++){
+                expr += x_var[j][i];
+            }
+            model.add(expr <= facilities[j].M * y_var[j]);
+            expr.end();
+        }
+
+        // add the opened yj by the subproblem to reduce branch combinations
+        for (int j = 0; j < J; j++) {
+            if (y[j] == 1) {
+                model.add(y_var[j] == 1); 
+            }
+        }
+
+        IloCplex cplex(model);
+        cplex.setOut(env.getNullStream()); // keeps iteration logs clean
+        cplex.setWarning(env.getNullStream());
+        cplex.setParam(IloCplex::Param::TimeLimit, 1.0); // stops iteration from hanging
+
+        if(cplex.solve()){
+            for (int j = 0; j < J; j++) {
+                bestY[j] = (cplex.getValue(y_var[j]) > 0.5) ? 1 : 0;
+                for (int i = 0; i < I; i++) {
+                    double val = cplex.getValue(x_var[j][i]);
+                    if (val > 1e-6) bestX[i][j] = val;
+                }
+            }
+        }
+    } catch(IloException &e) {
+        // meh
+    }
+    env.end();
+    return {bestY, bestX};
+}
+
 double computePrimalValue(
     const vector<Facility>& facilities,
     const vector<vector<double>>& c,
@@ -365,8 +446,10 @@ RelaxationResult lagrangeRelaxation(
         pair<vector<int>, vector<vector<double>>> repaired;
         if (heuristicVersion == 1) {
             repaired = repairHeuristic(facilities, c, y, x);
-        } else {
+        } else if (heuristicVersion == 2) {
             repaired = repairHeuristic2(facilities, customers, c, y);
+        } else if (heuristicVersion == 3) {
+            repaired = repairHeuristic3(facilities, customers, c, y);
         }
         const vector<int>& yRepair = repaired.first;
         const vector<vector<double>>& xRepair = repaired.second;
@@ -507,4 +590,7 @@ pair<double, double> lagrange_RH_1(const string& csvPath){
 }
 pair<double, double> lagrange_RH_2(const string& csvPath){ 
     return runLagrangian(2, csvPath); 
+}
+pair<double, double> lagrange_RH_3(const string& csvPath){ 
+    return runLagrangian(3, csvPath); 
 }

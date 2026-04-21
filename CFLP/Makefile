@@ -45,6 +45,10 @@ build/cflpCplex.o: src/cflpCplex.cpp
 	@mkdir -p build
 	$(CXX) $(CXXFLAGS_CPLEX) -c $< -o $@
 
+build/lagrangeCFLP.o: src/lagrangeCFLP.cpp
+	@mkdir -p build
+	$(CXX) $(CXXFLAGS_CPLEX) -c $< -o $@
+
 # Standard compilation for everything else
 build/%.o: src/%.cpp
 	@mkdir -p build
