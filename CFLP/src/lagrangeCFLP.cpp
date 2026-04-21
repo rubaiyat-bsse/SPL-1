@@ -343,7 +343,7 @@ pair<vector<int>, vector<vector<double>>> repairHeuristic3(
         IloCplex cplex(model);
         cplex.setOut(env.getNullStream()); // keeps iteration logs clean
         cplex.setWarning(env.getNullStream());
-        cplex.setParam(IloCplex::Param::TimeLimit, 1.0); // stops iteration from hanging
+        // cplex.setParam(IloCplex::Param::TimeLimit, 1.0); // stops iteration from hanging
 
         if(cplex.solve()){
             for (int j = 0; j < J; j++) {

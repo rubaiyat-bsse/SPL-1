@@ -1,36 +1,98 @@
-CPLEX Exact Optimal Objective Value = 5687193678.813062
+CPLEX Exact Optimal Objective Value = 62836448787.581703
 Opened facilities:
-Facility 0 (Gobindaganj) opened
-Facility 2 (Sonagazi) opened
-Facility 3 (Gangni) opened
-Facility 4 (Banaripara) opened
-Facility 5 (Tahirpur) opened
-Facility 8 (Kurigram-S) opened
-Facility 9 (Durgapur) opened
-Facility 10 (Chirirbandar) opened
-Facility 11 (Lakhai) opened
-Facility 13 (Hizla) opened
-Facility 14 (Araihazar) opened
-Facility 16 (Gouripur) opened
-Facility 17 (Kalaroa) opened
-Facility 18 (Singair) opened
-Facility 19 (Jaldhaka) opened
-Facility 21 (Kalia) opened
-Facility 22 (Sariakandi) opened
-Facility 24 (Manda) opened
-Facility 26 (Kumarkhali) opened
-Facility 27 (Bhairab) opened
-Facility 28 (Chandanish) opened
-Facility 29 (Sirajganj-S) opened
-Facility 30 (Thanchi) opened
-Facility 32 (Burichong) opened
-Facility 33 (Galachipa) opened
-Facility 34 (Dumki) opened
-Facility 36 (Khaliajuri) opened
-Facility 37 (Jhikargacha) opened
-Facility 39 (Baliadangi) opened
-Facility 40 (Sonargaon) opened
-Facility 41 (Fatikchari) opened
-Facility 42 (Santhia) opened
-Facility 43 (Dakshin Surma) opened
-Facility 48 (Charbhadrasan) opened
+Facility 0 (Delhi) opened
+Facility 1 (Mumbai) opened
+Facility 2 (Kolkāta) opened
+Facility 3 (Karachi) opened
+Facility 4 (Dhaka) opened
+Facility 5 (Bangalore) opened
+Facility 6 (Chennai) opened
+Facility 7 (Lahore) opened
+Facility 8 (Hyderābād) opened
+Facility 9 (Ahmedabad) opened
+Facility 10 (Lucknow) opened
+Facility 11 (Faisalabad) opened
+Facility 12 (Jaipur) opened
+Facility 13 (Chattogram) opened
+Facility 15 (Gujranwala) opened
+Facility 17 (Multan) opened
+Facility 18 (Bhopāl) opened
+Facility 19 (Hyderabad City) opened
+Facility 20 (Patna) opened
+Facility 21 (Madurai) opened
+Facility 22 (Srīnagar) opened
+Facility 23 (Rānchi) opened
+Facility 24 (Chandīgarh) opened
+Facility 26 (Raipur) opened
+Facility 28 (Khulna) opened
+Facility 29 (Bhubaneshwar) opened
+Facility 30 (Bahawalpur) opened
+Facility 31 (Thiruvananthapuram) opened
+Facility 33 (Sialkot City) opened
+Facility 34 (Dehra Dūn) opened
+Facility 35 (Mymensingh) opened
+Facility 36 (Dispur) opened
+Facility 37 (Agartala) opened
+Facility 38 (Jammu) opened
+Facility 39 (Sukkur) opened
+Facility 40 (Larkana) opened
+Facility 41 (Sylhet) opened
+Facility 42 (Chiniot) opened
+Facility 43 (Shekhupura) opened
+Facility 44 (Rājshāhi) opened
+Facility 45 (Sanghar) opened
+Facility 46 (Calicut) opened
+Facility 47 (Jhang City) opened
+Facility 48 (Dera Ghazi Khan) opened
+Facility 49 (Gujrat) opened
+Facility 51 (Hafizabad) opened
+Facility 52 (Kasur) opened
+Facility 54 (Rangpur) opened
+Facility 55 (Āīzawl) opened
+Facility 56 (Khanewal) opened
+Facility 57 (Turbat) opened
+Facility 58 (Imphāl) opened
+Facility 59 (Nawabshah) opened
+Facility 60 (New Delhi) opened
+Facility 61 (Sahiwal) opened
+Facility 62 (Puducherry) opened
+Facility 63 (Mirpur Khas) opened
+Facility 64 (Okara) opened
+Facility 65 (Barishal) opened
+Facility 66 (Thatta) opened
+Facility 68 (Panchkula) opened
+Facility 69 (Shimla) opened
+Facility 70 (Jacobabad) opened
+Facility 71 (Ghāndīnagar) opened
+Facility 74 (Muzaffargarh) opened
+Facility 77 (Mandi Bahauddin) opened
+Facility 78 (Naogaon) opened
+Facility 80 (Dadu) opened
+Facility 81 (Khairpur Mir’s) opened
+Facility 82 (Lodhran) opened
+Facility 83 (Shillong) opened
+Facility 84 (Bahawalnagar) opened
+Facility 85 (Port Blair) opened
+Facility 86 (Pakpattan) opened
+Facility 87 (Tando Allahyar) opened
+Facility 88 (Vihari) opened
+Facility 89 (New Mirpur) opened
+Facility 90 (Ghotki) opened
+Facility 92 (Badin) opened
+Facility 94 (Tando Muhammad Khan) opened
+Facility 99 (Amarāvati) opened
+Facility 100 (Gangtok) opened
+Facility 101 (Kohīma) opened
+Facility 104 (Dera Allahyar) opened
+Facility 106 (Jamshoro) opened
+Facility 107 (Toba Tek Singh) opened
+Facility 108 (Gwadar) opened
+Facility 110 (Saidu Sharif) opened
+Facility 112 (Itānagar) opened
+Facility 113 (Gaibandha) opened
+Facility 119 (Damān) opened
+Facility 120 (Panaji) opened
+Facility 122 (Naushahro Firoz) opened
+Facility 123 (Uthal) opened
+Facility 125 (Umarkot) opened
+Facility 130 (Kavaratti) opened
