@@ -460,14 +460,14 @@ void printFinalResult(
 
 #include "lagrangeCFLP.hpp"
 
-void runLagrangian(int heuristicVersion, const string& csvPath){
+pair<double, double> runLagrangian(int heuristicVersion, const string& csvPath){
     srand(42); // using a fixed seed so CPLEX and Lagrangian get the exact same demands & capacities
 
     // process Data
     vector<City> allCities = parseCSV(csvPath);
     if(allCities.empty()) {
         cerr << "Failed to parse cities or file is empty.\n";
-        return;
+        return {-1.0, -1.0};
     }
 
     vector<Facility> facilities = selectFacilities(allCities);
@@ -498,11 +498,13 @@ void runLagrangian(int heuristicVersion, const string& csvPath){
     string logBaseDir = "/home/ratul/IIT/spl-1/CFLP/out/";
     string kmlOut = logBaseDir + "optimized_cflp_rh" + to_string(heuristicVersion) + ".kml";
     generateKML(facilities, customers, result.bestY, result.bestX, kmlOut);
+    
+    return {result.UB, elapsed.count()};
 }
 
-void lagrange_RH_1(const string& csvPath){ 
-    runLagrangian(1, csvPath); 
+pair<double, double> lagrange_RH_1(const string& csvPath){ 
+    return runLagrangian(1, csvPath); 
 }
-void lagrange_RH_2(const string& csvPath){ 
-    runLagrangian(2, csvPath); 
+pair<double, double> lagrange_RH_2(const string& csvPath){ 
+    return runLagrangian(2, csvPath); 
 }

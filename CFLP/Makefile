@@ -34,10 +34,10 @@ cflpCplex: $(CORE_OBJS) $(CPLEX_OBJS)
 	@mkdir -p build
 	$(CXX) $(CORE_OBJS) $(CPLEX_OBJS) -o $(EXEC_CPLEX) $(LDFLAGS_CPLEX)
 
-# Rule to build the lagrange heuristic baseline (Standard build, no CPLEX linkage)
-lagrange-cli: $(CORE_OBJS) $(CLI_OBJS)
+# Rule to build the lagrange heuristic baseline, now with CPLEX linkage for benchmarking feature
+lagrange-cli: $(CORE_OBJS) $(CLI_OBJS) build/cflpCplex.o
 	@mkdir -p build
-	$(CXX) $(CORE_OBJS) $(CLI_OBJS) -o $(EXEC_CLI)
+	$(CXX) $(CORE_OBJS) $(CLI_OBJS) build/cflpCplex.o -o $(EXEC_CLI) $(LDFLAGS_CPLEX)
 
 # Pattern rules for object compilation
 # Compiling CPLEX objects requires the heavy include headers
