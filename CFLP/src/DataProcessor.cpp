@@ -39,15 +39,11 @@ vector<City> parseCSV(const string& filename){
         }
 
         // city,city_ascii,lat,lng,country,iso2,iso3,admin_name,capital,population,id
-        if(tokens.size() >= 10){
+        if(tokens.size() >= 11){
             City c;
             c.name = tokens[0];
-            try {
-                c.lat = stod(tokens[2]);
-                c.lng = stod(tokens[3]);
-            } catch (...) {
-                continue; // invalid coordinates
-            }
+            c.lat = stod(tokens[2]);
+            c.lng = stod(tokens[3]);
             c.admin_name = tokens[7];
             c.capital = tokens[8];
 
@@ -55,12 +51,8 @@ vector<City> parseCSV(const string& filename){
                 c.capital.pop_back();
             }
 
-            try {
-               c.population = stoi(tokens[9]);
-            } catch (...) {
-               c.population = 200000 + (rand() % 250001);
-            }
-            c.id = tokens.size() >= 11 ? tokens[10] : "";
+            c.population = stoi(tokens[9]);
+            c.id = tokens[10];
 
             cities.push_back(c);
         }

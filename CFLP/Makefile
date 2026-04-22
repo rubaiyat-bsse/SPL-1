@@ -16,10 +16,8 @@ LDFLAGS_CPLEX = -L$(CPLEX_LIBDIR) -L$(CONCERT_LIBDIR) -lilocplex -lconcert -lcpl
 CORE_SRCS = src/DataProcessor.cpp src/ParameterGenerator.cpp src/KMLGenerator.cpp
 CORE_OBJS = $(patsubst src/%.cpp,build/%.o,$(CORE_SRCS))
 
-# Target: cflpCplex
 CPLEX_SRCS = src/cflpCplex.cpp
 CPLEX_OBJS = $(patsubst src/%.cpp,build/%.o,$(CPLEX_SRCS))
-EXEC_CPLEX = build/cflpCplex
 
 # Target: lagrange-cli (CLI)
 CLI_SRCS = src/cli.cpp src/lagrangeCFLP.cpp
@@ -27,25 +25,23 @@ CLI_OBJS = $(patsubst src/%.cpp,build/%.o,$(CLI_SRCS))
 EXEC_CLI = build/lagrange-cli
 
 # --- Rules ---
-all: cflpCplex lagrange-cli
+all: lagrange-cli
 
-# Rule to build the exact CPLEX baseline
-cflpCplex: $(CORE_OBJS) $(CPLEX_OBJS)
+# Rule to build the unified executable
+lagrange-cli: $(CORE_OBJS) $(CLI_OBJS) $(CPLEX_OBJS)
 	@mkdir -p build
-	$(CXX) $(CORE_OBJS) $(CPLEX_OBJS) -o $(EXEC_CPLEX) $(LDFLAGS_CPLEX)
-
-# Rule to build the lagrange heuristic baseline, now with CPLEX linkage for benchmarking feature
-lagrange-cli: $(CORE_OBJS) $(CLI_OBJS) build/cflpCplex.o
-	@mkdir -p build
-	$(CXX) $(CORE_OBJS) $(CLI_OBJS) build/cflpCplex.o -o $(EXEC_CLI) $(LDFLAGS_CPLEX)
+	$(CXX) $(CORE_OBJS) $(CLI_OBJS) $(CPLEX_OBJS) -o $(EXEC_CLI) $(LDFLAGS_CPLEX)
 
 # Pattern rules for object compilation
-# Compiling CPLEX objects requires the heavy include headers
 build/cflpCplex.o: src/cflpCplex.cpp
 	@mkdir -p build
 	$(CXX) $(CXXFLAGS_CPLEX) -c $< -o $@
 
 build/lagrangeCFLP.o: src/lagrangeCFLP.cpp
+	@mkdir -p build
+	$(CXX) $(CXXFLAGS_CPLEX) -c $< -o $@
+
+build/cli.o: src/cli.cpp
 	@mkdir -p build
 	$(CXX) $(CXXFLAGS_CPLEX) -c $< -o $@
 
@@ -56,4 +52,4 @@ build/%.o: src/%.cpp
 
 # --- Cleanup ---
 clean:
-	rm -f build/*.o $(EXEC_CPLEX) $(EXEC_CLI)
+	rm -f build/*.o $(EXEC_CLI)

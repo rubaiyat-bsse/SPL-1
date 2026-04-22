@@ -7,8 +7,8 @@
 using namespace std;
 
 #define PI 3.14159265358979323846
-#define COST_PER_WAREHOUSE 1000000.0
-#define SUPPLY_FACTOR_PER_WAREHOUSE 50
+// #define COST_PER_WAREHOUSE 1000000.0
+// #define SUPPLY_FACTOR_PER_WAREHOUSE 50
 
 static double toRadians(double degrees){
     return degrees * PI / 180.0;
@@ -51,7 +51,7 @@ void generateFacilityParameters(vector<Facility>& facilities, const vector<Custo
         globalTotalDemand += customers[i].d;
     }
 
-    // 1. TIGHT CAPACITY: We want total capacity to be just barely enough, e.g., 1.5x total demand.
+    // We want total capacity to be just barely enough, e.g., 1.5x total demand.
     // Divided equally among the number of facilities as a base scale.
     double baseCapacityScale = (globalTotalDemand * 1.5) / facilities.size();
 
@@ -61,10 +61,10 @@ void generateFacilityParameters(vector<Facility>& facilities, const vector<Custo
         double randomCapMultiplier = 0.5 + ((rand() % 101) / 100.0); 
         facilities[j].M = baseCapacityScale * randomCapMultiplier;
 
-        // 2. VARYING FIXED COSTS: Base cost + (Capacity * cost per unit) + Random Noise
+        // VARYING FIXED COSTS: Base cost + (Capacity * cost per unit) + random Noise
         double baseCost = 500000.0;
-        double capacityCost = 1500.0 * facilities[j].M; // Bigger warehouse costs more to open
-        double randomNoise = (rand() % 200000) - 100000; // Random +/- 100k
+        double capacityCost = 1500.0 * facilities[j].M; // bigger warehouse costs more to open
+        double randomNoise = (rand() % 200000) - 100000; // random +/- 100k
         
         facilities[j].f = baseCost + capacityCost + randomNoise; 
         if(facilities[j].f < 10000) facilities[j].f = 10000; // prevent negative/zero costs

@@ -4,6 +4,7 @@
 #include <iomanip>
 
 #include "lagrangeCFLP.hpp"
+#include "cflpCplex.hpp"
 
 using namespace std;
 
@@ -66,7 +67,7 @@ int main(int argc, char* argv[]){
             cout << "                 PERFORMANCE BENCHMARK                   \n";
             cout << "=========================================================\n";
             
-            cout << "-> Running exact CPLEX solver... (silently)\n";
+            cout << "-> Running exact CPLEX solver...\n";
             auto cplexResult = runCplex(inputFile);
             
             cout << "-> Running Lagrangian RH 1...\n";
@@ -126,6 +127,7 @@ int main(int argc, char* argv[]){
             // call the solver with the input file
             lagrange_RH_1(inputFile);
             lagrange_RH_2(inputFile);
+            lagrange_RH_3(inputFile);
         }
 
     } else if (command == "knapsack") {

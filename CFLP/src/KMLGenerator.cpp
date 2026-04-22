@@ -44,7 +44,7 @@ void generateKML(const vector<Facility>& facilities,
     // greenish line for routes
     file << "  <Style id=\"lineStyle\">\n";
     file << "    <LineStyle>\n";
-    file << "      <color>7f00ff00</color>\n"; // Transparent Green
+    file << "      <color>ffee82ee</color>\n"; // violate
     file << "      <width>2</width>\n";
     file << "    </LineStyle>\n";
     file << "  </Style>\n";

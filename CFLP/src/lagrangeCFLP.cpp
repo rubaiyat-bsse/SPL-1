@@ -285,8 +285,10 @@ pair<vector<int>, vector<vector<double>>> repairHeuristic2(
 pair<vector<int>, vector<vector<double>>> repairHeuristic3(
     const vector<Facility>& facilities,
     const vector<Customer>& customers,
-    const vector<vector<double>>& c,
-    const vector<int>& y
+    const vector<int>& y,
+    IloCplex& cplex,
+    IloNumVarArray& y_var,
+    IloArray<IloNumVarArray>& x_var
 ){
     int I = customers.size();
     int J = facilities.size();
@@ -294,56 +296,14 @@ pair<vector<int>, vector<vector<double>>> repairHeuristic3(
     vector<int> bestY = y;
     vector<vector<double>> bestX(I, vector<double>(J, 0.0));
 
-    // environment setup
-    IloEnv env;
     try {
-        IloModel model(env);
-
-        IloArray<IloNumVarArray> x_var(env, J);
-        for(int j = 0; j < J; j++)
-            x_var[j] = IloNumVarArray(env, I, 0.0, IloInfinity, ILOFLOAT);
-
-        IloBoolVarArray y_var(env, J);
-
-        IloExpr obj(env);
-        for(int j = 0; j < J; j++){
-            obj += facilities[j].f * y_var[j];
-            for(int i = 0; i < I; i++){
-                obj += c[i][j] * x_var[j][i];
-            }
-        }
-        model.add(IloMinimize(env, obj));
-        obj.end();
-
-        for(int i = 0; i < I; i++){
-            IloExpr expr(env);
-            for(int j = 0; j < J; j++){
-                expr += x_var[j][i];
-            }
-            model.add(expr == customers[i].d);
-            expr.end();
-        }
-
-        for(int j = 0; j < J; j++){
-            IloExpr expr(env);
-            for(int i = 0; i < I; i++){
-                expr += x_var[j][i];
-            }
-            model.add(expr <= facilities[j].M * y_var[j]);
-            expr.end();
-        }
-
-        // add the opened yj by the subproblem to reduce branch combinations
         for (int j = 0; j < J; j++) {
             if (y[j] == 1) {
-                model.add(y_var[j] == 1); 
+                y_var[j].setBounds(1, 1);
+            } else {
+                y_var[j].setBounds(0, 1);
             }
         }
-
-        IloCplex cplex(model);
-        cplex.setOut(env.getNullStream()); // keeps iteration logs clean
-        cplex.setWarning(env.getNullStream());
-        // cplex.setParam(IloCplex::Param::TimeLimit, 1.0); // stops iteration from hanging
 
         if(cplex.solve()){
             for (int j = 0; j < J; j++) {
@@ -354,10 +314,13 @@ pair<vector<int>, vector<vector<double>>> repairHeuristic3(
                 }
             }
         }
+
+        for (int j = 0; j < J; j++) {
+            y_var[j].setBounds(0, 1);
+        }
     } catch(IloException &e) {
         // meh
     }
-    env.end();
     return {bestY, bestX};
 }
 
@@ -426,6 +389,51 @@ RelaxationResult lagrangeRelaxation(
     vector<int> bestY(m, 0);
     vector<vector<double>> bestX(n, vector<double>(m, 0));
 
+    IloEnv env;
+    {
+        IloModel model(env);
+        IloNumVarArray y_var(env, m, 0, 1, ILOINT);
+        IloArray<IloNumVarArray> x_var(env, m);
+        
+        if (heuristicVersion == 3) {
+        for(int j = 0; j < m; j++)
+            x_var[j] = IloNumVarArray(env, n, 0.0, IloInfinity, ILOFLOAT);
+
+        IloExpr obj(env);
+        for(int j = 0; j < m; j++){
+            obj += facilities[j].f * y_var[j];
+            for(int i = 0; i < n; i++){
+                obj += c[i][j] * x_var[j][i];
+            }
+        }
+        model.add(IloMinimize(env, obj));
+        obj.end();
+
+        for(int i = 0; i < n; i++){
+            IloExpr expr(env);
+            for(int j = 0; j < m; j++){
+                expr += x_var[j][i];
+            }
+            model.add(expr == customers[i].d);
+            expr.end();
+        }
+
+        for(int j = 0; j < m; j++){
+            IloExpr expr(env);
+            for(int i = 0; i < n; i++){
+                expr += x_var[j][i];
+            }
+            model.add(expr <= facilities[j].M * y_var[j]);
+            expr.end();
+        }
+    }
+    
+    IloCplex cplex(model);
+    if (heuristicVersion == 3) {
+        cplex.setOut(env.getNullStream()); 
+        cplex.setWarning(env.getNullStream());
+    }
+
     // clear previous log file on new run
     string logBaseDir = "/home/ratul/IIT/spl-1/CFLP/out/";
     string logFile = logBaseDir + "lagrange_log_" + to_string(heuristicVersion) + ".csv";
@@ -449,7 +457,7 @@ RelaxationResult lagrangeRelaxation(
         } else if (heuristicVersion == 2) {
             repaired = repairHeuristic2(facilities, customers, c, y);
         } else if (heuristicVersion == 3) {
-            repaired = repairHeuristic3(facilities, customers, c, y);
+            repaired = repairHeuristic3(facilities, customers, y, cplex, y_var, x_var);
         }
         const vector<int>& yRepair = repaired.first;
         const vector<vector<double>>& xRepair = repaired.second;
@@ -487,7 +495,9 @@ RelaxationResult lagrangeRelaxation(
 
         updateLambda(lambda, step, g);
     }
+    } // end of explicit CPLEX environment scope
 
+    env.end();
     return {LB, UB, lambda, bestY, bestX};
 }
 
