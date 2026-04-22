@@ -1,98 +1,103 @@
-CPLEX Exact Optimal Objective Value = 62836448787.581703
+CPLEX Exact Optimal Objective Value = 6762936230.651985
 Opened facilities:
-Facility 0 (Delhi) opened
-Facility 1 (Mumbai) opened
-Facility 2 (Kolkāta) opened
-Facility 3 (Karachi) opened
-Facility 4 (Dhaka) opened
-Facility 5 (Bangalore) opened
-Facility 6 (Chennai) opened
-Facility 7 (Lahore) opened
-Facility 8 (Hyderābād) opened
-Facility 9 (Ahmedabad) opened
-Facility 10 (Lucknow) opened
-Facility 11 (Faisalabad) opened
-Facility 12 (Jaipur) opened
-Facility 13 (Chattogram) opened
-Facility 15 (Gujranwala) opened
-Facility 17 (Multan) opened
-Facility 18 (Bhopāl) opened
-Facility 19 (Hyderabad City) opened
-Facility 20 (Patna) opened
-Facility 21 (Madurai) opened
-Facility 22 (Srīnagar) opened
-Facility 23 (Rānchi) opened
-Facility 24 (Chandīgarh) opened
-Facility 26 (Raipur) opened
-Facility 28 (Khulna) opened
-Facility 29 (Bhubaneshwar) opened
-Facility 30 (Bahawalpur) opened
-Facility 31 (Thiruvananthapuram) opened
-Facility 33 (Sialkot City) opened
-Facility 34 (Dehra Dūn) opened
-Facility 35 (Mymensingh) opened
-Facility 36 (Dispur) opened
-Facility 37 (Agartala) opened
-Facility 38 (Jammu) opened
-Facility 39 (Sukkur) opened
-Facility 40 (Larkana) opened
-Facility 41 (Sylhet) opened
-Facility 42 (Chiniot) opened
-Facility 43 (Shekhupura) opened
-Facility 44 (Rājshāhi) opened
-Facility 45 (Sanghar) opened
-Facility 46 (Calicut) opened
-Facility 47 (Jhang City) opened
-Facility 48 (Dera Ghazi Khan) opened
-Facility 49 (Gujrat) opened
-Facility 51 (Hafizabad) opened
-Facility 52 (Kasur) opened
-Facility 54 (Rangpur) opened
-Facility 55 (Āīzawl) opened
-Facility 56 (Khanewal) opened
-Facility 57 (Turbat) opened
-Facility 58 (Imphāl) opened
-Facility 59 (Nawabshah) opened
-Facility 60 (New Delhi) opened
-Facility 61 (Sahiwal) opened
-Facility 62 (Puducherry) opened
-Facility 63 (Mirpur Khas) opened
-Facility 64 (Okara) opened
-Facility 65 (Barishal) opened
-Facility 66 (Thatta) opened
-Facility 68 (Panchkula) opened
-Facility 69 (Shimla) opened
-Facility 70 (Jacobabad) opened
-Facility 71 (Ghāndīnagar) opened
-Facility 74 (Muzaffargarh) opened
-Facility 77 (Mandi Bahauddin) opened
-Facility 78 (Naogaon) opened
-Facility 80 (Dadu) opened
-Facility 81 (Khairpur Mir’s) opened
-Facility 82 (Lodhran) opened
-Facility 83 (Shillong) opened
-Facility 84 (Bahawalnagar) opened
-Facility 85 (Port Blair) opened
-Facility 86 (Pakpattan) opened
-Facility 87 (Tando Allahyar) opened
-Facility 88 (Vihari) opened
-Facility 89 (New Mirpur) opened
-Facility 90 (Ghotki) opened
-Facility 92 (Badin) opened
-Facility 94 (Tando Muhammad Khan) opened
-Facility 99 (Amarāvati) opened
-Facility 100 (Gangtok) opened
-Facility 101 (Kohīma) opened
-Facility 104 (Dera Allahyar) opened
-Facility 106 (Jamshoro) opened
-Facility 107 (Toba Tek Singh) opened
-Facility 108 (Gwadar) opened
-Facility 110 (Saidu Sharif) opened
-Facility 112 (Itānagar) opened
-Facility 113 (Gaibandha) opened
-Facility 119 (Damān) opened
-Facility 120 (Panaji) opened
-Facility 122 (Naushahro Firoz) opened
-Facility 123 (Uthal) opened
-Facility 125 (Umarkot) opened
-Facility 130 (Kavaratti) opened
+Facility 0 (Manila) opened
+Facility 1 (Dhaka) opened
+Facility 2 (Quezon City) opened
+Facility 3 (Chattogram) opened
+Facility 5 (Davao) opened
+Facility 6 (Caloocan City) opened
+Facility 7 (Cebu City) opened
+Facility 8 (Khulna) opened
+Facility 9 (Masbate) opened
+Facility 10 (Antipolo) opened
+Facility 11 (Taguig City) opened
+Facility 12 (Pasig City) opened
+Facility 13 (Cagayan de Oro) opened
+Facility 14 (Valenzuela) opened
+Facility 15 (General Santos) opened
+Facility 16 (City of Parañaque) opened
+Facility 17 (Makati City) opened
+Facility 18 (Bacolod) opened
+Facility 19 (Mymensingh) opened
+Facility 20 (Iloilo) opened
+Facility 21 (Muntinlupa City) opened
+Facility 22 (Lapu-Lapu City) opened
+Facility 23 (Sylhet) opened
+Facility 24 (Angeles City) opened
+Facility 25 (Marikina City) opened
+Facility 26 (Rājshāhi) opened
+Facility 27 (Pasay City) opened
+Facility 28 (Mandaluyong City) opened
+Facility 29 (Tarlac City) opened
+Facility 30 (Malabon) opened
+Facility 32 (Baguio City) opened
+Facility 33 (Mandaue City) opened
+Facility 35 (San Fernando) opened
+Facility 36 (Batangas) opened
+Facility 37 (Naga City) opened
+Facility 38 (Cotabato) opened
+Facility 39 (Puerto Princesa) opened
+Facility 40 (Tagum) opened
+Facility 41 (Rangpur) opened
+Facility 42 (Lucena) opened
+Facility 43 (Malolos) opened
+Facility 44 (Olongapo) opened
+Facility 45 (Tacloban) opened
+Facility 47 (Ormoc) opened
+Facility 48 (Barishal) opened
+Facility 49 (Trece Martires City) opened
+Facility 50 (Pagadian) opened
+Facility 51 (Legazpi City) opened
+Facility 52 (Marawi City) opened
+Facility 53 (Malaybalay) opened
+Facility 57 (Dagupan City) opened
+Facility 58 (Surigao) opened
+Facility 59 (Tuguegarao) opened
+Facility 60 (Kidapawan) opened
+Facility 61 (Ilagan) opened
+Facility 62 (Naogaon) opened
+Facility 65 (Calapan) opened
+Facility 68 (La Trinidad) opened
+Facility 70 (Dumaguete City) opened
+Facility 72 (San Juan) opened
+Facility 73 (San Fernando) opened
+Facility 74 (Magalang) opened
+Facility 79 (Daet) opened
+Facility 80 (Laoag) opened
+Facility 81 (Lingayen) opened
+Facility 83 (Tiaong) opened
+Facility 85 (Balanga) opened
+Facility 86 (Talipao) opened
+Facility 87 (Catarman) opened
+Facility 88 (Isulan) opened
+Facility 91 (Kalibo) opened
+Facility 95 (Nabunturan) opened
+Facility 96 (Cabadbaran) opened
+Facility 99 (Virac) opened
+Facility 101 (Oroquieta) opened
+Facility 107 (Gaibandha) opened
+Facility 108 (Naval) opened
+Facility 111 (Iba) opened
+Facility 112 (Vigan) opened
+Facility 115 (Bangued) opened
+Facility 116 (Tubod) opened
+Facility 117 (Panay) opened
+Facility 119 (Kabasalan) opened
+Facility 120 (Palayan City) opened
+Facility 122 (Hinatuan) opened
+Facility 123 (Baler) opened
+Facility 124 (Badian) opened
+Facility 126 (President Quirino) opened
+Facility 127 (Claveria) opened
+Facility 129 (Romblon) opened
+Facility 130 (Jordan) opened
+Facility 131 (San Antonio) opened
+Facility 133 (Cabarroguis) opened
+Facility 134 (Buguey) opened
+Facility 136 (Bontoc) opened
+Facility 139 (Maribojoc) opened
+Facility 142 (Anda) opened
+Facility 143 (Alcantara) opened
+Facility 144 (Kabugao) opened
+Facility 146 (Agdangan) opened
+Facility 148 (Basco) opened

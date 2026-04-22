@@ -16,12 +16,12 @@ LDFLAGS_CPLEX = -L$(CPLEX_LIBDIR) -L$(CONCERT_LIBDIR) -lilocplex -lconcert -lcpl
 CORE_SRCS = src/DataProcessor.cpp src/ParameterGenerator.cpp src/KMLGenerator.cpp
 CORE_OBJS = $(patsubst src/%.cpp,build/%.o,$(CORE_SRCS))
 
-CPLEX_SRCS = src/cflpCplex.cpp
-CPLEX_OBJS = $(patsubst src/%.cpp,build/%.o,$(CPLEX_SRCS))
+CPLEX_SRCS = src/cflpCplex.cpp ../knapsack/lagrange/src/cplexKnapsack.cpp
+CPLEX_OBJS = $(patsubst src/%.cpp,build/%.o,src/cflpCplex.cpp) build/cplexKnapsack.o
 
 # Target: lagrange-cli (CLI)
-CLI_SRCS = src/cli.cpp src/lagrangeCFLP.cpp
-CLI_OBJS = $(patsubst src/%.cpp,build/%.o,$(CLI_SRCS))
+CLI_SRCS = src/cli.cpp src/lagrangeCFLP.cpp ../knapsack/lagrange/src/lagrangeKnapsack.cpp
+CLI_OBJS = $(patsubst src/%.cpp,build/%.o,src/cli.cpp src/lagrangeCFLP.cpp) build/lagrangeKnapsack.o
 EXEC_CLI = build/lagrange-cli
 
 # --- Rules ---
@@ -38,6 +38,14 @@ build/cflpCplex.o: src/cflpCplex.cpp
 	$(CXX) $(CXXFLAGS_CPLEX) -c $< -o $@
 
 build/lagrangeCFLP.o: src/lagrangeCFLP.cpp
+	@mkdir -p build
+	$(CXX) $(CXXFLAGS_CPLEX) -c $< -o $@
+
+build/cplexKnapsack.o: ../knapsack/lagrange/src/cplexKnapsack.cpp
+	@mkdir -p build
+	$(CXX) $(CXXFLAGS_CPLEX) -c $< -o $@
+
+build/lagrangeKnapsack.o: ../knapsack/lagrange/src/lagrangeKnapsack.cpp
 	@mkdir -p build
 	$(CXX) $(CXXFLAGS_CPLEX) -c $< -o $@
 

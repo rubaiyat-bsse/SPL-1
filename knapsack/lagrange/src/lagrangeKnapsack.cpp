@@ -44,7 +44,7 @@ double polyakStepSize(double currentDualValue, double lowerBound, double subgrad
     
 }
 
-void logIteration(
+static void logIteration(
     int iter,
     double lambda,
     double dual,
@@ -57,7 +57,7 @@ void logIteration(
 ){
     static bool headerPrinted = false;
 
-    ofstream logFile("iterationLog.txt", ios::app);
+    ofstream logFile("/home/ratul/IIT/spl-1/CFLP/out/iterationLog_knapsack.txt", ios::app);
     if(!logFile) return;
     
     if(!headerPrinted){
@@ -91,10 +91,35 @@ void logIteration(
     logFile.close(); 
 }
 
-vector<int> lagrangian(vector<Item>items, int C){
+std::pair<double, double> runKnapsackLagrange(const std::string& inputFile){
+    ifstream ifs(inputFile);
+    if (!ifs.is_open()){
+        cerr << "Could not open " << inputFile << endl;
+        return {-1.0, -1.0};
+    }
+
+    int n, C;
+    if (!(ifs >> n >> C)) return {-1.0, -1.0};
+    
+    vector<Item> items(n);
+    vector<Item> originalItems(n);
+    for(int i=0; i<n; i++){
+        int weight, value;
+        ifs >> weight >> value;
+
+        items[i].weight = weight;
+        items[i].value = value;
+        items[i].id = i;
+        originalItems[i] = items[i];
+    }
+    ifs.close();
+
+    // Reset log file
+    ofstream("/home/ratul/IIT/spl-1/CFLP/out/iterationLog_knapsack.txt", ios::trunc).close();
+
+    auto startTime = std::chrono::high_resolution_clock::now();
 
     double lambda =0.0;
-    
     auto initialData = initialGreedyData(items, C);
 
     double bestLowerBound = initialData.first;
@@ -111,13 +136,10 @@ vector<int> lagrangian(vector<Item>items, int C){
         double primalValue=0;
 
         for(int i=0; i<items.size(); i++){
-        //solving subproblems
-            
+            //solving subproblems
             if((items[i].value-lambda*items[i].weight)>=0){
                 currentSolutionIndex.push_back(items[i].id);
-                
                 changingTermDual+=items[i].value-lambda*items[i].weight;
-
                 primalConstraintValue+=items[i].weight;
                 primalValue+=items[i].value;
             }
@@ -125,17 +147,13 @@ vector<int> lagrangian(vector<Item>items, int C){
 
         //calculate dual value a.k.a upper bound
         double currentUpperBound = changingTermDual + lambda*C;
-
         if(currentUpperBound < bestUpperBound){
             bestUpperBound = currentUpperBound;
         }
 
         //primal check a.k.a lower bound
-
-        double currentLowerBound;
-
         if(primalConstraintValue<=C){
-            if(primalValue>bestLowerBound){  //only update bounds and save solutions if it fits in the bag
+            if(primalValue>bestLowerBound){  
                 bestLowerBound = primalValue;
                 bestSolutionIndex = currentSolutionIndex;
             }
@@ -144,75 +162,38 @@ vector<int> lagrangian(vector<Item>items, int C){
         double dualityGap = bestUpperBound - bestLowerBound;
         double subgradient = C - primalConstraintValue;
 
-        //STOPPING CONDITION
         if(dualityGap<=THRESHOLD || abs(subgradient)==0){
             break;
         }
 
-        //update multiplier
         stepSize = polyakStepSize(currentUpperBound, bestLowerBound, subgradient); 
-        
         lambda = max(0.0, lambda-stepSize*subgradient);
 
         logIteration(I, lambda, currentUpperBound, primalValue, bestLowerBound, bestUpperBound, dualityGap, stepSize, subgradient);
     }
-    return bestSolutionIndex;
 
-}
+    auto endTime = std::chrono::high_resolution_clock::now();
+    double executionTime = std::chrono::duration<double>(endTime - startTime).count();
 
-void printSolution(const vector<int>& solution, const vector<Item>& items){
-    
-    cout << endl
-         << left
-         << setw(8)  << "ID"
-         << setw(10) << "Weight"
-         << setw(10) << "Value"
-         << "\n";
-    cout<<"--------------------------"<<endl;
+    sort(bestSolutionIndex.begin(), bestSolutionIndex.end());
+
+    ofstream outLog("/home/ratul/IIT/spl-1/CFLP/out/lagrangeKnapsackOut.txt", ios::trunc);
+    outLog << "Lagrange Knapsack Lower Bound (Best Feasible) = " << bestLowerBound << "\n";
+    outLog << "\nSelected items:\nID      Weight    Value\n";
+    outLog << "--------------------------\n";
 
     int totalWeight = 0;
     int totalValue = 0;
-
-    for(int id:solution){
-        cout << left
-             << setw(8) << items[id].id
-             << setw(10) << items[id].weight
-             << setw(10) << items[id].value
-             << "\n";
-        
-        // cout<<items[id].id<<" ";
-
-        totalWeight += items[id].weight;
-        totalValue += items[id].value;
+    for(int id : bestSolutionIndex){
+        outLog << left << setw(8) << originalItems[id].id 
+               << setw(10) << originalItems[id].weight 
+               << setw(10) << originalItems[id].value << "\n";
+        totalWeight += originalItems[id].weight;
+        totalValue += originalItems[id].value;
     }
-    cout<<"--------------------------"<<endl;
-    cout << left
-         << setw(8) << "TOTAL"
-         << setw(10) << totalWeight
-         << setw(10) << totalValue
-         << "\n";
-}
+    outLog << "--------------------------\n";
+    outLog << left << setw(8) << "TOTAL" << setw(10) << totalWeight << setw(10) << totalValue << "\n";
+    outLog.close();
 
-int main(){
-    ofstream("iterationLog.txt", ios::trunc).close();
-    int n,C;
-    cin>>n>>C;
-    vector<Item> items(n);
-    
-    for(int i=0; i<n; i++){
-        int weight, value;
-        cin>>weight>>value;
-
-        items[i].weight = weight;
-        items[i].value = value;
-        items[i].id = i;
-    }
-
-    vector<int> solutionVector = lagrangian(items, C);
-    sort(solutionVector.begin(), solutionVector.end()); //for cleaner output
-
-    printSolution(solutionVector, items);
-    cout<<endl;
-    return 0;
-
+    return {bestLowerBound, executionTime};
 }

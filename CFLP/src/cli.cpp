@@ -5,6 +5,8 @@
 
 #include "lagrangeCFLP.hpp"
 #include "cflpCplex.hpp"
+#include "../../knapsack/lagrange/src/lagrangeKnapsack.hpp"
+#include "../../knapsack/lagrange/src/cplexKnapsack.hpp"
 
 using namespace std;
 
@@ -131,7 +133,71 @@ int main(int argc, char* argv[]){
         }
 
     } else if (command == "knapsack") {
-        cout << "Knapsack command is not yet implemented.\n";
+        string inputFile = "";
+        bool isBenchmark = false;
+
+        for (int i = 2; i < argc; ++i) {
+            string arg = argv[i];
+
+            if ((arg == "-i" || arg == "--input") && i + 1 < argc) {
+                inputFile = argv[++i];
+            } else if (arg == "-b" || arg == "--benchmark") {
+                isBenchmark = true;
+            } else {
+                cerr << "Unknown or incomplete argument: " << arg << "\n";
+                printHelp();
+                return 1;
+            }
+        }
+
+        if (inputFile.empty()) {
+            cerr << "Error: --input is required for knapsack.\n";
+            return 1;
+        }
+
+        cout << "Running Knapsack command...\n";
+        cout << "  Input:  " << inputFile << "\n";
+        cout << "  Outputs will be saved in the '/home/ratul/IIT/spl-1/CFLP/out/' directory.\n\n";
+
+        if (isBenchmark) {
+            cout << "=========================================================\n";
+            cout << "                 PERFORMANCE BENCHMARK                   \n";
+            cout << "=========================================================\n";
+            
+            cout << "-> Running exact CPLEX solver...\n";
+            auto cplexResult = runKnapsackCplex(inputFile);
+            
+            cout << "-> Running Lagrangian Relaxation solver...\n";
+            auto lagrangeResult = runKnapsackLagrange(inputFile);
+
+            double gap = ((cplexResult.first - lagrangeResult.first) / cplexResult.first) * 100.0;
+            double speedup = (lagrangeResult.second > 1e-6) ? (cplexResult.second / lagrangeResult.second) : 0.0;
+
+            cout << "\n=================================== RESULTS ===================================\n";
+            cout << left << setw(15) << "Solver" 
+                 << setw(20) << "Objective Value" 
+                 << setw(15) << "Time (s)" 
+                 << setw(15) << "Gap to Opt."
+                 << "Speedup\n";
+            cout << "-------------------------------------------------------------------------------\n";
+            
+            cout << left << setw(15) << "CPLEX (Exact)" 
+                 << setw(20) << fixed << setprecision(2) << cplexResult.first 
+                 << setw(15) << fixed << setprecision(6) << cplexResult.second 
+                 << setw(15) << "0.00%"
+                 << "1.0x\n";
+                 
+            cout << left << setw(15) << "Lagrangian" 
+                 << setw(20) << fixed << setprecision(2) << lagrangeResult.first 
+                 << setw(15) << fixed << setprecision(6) << lagrangeResult.second 
+                 << fixed << setprecision(4) << gap << "%      ";
+            if (speedup > 1.0) cout << fixed << setprecision(1) << speedup << "x faster\n";
+            else cout << "-\n";
+
+            cout << "===============================================================================\n";
+        } else {
+            runKnapsackLagrange(inputFile);
+        }
     } else {
         cerr << "Error: Unknown command '" << command << "'.\n";
         printHelp();
