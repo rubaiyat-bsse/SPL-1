@@ -1,16 +1,8 @@
 # folders
 misc/
-build/
-optimization_cflp_marker/
-
-# build files
-*.o
-*.out
-*.exe
 
 # editor files
 .vscode/
-.github/
 
 # specific files
 scrap.txt
